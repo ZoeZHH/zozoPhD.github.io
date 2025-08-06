@@ -9,11 +9,11 @@ website:
       - href: index.qmd
         text: Home
       - href: C1-Partitioning Algorithms.qmd
-      - text: C1-Partitioning Algorithms  
+        text: C1-Partitioning Algorithms  
       - href: C2-Seasonal Vars of CUE.qmd
-      - text: C2-Seasonal Vars of CUE
+        text: C2-Seasonal Vars of CUE
       - href: C3-Coordination of MCUE VCUE.qmd
-      - text: C3-Coordination of MCUE VCUE
+        text: C3-Coordination of MCUE VCUE
     tools:
       - icon: github
         href: https://github.com/ZoeZHH
