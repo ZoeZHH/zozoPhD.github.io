@@ -1,5 +1,6 @@
 ---
 title: "C1-Partitioning Algorithms"
+title-block: false
 format:
   html:
     toc: true
