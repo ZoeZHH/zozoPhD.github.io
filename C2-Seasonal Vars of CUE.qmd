@@ -1,5 +1,9 @@
 ---
 title: "C2-Seasonal Vars of CUE"
+format:
+  html:
+    toc: true
+    title-block-style: none
 ---
 
 ## CHAPTER 2-Understanding Seasonal Variations of Carbon Use Efficiency and Autotrophic Respiration Using Eddy Covariance Observations
