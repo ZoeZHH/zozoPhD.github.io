@@ -1,7 +1,7 @@
 ---
 
 title: "C1-Partitioning Algorithms"
-title-block: false  # ← THIS is what you're still missing
+title-block: false  
 format:
   html:
     toc: true
