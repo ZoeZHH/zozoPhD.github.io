@@ -21,7 +21,7 @@ website:
 
 format:
   html:
-    theme: flatly
+    theme: litera
     toc: true
 
 editor: source
