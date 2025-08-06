@@ -1,5 +1,5 @@
 ---
-title: "C2-Seasonal Vars of CUE"
+title: false
 format:
   html:
     toc: true
