@@ -1,2 +1,1 @@
-# Zoe is reading papers for her PhD
-Checkout the papers she read: https://zoezhh.github.io/zoephdlitR.github.io/
+# For Zoe's PhD info: https://github.com/ZoeZHH/zozoPhD.github.io.git

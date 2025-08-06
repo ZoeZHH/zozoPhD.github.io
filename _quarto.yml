@@ -3,24 +3,16 @@ project:
   output-dir: docs
   
 website:
-  title: "Zoe Is Reading Papers"
+  title: "Zoe PhD Info"
   navbar:
     left:
       - href: index.qmd
         text: Home
 
-      - Terminology.qmd
-      - TalkC.qmd
-      - RemoteSensing.qmd
-      - EC Partitioning.qmd
-      - C Models.qmd
-      - Others.qmd
-      - CUE.qmd
-      - Pipeline.qmd
-      - Workshop.qmd
+      - C1-Improved Partitioning Algorithms.qmd
+      - C2-Seasonal Vars of CUE.qmd
+      - C3-Coordination of MCUE/VCUE.qmd
     tools:
-      - icon: twitter
-        href: https://twitter.com/
       - icon: github
         href: https://github.com/ZoeZHH
   page-footer:
