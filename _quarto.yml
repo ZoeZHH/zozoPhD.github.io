@@ -21,7 +21,7 @@ website:
 
 format:
   html:
-    theme: lumen
+    theme: cosmo
     toc: true
 
 editor: source
