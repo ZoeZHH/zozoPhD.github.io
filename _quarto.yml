@@ -11,7 +11,7 @@ website:
 
       - C1-Partitioning Algorithms.qmd
       - C2-Seasonal Vars of CUE.qmd
-      - C3-Coordination of MCUE/VCUE.qmd
+      - C3-Coordination of MCUE VCUE.qmd
     tools:
       - icon: github
         href: https://github.com/ZoeZHH
