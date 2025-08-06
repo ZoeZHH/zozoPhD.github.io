@@ -1,0 +1,45 @@
+---
+title: "Let's Talk C Here"
+---
+
+## C Models
+
+Researchers developed three ways for predicting global GPP!
+
+1.  Dynamic global vegetation models (DGVMs)
+
+    Methods: Compute GPP based on complex process-based algorithms
+
+    Benefits: lalala
+
+    Limitations:
+
+    -   Underestimate the effect of atmospheric dryness on GPP and overestimate the current increase in GPP
+
+2.  Flux-data driven models
+
+    Methods: Eddy-covariance flux measurements
+
+    Benefits:
+
+    Limitations:
+
+3.  Remote-sensing based models (RSMs)
+
+    Methods: Use algorithms based on satellite retrievals of land-surface properties
+
+    $$GPP = LUE\times PAR\times fAPAR $$
+
+    LUE is light use efficiency, PAR is incident photosynthetically active radiation and fAPAR is the fraction of photosynthetically available radiation absorbed by vegetation
+
+    Benefits: Compared to DGVMs, fewer assumptions about vegetation dynamic and productivity
+
+    Comapred to flux-data driven models, more extensive data
+
+    Limitations:
+
+    -   Validity of RSM-based are challenging due to lack of independent, global-scale empirical data on GPP
+
+## Project 2
+
+## Project 3
