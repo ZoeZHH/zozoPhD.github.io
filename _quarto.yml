@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: "Zoe Is Reading Papers"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+      - Terminology.qmd
+      - TalkC.qmd
+      - RemoteSensing.qmd
+      - EC Partitioning.qmd
+      - C Models.qmd
+      - Others.qmd
+      - CUE.qmd
+      - Pipeline.qmd
+      - Workshop.qmd
+    tools:
+      - icon: twitter
+        href: https://twitter.com/
+      - icon: github
+        href: https://github.com/ZoeZHH
+  page-footer:
+    right: "Built with [Quarto](https://quarto.org/)"
+    left: "&copy; Copyright 2023, Hehan (Zoe) Zhang"
+
+format:
+  html:
+    theme: cerulean
+    toc: true
+
+editor: source
+
