@@ -8,10 +8,12 @@ website:
     left:
       - href: index.qmd
         text: Home
-
-      - C1-Partitioning Algorithms.qmd
-      - C2-Seasonal Vars of CUE.qmd
-      - C3-Coordination of MCUE VCUE.qmd
+      - href: C1-Partitioning Algorithms.qmd
+      - text: C1  
+      - href: C2-Seasonal Vars of CUE.qmd
+      - text: C2
+      - href: C3-Coordination of MCUE VCUE.qmd
+      - text: C3
     tools:
       - icon: github
         href: https://github.com/ZoeZHH
