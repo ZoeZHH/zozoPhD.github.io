@@ -1,5 +1,8 @@
 ---
 title: "C1-Partitioning Algorithms"
+format:
+  html:
+    toc: true
 ---
 
 ## CHAPTER 1-Improving Daytime Partitioning Algorithms in Eddy Covariance Observations: Incorporating Absorbed PAR and Canopy Temperature
