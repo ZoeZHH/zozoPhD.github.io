@@ -1,4 +1,4 @@
 ---
-title: "EC Partitioning"
+title: "C1-Partitioning Algorithms"
 ---
 

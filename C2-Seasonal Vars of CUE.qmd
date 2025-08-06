@@ -1,3 +1,3 @@
 ---
-title: "C in Remote Sensing"
+title: "C2-Seasonal Vars of CUE"
 ---
