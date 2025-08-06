@@ -25,7 +25,7 @@
     "href": "C1-Partitioning Algorithms.html",
     "title": "Zoe PhD Info",
     "section": "",
-    "text": "title: “C1-Partitioning Algorithms” title-block: false # ← THIS is what you’re still missing format: html: toc: true title-block-style: none —"
+    "text": "title: “C1-Partitioning Algorithms” title-block: false\nformat: html: toc: true title-block-style: none —"
   },
   {
     "objectID": "C1-Partitioning Algorithms.html#chapter-1-improving-daytime-partitioning-algorithms-in-eddy-covariance-observations-incorporating-absorbed-par-and-canopy-temperature",
