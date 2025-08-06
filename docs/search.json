@@ -1,100 +1,163 @@
 [
   {
-    "objectID": "EC Partitioning.html",
-    "href": "EC Partitioning.html",
+    "objectID": "Seasonal Vars of CUE.html",
+    "href": "Seasonal Vars of CUE.html",
+    "title": "C in Remote Sensing",
+    "section": "",
+    "text": "Read from 2024/10/30 to , check the paper here: https://doi.org/10.1038/s43017-024-00601-6"
+  },
+  {
+    "objectID": "Seasonal Vars of CUE.html#principles-for-satellite-monitoring-of-vegetation-carbon-uptake-prentice-et-al.-2024",
+    "href": "Seasonal Vars of CUE.html#principles-for-satellite-monitoring-of-vegetation-carbon-uptake-prentice-et-al.-2024",
+    "title": "C in Remote Sensing",
+    "section": "",
+    "text": "Read from 2024/10/30 to , check the paper here: https://doi.org/10.1038/s43017-024-00601-6"
+  },
+  {
+    "objectID": "Seasonal Vars of CUE.html#estimation-of-global-lai-and-fapar-using-radiative-transfer-models-myneni-et-al.-1997",
+    "href": "Seasonal Vars of CUE.html#estimation-of-global-lai-and-fapar-using-radiative-transfer-models-myneni-et-al.-1997",
+    "title": "C in Remote Sensing",
+    "section": "Estimation of global LAI and FAPAR using radiative transfer models (Myneni et al., 1997)",
+    "text": "Estimation of global LAI and FAPAR using radiative transfer models (Myneni et al., 1997)\nRead from 2024/10/30 to , check the paper here: 10.1109/36.649788"
+  },
+  {
+    "objectID": "Seasonal Vars of CUE.html#global-patterns-of-land-atmosphere-fluxes-of-carbon-dioxide-latent-heat-and-xxx-june-et-al.-2011",
+    "href": "Seasonal Vars of CUE.html#global-patterns-of-land-atmosphere-fluxes-of-carbon-dioxide-latent-heat-and-xxx-june-et-al.-2011",
+    "title": "C in Remote Sensing",
+    "section": "Global Patterns of land-atmosphere fluxes of carbon dioxide, latent heat, and xxx (June et al., 2011)",
+    "text": "Global Patterns of land-atmosphere fluxes of carbon dioxide, latent heat, and xxx (June et al., 2011)"
+  },
+  {
+    "objectID": "Coordination of MCUE:VCUE.html",
+    "href": "Coordination of MCUE:VCUE.html",
+    "title": "Let’s Talk C Here",
+    "section": "",
+    "text": "Researchers developed three ways for predicting global GPP!\n\nDynamic global vegetation models (DGVMs)\nMethods: Compute GPP based on complex process-based algorithms\nBenefits: lalala\nLimitations:\n\nUnderestimate the effect of atmospheric dryness on GPP and overestimate the current increase in GPP\n\nFlux-data driven models\nMethods: Eddy-covariance flux measurements\nBenefits:\nLimitations:\nRemote-sensing based models (RSMs)\nMethods: Use algorithms based on satellite retrievals of land-surface properties\n\\[GPP = LUE\\times PAR\\times fAPAR \\]\nLUE is light use efficiency, PAR is incident photosynthetically active radiation and fAPAR is the fraction of photosynthetically available radiation absorbed by vegetation\nBenefits: Compared to DGVMs, fewer assumptions about vegetation dynamic and productivity\nComapred to flux-data driven models, more extensive data\nLimitations:\n\nValidity of RSM-based are challenging due to lack of independent, global-scale empirical data on GPP"
+  },
+  {
+    "objectID": "Coordination of MCUE:VCUE.html#c-models",
+    "href": "Coordination of MCUE:VCUE.html#c-models",
+    "title": "Let’s Talk C Here",
+    "section": "",
+    "text": "Researchers developed three ways for predicting global GPP!\n\nDynamic global vegetation models (DGVMs)\nMethods: Compute GPP based on complex process-based algorithms\nBenefits: lalala\nLimitations:\n\nUnderestimate the effect of atmospheric dryness on GPP and overestimate the current increase in GPP\n\nFlux-data driven models\nMethods: Eddy-covariance flux measurements\nBenefits:\nLimitations:\nRemote-sensing based models (RSMs)\nMethods: Use algorithms based on satellite retrievals of land-surface properties\n\\[GPP = LUE\\times PAR\\times fAPAR \\]\nLUE is light use efficiency, PAR is incident photosynthetically active radiation and fAPAR is the fraction of photosynthetically available radiation absorbed by vegetation\nBenefits: Compared to DGVMs, fewer assumptions about vegetation dynamic and productivity\nComapred to flux-data driven models, more extensive data\nLimitations:\n\nValidity of RSM-based are challenging due to lack of independent, global-scale empirical data on GPP"
+  },
+  {
+    "objectID": "Coordination of MCUE:VCUE.html#project-2",
+    "href": "Coordination of MCUE:VCUE.html#project-2",
+    "title": "Let’s Talk C Here",
+    "section": "Project 2",
+    "text": "Project 2"
+  },
+  {
+    "objectID": "Coordination of MCUE:VCUE.html#project-3",
+    "href": "Coordination of MCUE:VCUE.html#project-3",
+    "title": "Let’s Talk C Here",
+    "section": "Project 3",
+    "text": "Project 3"
+  },
+  {
+    "objectID": "Partitioning Algorithms.html",
+    "href": "Partitioning Algorithms.html",
     "title": "EC Partitioning",
     "section": "",
     "text": "The importance of eddy-covariace: 1) Having a global estimate based on observations and 2) These global gridded datasets are highly promising for land surface model validation and improvement (doi:10.1029/2010JG001593, 2011.)\nThe CO2 analyzer is measuring CO2 flux or what we called net ecosystem exchange (FCO2 or NEE), it’s essentially a difference between ecosystem respiration (Reco) and gross primary production (GPP), as \\(NEE = Reco - GPP\\). Partitioning is to partition the NEE measured by tower into GPP and Reco, which is important in flux data analysis (Burba, 2022).\nThere are mainly two groups of NEE partitioning: one group methods are empirical models (establish site specifics relationship between nighttime flux and biophysical controls, then used the relationship to approximate daytime Reco). Another group of methods is more complex but less empirical models (light response curves using just daytime or 24-hour data) (Burba, 2022).\nhttps://www.bgc-jena.mpg.de/5624848/Flux-partitioning\nOther Possible Ways on measuring Reco:\n1) Estimates from biogeochemical or soil–vegetation–atmosphere transfer (SVAT) models (https://link.springer.com/article/10.1023/A:1002497616547)\n2) From chamber measurements extrapolated to the stand scale (https://doi.org/10.1046/j.1365-2486.1999.00214.x; https://pubmed.ncbi.nlm.nih.gov/11262922/)\n(Desai et al., 2007)\nIt is currently not possible to obtain direct, integrated observations of either GPP or RE, because these processes represent a multitude of responses by a combination of autotrophic and heterotrophic organisms.\nScaling from chamber level measurements to canopy level is labor intensive and fraught with high sampling uncertainty.\nNighttime Partitioning Drawbacks:\n1) frequent nighttime suppression of turbulence and dominance of advective fluxes not measured by conventional EC systems (Lasslop et al., 2010)\nAccurately partitioning NEE into ER and GPP can:\n1) understanding the responses of the terrestrial carbon cycle to a changing climate, especially during extreme events (10.1088/1748-9326/9/3/035001)\n2) better understand the underlying mechanisms constraining ecosystem functions\n3) GPP and RECO estimates from EC are useful for modeling, supporting process-based model parameterization and validation, data assimilation, plant trait retrieval by model inversion, upscaling, as well as photosynthesis estimates based on remote sensing\nWith the coming up machine learning methods, how do you think compared with the algorithms (sulman et al., 2020; Weiwei et al., 2022)?"
   },
   {
-    "objectID": "EC Partitioning.html#a-story-of-partitioning",
-    "href": "EC Partitioning.html#a-story-of-partitioning",
+    "objectID": "Partitioning Algorithms.html#a-story-of-partitioning",
+    "href": "Partitioning Algorithms.html#a-story-of-partitioning",
     "title": "EC Partitioning",
     "section": "",
     "text": "The importance of eddy-covariace: 1) Having a global estimate based on observations and 2) These global gridded datasets are highly promising for land surface model validation and improvement (doi:10.1029/2010JG001593, 2011.)\nThe CO2 analyzer is measuring CO2 flux or what we called net ecosystem exchange (FCO2 or NEE), it’s essentially a difference between ecosystem respiration (Reco) and gross primary production (GPP), as \\(NEE = Reco - GPP\\). Partitioning is to partition the NEE measured by tower into GPP and Reco, which is important in flux data analysis (Burba, 2022).\nThere are mainly two groups of NEE partitioning: one group methods are empirical models (establish site specifics relationship between nighttime flux and biophysical controls, then used the relationship to approximate daytime Reco). Another group of methods is more complex but less empirical models (light response curves using just daytime or 24-hour data) (Burba, 2022).\nhttps://www.bgc-jena.mpg.de/5624848/Flux-partitioning\nOther Possible Ways on measuring Reco:\n1) Estimates from biogeochemical or soil–vegetation–atmosphere transfer (SVAT) models (https://link.springer.com/article/10.1023/A:1002497616547)\n2) From chamber measurements extrapolated to the stand scale (https://doi.org/10.1046/j.1365-2486.1999.00214.x; https://pubmed.ncbi.nlm.nih.gov/11262922/)\n(Desai et al., 2007)\nIt is currently not possible to obtain direct, integrated observations of either GPP or RE, because these processes represent a multitude of responses by a combination of autotrophic and heterotrophic organisms.\nScaling from chamber level measurements to canopy level is labor intensive and fraught with high sampling uncertainty.\nNighttime Partitioning Drawbacks:\n1) frequent nighttime suppression of turbulence and dominance of advective fluxes not measured by conventional EC systems (Lasslop et al., 2010)\nAccurately partitioning NEE into ER and GPP can:\n1) understanding the responses of the terrestrial carbon cycle to a changing climate, especially during extreme events (10.1088/1748-9326/9/3/035001)\n2) better understand the underlying mechanisms constraining ecosystem functions\n3) GPP and RECO estimates from EC are useful for modeling, supporting process-based model parameterization and validation, data assimilation, plant trait retrieval by model inversion, upscaling, as well as photosynthesis estimates based on remote sensing\nWith the coming up machine learning methods, how do you think compared with the algorithms (sulman et al., 2020; Weiwei et al., 2022)?"
   },
   {
-    "objectID": "EC Partitioning.html#partitioning-with-reddyproc",
-    "href": "EC Partitioning.html#partitioning-with-reddyproc",
+    "objectID": "Partitioning Algorithms.html#partitioning-with-reddyproc",
+    "href": "Partitioning Algorithms.html#partitioning-with-reddyproc",
     "title": "EC Partitioning",
     "section": "Partitioning with REddyProc",
     "text": "Partitioning with REddyProc\n(Wutzler et al., 2018) Read from 2024/10/31 to , check the paper here: https://doi.org/10.5194/bg-15-5015-2018\n\nSummary"
   },
   {
-    "objectID": "EC Partitioning.html#estimation-of-global-lai-and-fapar-using-radiative-transfer-models-myneni-et-al.-1997",
-    "href": "EC Partitioning.html#estimation-of-global-lai-and-fapar-using-radiative-transfer-models-myneni-et-al.-1997",
+    "objectID": "Partitioning Algorithms.html#estimation-of-global-lai-and-fapar-using-radiative-transfer-models-myneni-et-al.-1997",
+    "href": "Partitioning Algorithms.html#estimation-of-global-lai-and-fapar-using-radiative-transfer-models-myneni-et-al.-1997",
     "title": "EC Partitioning",
     "section": "Estimation of global LAI and FAPAR using radiative transfer models (Myneni et al., 1997)",
     "text": "Estimation of global LAI and FAPAR using radiative transfer models (Myneni et al., 1997)\nRead from 2024/10/30 to , check the paper here: 10.1109/36.649788"
   },
   {
-    "objectID": "EC Partitioning.html#on-the-temperature-dependence-of-soil-respiration-lloyd-taylor-1994---nighttime-partitioning",
-    "href": "EC Partitioning.html#on-the-temperature-dependence-of-soil-respiration-lloyd-taylor-1994---nighttime-partitioning",
+    "objectID": "Partitioning Algorithms.html#on-the-temperature-dependence-of-soil-respiration-lloyd-taylor-1994---nighttime-partitioning",
+    "href": "Partitioning Algorithms.html#on-the-temperature-dependence-of-soil-respiration-lloyd-taylor-1994---nighttime-partitioning",
     "title": "EC Partitioning",
     "section": "On the temperature dependence of soil respiration (Lloyd & Taylor, 1994) - Nighttime Partitioning",
     "text": "On the temperature dependence of soil respiration (Lloyd & Taylor, 1994) - Nighttime Partitioning\nFrom 2024/11/01 to , check the paper\nResearch Qs:\n\nRx​ reflects the baseline respiration rate that is influenced by ecosystem factors like MMM.\nf(T) captures the temperature sensitivity in a generalized form that applies across datasets.\n\n1884 Van’t Hoff derivative of the natural logarithm of the reaction rate constant (lnk) with respect to temperature (T). Van’t Hoff observed that the rate of chemical reactions changes exponentially with temperature. And the derivative of it in linear relationship. \\[\\frac{d(\\ln k)}{dT} = \\frac{E}{\\mathcal{R}T^2} + c\\]\n1889 Arrhenius built on van’t Hoff’s observations and incorporated the concept of energy distribution among reacting molecules (based on Boltzmann’s statistical mechanics). He simplified van’t Hoff’s equation by assuming c=0 and integrating it into a simpler form to explain reaction kinetics.\n\\[k = d e^{-\\frac{E}{\\mathcal{R}T}}\\]\nWhere d is a constant, E is activation energy, T is the absolute temperature (K). But we would like to involve a reference temperature (283.15K), where standardize the temperature dependencies (enables consistent comparisons across data sets, standardizing variation between ecosystems).\n\\[R = R_{10} e^{\\frac{E}{\\mathcal{R} \\cdot 283.15} \\left(1 - \\frac{283.15}{T}\\right)}\\]\nSoil respiration involves changing populations of many different organisms, each undergoing a complex series of reactions, which is likely that the activation energies may indeed increase with decreasing temperature. Kavanau (1951) utilized kinetic theory to derive a semi-empirical formulation that effectively gives a decrease in activation energy with increasing temperature.\n\\[k_R = P \\left[1 - e^{-\\frac{E_0}{T - T_0}}\\right]\\]\nA simplified version:\n\\[\nR = A e^{-\\frac{E_0}{T - T_0}}\n\\]\nFinal form relative to 10 celsius degree by Lloyd & Taylor, 1994:\n\\[R_{\\text{eco}}(T) = R_{\\text{eco,ref}} e^{E_0 \\left( \\frac{1}{T_{\\text{Ref}} - T_0} - \\frac{1}{T - T_0} \\right)}\\]\nThis equation indeed used to calculate Reco at night for nighttime partitioning method.\n1898 Q10: Van’t Hoff in 1898 (p226-228) observed from the data he collected for T (temperature) vs k (reaction rate constant), for many chemical reactions, the k typically increases by a factor of 2 to 3 for every 10°C increase in temperature [T VS. Reaction Rates]. This is in exponential relationship. To further test if reaction rates are in certain times for 10°C intervals, we used: \\(log_{10}k = a +bt\\) & \\((k_{t+10})/k_t = 10^{10b}\\)\nThis make us available to calculate any ratios, such as for ethyl acetate: 9.4°C k=2.307 & 44.94°C k=21.648, sub to \\(log_{10}k = a +bt\\), we are able to calculate b and then \\(10^{10b}\\) to get the ratios.\nThe idea posted by Van’t Hoff was further widely used in ecology study."
   },
   {
-    "objectID": "EC Partitioning.html#on-the-seperation-of-net-ecosystem-exchange-into-assimilation-and-ecosystem-respiration-review-and-improved-algorithm-reichstein-2005",
-    "href": "EC Partitioning.html#on-the-seperation-of-net-ecosystem-exchange-into-assimilation-and-ecosystem-respiration-review-and-improved-algorithm-reichstein-2005",
+    "objectID": "Partitioning Algorithms.html#on-the-seperation-of-net-ecosystem-exchange-into-assimilation-and-ecosystem-respiration-review-and-improved-algorithm-reichstein-2005",
+    "href": "Partitioning Algorithms.html#on-the-seperation-of-net-ecosystem-exchange-into-assimilation-and-ecosystem-respiration-review-and-improved-algorithm-reichstein-2005",
     "title": "EC Partitioning",
     "section": "On the seperation of net ecosystem exchange into assimilation and ecosystem respiration: review and improved algorithm (Reichstein, 2005)",
     "text": "On the seperation of net ecosystem exchange into assimilation and ecosystem respiration: review and improved algorithm (Reichstein, 2005)\nFrom 2024/11/24 to , check the paper here: doi: 10.1111/j.1365-2486.2005.001002.x\nMain Research Question: analyse the effect of short-term vs. long-term temperature sensitivity on the estimation of daytime Reco and GPP.\n\n(The observed seasonal temperature sensitivity of ecosystem respiration includes influences from other factors (e.o., soil moisture, growth) that vary with temperature, making it different from the actual short-term temperature sensitivity.)\n\nImproved Algorithm:\n\nCollect half-hourly eddy covariance flux data, ensuring high-quality night-time data through a turbulence filtering threshold.\nSegment the data into 15-day windows, with a 10-day overlap between consecutive windows.\nPerform short-term regressions within each window to estimate temperature sensitivity (E0).\nLinearly interpolate Rref based on estimates from 4-day periods and integrate E0, short into respiration calculations.\nUse the improved algorithm to partition NEE into GEP and Reco while addressing biases from long-term temperature sensitivity.\n\n\\[R_{\\text{eco}}(T) = R_{\\text{eco,ref}} e^{E_0 \\left( \\frac{1}{T_{\\text{Ref}} - T_0} - \\frac{1}{T - T_0} \\right)}\\]\nT0 is kept constant at -46.02 celsius degrees; Tref is set to 10 celsius degrees in (Reichstein, 2005) and 15 celsius degrees in (Lasslop et al., 2010). E0, temperature sensitivity is a constant value used for the whole year in (Lasslop et al., 2010) and in a short periods in (Reichstein, 2005), Reco,ref was estimated every 5 days using a 15 days window.\nLog formed:\n\\[\\ln(R_{\\text{eco}}(T)) = \\ln(R_{\\text{eco,ref}}) + E_0 \\left( \\frac{1}{T_{\\text{ref}} - T_0} - \\frac{1}{T - T_0} \\right)\\]\nThus, ln (Reco,ref) as the intercept, E0 temperature sensitivity as slope.\nUsing daytime temperature, respiration is extrapolated to the daytime and the difference between modeled Reco and measured NEE yields estimated GPP. We refer to this estimate as ‘NB’ (nighttime data-based).\nThe paper for REddyProc package: https://bg.copernicus.org/articles/15/5015/2018/"
   },
   {
-    "objectID": "EC Partitioning.html#daytime-flux-partitioning-method---lasslop-et-al.-2010",
-    "href": "EC Partitioning.html#daytime-flux-partitioning-method---lasslop-et-al.-2010",
+    "objectID": "Partitioning Algorithms.html#daytime-flux-partitioning-method---lasslop-et-al.-2010",
+    "href": "Partitioning Algorithms.html#daytime-flux-partitioning-method---lasslop-et-al.-2010",
     "title": "EC Partitioning",
     "section": "Daytime flux partitioning method -> Lasslop et al. (2010)",
     "text": "Daytime flux partitioning method -&gt; Lasslop et al. (2010)\nDaytime flux partitioning method -&gt; Lasslop et al. (2010)\nLight–response curves are fit to daytime NEE measurements and respiration is estimated from the intercept of the ordinate, which avoids the use of potentially problematic nighttime data.\nFalge et al. (2001)\nBiases of nighttime partitioning methods:\nLasslop et al. (2010)\nMethods that rely on nighttime data for partitioning may be biased due to the frequent nighttime suppression of turbulence and dominance of advective fluxes not measured by conventional EC systems (Goulden et al., 1996; Aubinet et al., 2000; Feigenwinter et al., 2004; Aubinet, 2008).\nDaytime data-based estimate including temperature sensitivity of respiration.\n(Michaelis and Menten, 1913) examines the concentration of sucrose affects the rate of its enzymatic inversion, models how reaction velocity (rate of product formation) depends on the substrate concentration. Which expresses reaction rate as a hyperbolic function:\n\\[v = \\frac{V_{\\text{max}}[S]}{K_m + [S]}\\]\nwhere \\(V_{max}\\)​ is the maximum rate, [S] is the substrate concentration, and \\(K_m\\)​ is the Michaelis constant (substrate concentration at half-maximum rate).\nRectangular hyperbolic light-response curve (Falge et al., 2001)\n\\[\\begin{equation}\\mathrm{NEE} = \\frac{\\alpha \\beta R_g}{\\alpha R_g + \\beta} + \\gamma\\end{equation}\\]\n\\(\\alpha \\, (\\mu\\text{mol C J}^{-1})\\) is the canopy light utilization efficiency and represents the initial slope of the light–response curve\n\\(\\beta \\, (\\mu\\text{mol C m}^{-2} \\text{s}^{-1})\\) is the maximum CO2 uptake rate of the canopy at light saturation\n\\(\\gamma \\, (\\mu\\text{mol C m}^{-2} \\text{s}^{-1})\\) is the ecosystem respiration\n\\(R_g \\, ({W m}^{-2})\\) is the global radiation\nGilmanov et al. (2003) consider the temperature sensitivity of the Reco, thus combined with Llyod & Taylor (1994), then:\n\\[\\begin{equation}\\mathrm{NEE} = \\frac{\\alpha \\beta R_g}{\\alpha R_g + \\beta} + R_{\\text{eco,ref}} e^{E_0 \\left( \\frac{1}{T_{\\text{Ref}} - T_0} - \\frac{1}{T - T_0} \\right)}\\end{equation}\\]\nThere are two ways in estimating parameters:\na) E0 was estimated using nighttime data, Reco,ref, alpha, beta were derived from daytime data ; b) All parameters were estimated using daytime data.\nWith the consideration of VPD limitation, β could be further interpreted as with an exponential decreasing function (Korner, 1995)\n\\[\n\\beta =\\begin{cases} \\beta_0 \\exp(-k(\\text{VPD} - \\text{VPD}_0)), & \\text{VPD} &gt; \\text{VPD}_0, \\\\\\beta_0, & \\text{VPD} \\leq \\text{VPD}_0.\\end{cases}\n\\]"
   },
   {
-    "objectID": "EC Partitioning.html#partitioning-net-carbon-dioxide-fluxes-into-photosynthesis-and-respiration-using-neural-networks---tramontana-et-al.-2020",
-    "href": "EC Partitioning.html#partitioning-net-carbon-dioxide-fluxes-into-photosynthesis-and-respiration-using-neural-networks---tramontana-et-al.-2020",
+    "objectID": "Partitioning Algorithms.html#partitioning-net-carbon-dioxide-fluxes-into-photosynthesis-and-respiration-using-neural-networks---tramontana-et-al.-2020",
+    "href": "Partitioning Algorithms.html#partitioning-net-carbon-dioxide-fluxes-into-photosynthesis-and-respiration-using-neural-networks---tramontana-et-al.-2020",
     "title": "EC Partitioning",
     "section": "Partitioning net carbon dioxide fluxes into photosynthesis and respiration using neural networks -> (Tramontana et al., 2020)",
     "text": "Partitioning net carbon dioxide fluxes into photosynthesis and respiration using neural networks -&gt; (Tramontana et al., 2020)"
   },
   {
-    "objectID": "EC Partitioning.html#widespread-inhibition-of-daytime-ecosystem-respiration-keenan-et-al.-2019",
-    "href": "EC Partitioning.html#widespread-inhibition-of-daytime-ecosystem-respiration-keenan-et-al.-2019",
+    "objectID": "Partitioning Algorithms.html#widespread-inhibition-of-daytime-ecosystem-respiration-keenan-et-al.-2019",
+    "href": "Partitioning Algorithms.html#widespread-inhibition-of-daytime-ecosystem-respiration-keenan-et-al.-2019",
     "title": "EC Partitioning",
     "section": "Widespread inhibition of daytime ecosystem respiration (Keenan et al., 2019)",
     "text": "Widespread inhibition of daytime ecosystem respiration (Keenan et al., 2019)\nhttps://www.nature.com/articles/s41559-019-0809-2#ref-CR12 With the consideration of the inhibition of leaf respiration in the light\nThe daytime and nighttime approaches are built on the assumption that the reference respiration rate (Rref) does not change between night and day. If there’s inhibition of leaf respiration in the light, then nighttime method will overestimate daytime respiration and the daytime method will underestimate the nighttime respiration\nHere, modified both the standard daytime and night-time partitioning methods to account for an apparent inhibition by estimating and applying Rref nighttime and Rref daytime separately."
   },
   {
-    "objectID": "EC Partitioning.html#partitioning-through-gpp-sif-weiwei-et-al.-2022-revisit-need",
-    "href": "EC Partitioning.html#partitioning-through-gpp-sif-weiwei-et-al.-2022-revisit-need",
+    "objectID": "Partitioning Algorithms.html#partitioning-through-gpp-sif-weiwei-et-al.-2022-revisit-need",
+    "href": "Partitioning Algorithms.html#partitioning-through-gpp-sif-weiwei-et-al.-2022-revisit-need",
     "title": "EC Partitioning",
     "section": "2025/04/08 Partitioning through GPP-SIF (Weiwei et al., 2022)** Revisit need",
     "text": "2025/04/08 Partitioning through GPP-SIF (Weiwei et al., 2022)** Revisit need\nProblem with current methods: Both NT and DT methods rely on simplified empirical methods, which have structural errors. Simplified ER parameterization: 1) E0 and Rref remain same through day and night 2) Reco only rely on air or soil T Fail to capture fast environmental change\nWhat the research did? In this study, we show that a new NN framework informed by SIF observations (NNSIF) can tackle two problems simultaneously: (1) partitioning NEE into GPP and ER without prescribed empirical models, and (2) unraveling the GPP-SIF relationship at the ecosystem scale.\nKey concept here: Solar-induced chlorophyll fluorescence (SIF) is the faint light re-emitted by chlorophyll during photosynthesis under natural sunlight, serving as a passive, remote indicator of plant photosynthetic activity.\nDuring photosynthesis, chlorophyll molecules absorb light energy. This energy can follow three main pathways:1) Drive photochemistry (photosynthesis) – powering electron transport, 2) Be dissipated as heat and 3) Be re-emitted as fluorescence (a small portion, &lt;5%). Thus, GPP can be related to SIF as SIF is a byproduct of the light reactions of photosynthesis, meaning it originates from the same absorbed light energy that drives carbon fixation — so higher photosynthetic activity generally results in stronger SIF signals."
   },
   {
-    "objectID": "EC Partitioning.html#on-the-choice-of-driving-temperature-for-eddy-covariance-carbon-dioxide-flux-partitioning-lasslop-et-al.-2012",
-    "href": "EC Partitioning.html#on-the-choice-of-driving-temperature-for-eddy-covariance-carbon-dioxide-flux-partitioning-lasslop-et-al.-2012",
+    "objectID": "Partitioning Algorithms.html#on-the-choice-of-driving-temperature-for-eddy-covariance-carbon-dioxide-flux-partitioning-lasslop-et-al.-2012",
+    "href": "Partitioning Algorithms.html#on-the-choice-of-driving-temperature-for-eddy-covariance-carbon-dioxide-flux-partitioning-lasslop-et-al.-2012",
     "title": "EC Partitioning",
     "section": "2025/04/09 On the choice of driving temperature for eddy-covariance carbon dioxide flux partitioning (Lasslop et al., 2012)",
     "text": "2025/04/09 On the choice of driving temperature for eddy-covariance carbon dioxide flux partitioning (Lasslop et al., 2012)\nMain objective: investigate the potential of air and soil temperatures, also surface temperatures, as drivers for night-time partitioning algorithms; quantify the uncertainty and potential biases arising from the choice of the driving temperature for respiration.\nConclusion: The highest performance was achieved with an averaged temperature with optimised weights, in spite of the cost of having an additional parameter. We recommend site specific evaluations to determine which temperature explains most of the variability of the ecosystem respiration (nighttime NEE). As surface temperature showed a good correlation with nighttime NEE, observations of longwave radiation or surface temperature could be a useful extension of the measurements at flux sites.\nImportant Points: Keeping the model’s structure simple is an important goal in order to remain as close as possible to the data, to avoid additional assumptions, and to avoid additional sources of uncertainty.\nFor a subset of sites, observations of the longwave radiation were available and Tsurf could be considered. For this subset of sites, the mean correlation coefficients computed between NEE and different temperature streams were not significantly different. We again observed the Topt had the greatest correlation with nighttime NEE (median = 0.367). For Tmean the median correlation was 0.346, followed by Tsurf derived from longwave radiation (0.339) (no figure). Tsoil, for this subset, showed a stronger correlation (0.332) than the air temperature (0.325).\nMethods on examining correlations:\n\nSliding Window Correlation: 12-day moving window. For each 12-day window, calculated the correlation between nighttime NEE and different temperature variables, half-hourly. Using median correlations\nBuilt linear models and use AIC to check which temperature explains the most variability of NEE\nAIC = n log (RSS/n) + 2 (p+1)"
   },
   {
-    "objectID": "EC Partitioning.html#revisiting-the-choice-of-the-driving-temperature-for-eddy-covariance-co2-flux-partitioning-wohlfahart-galvagno-2016",
-    "href": "EC Partitioning.html#revisiting-the-choice-of-the-driving-temperature-for-eddy-covariance-co2-flux-partitioning-wohlfahart-galvagno-2016",
+    "objectID": "Partitioning Algorithms.html#revisiting-the-choice-of-the-driving-temperature-for-eddy-covariance-co2-flux-partitioning-wohlfahart-galvagno-2016",
+    "href": "Partitioning Algorithms.html#revisiting-the-choice-of-the-driving-temperature-for-eddy-covariance-co2-flux-partitioning-wohlfahart-galvagno-2016",
     "title": "EC Partitioning",
     "section": "2025/04/10 Revisiting the choice of the driving temperature for eddy covariance CO2 flux partitioning (Wohlfahart & Galvagno, 2016)",
     "text": "2025/04/10 Revisiting the choice of the driving temperature for eddy covariance CO2 flux partitioning (Wohlfahart & Galvagno, 2016)\nMain objective: revisit the effects related to the choice of the driving temperature on inferred GPP and Reco\nMethods:\nUsing grassland and temperatures for surface temperaturem, soil temperature at 0.02m and 0.1m\n1) Seperate daytime, nighttime Reco for the same temeprature, to compare\nIf different -&gt; there is sth other than light inhibition problem, is that interchangeable for Reco, day and Reco, night, both used a temperature?\n2) Fit in the logtransformed Reco and T to llyod equation, check slopes (how sensitive Reco is to T change) and y-intercepts (Reco at reference T) between day and night Reco -&gt; Check if Reco responds to temperature in the same way during both day and night\nOpaque chambers for daytime and nighttime measurements -&gt; mimic the daytime, nighttime Reco extrapolated from the Llyod equations\nKey findings:\n\nThe diurnal course of Reco, in contrast, reflects the additive contributions of both below- and aboveground respiration (Eq. (1)) and reaches minima/maxima after that of air and before that of soil temperature (Fig. 1a).\n\nTs (explains Rbg; more likely influence the Reco at night)\nTa (explains Rag; more likely influence Reco at day)\nIf using Ts to estimate the Reco for day -&gt; daytime Ta responds faster -&gt; underestimate the Reco at day\nIf using Ta to estimate the Reco for day -&gt; Ta changes fast but Reco not that fast since a big portion from Rbg, thus steeper E0, overestimate the Reco.\nThus, nighttime Reco is overestimated based on soil temperature and underestimated based on air temperature\nThe magnitude of the over or underestimation depends on 1) phase shift between Ts and Ta (time lag between their daily maxima (or minima) during a typical diurnal cycle) and 2) the magnitude of soil and above-ground respiration"
   },
   {
-    "objectID": "EC Partitioning.html#problems-with-partitioning-algorithms-in-deriving-gpp-and-reco",
-    "href": "EC Partitioning.html#problems-with-partitioning-algorithms-in-deriving-gpp-and-reco",
+    "objectID": "Partitioning Algorithms.html#problems-with-partitioning-algorithms-in-deriving-gpp-and-reco",
+    "href": "Partitioning Algorithms.html#problems-with-partitioning-algorithms-in-deriving-gpp-and-reco",
     "title": "EC Partitioning",
     "section": "Problems with Partitioning Algorithms in Deriving GPP and Reco",
     "text": "Problems with Partitioning Algorithms in Deriving GPP and Reco\n\nLight Inhibition Problems (daytime lower Reco)\nhysteresis can lead to systematic under- or overestimation in flux-partitioning algorithms that selectively fit only daytime or nighttime data and then extrapolate the model in time."
   },
   {
-    "objectID": "EC Partitioning.html#history-of-ec-partitioning",
-    "href": "EC Partitioning.html#history-of-ec-partitioning",
+    "objectID": "Partitioning Algorithms.html#history-of-ec-partitioning",
+    "href": "Partitioning Algorithms.html#history-of-ec-partitioning",
     "title": "EC Partitioning",
     "section": "2025/04/20 History of EC Partitioning",
     "text": "2025/04/20 History of EC Partitioning\nWebb, E.K., Pearman, G.I., Leuning, R., 1980. Correction of flux measurements for density effects due to heat and water vapor transfer. Q. J. R. Meteorol. Soc. 106, 85–100.\n1972 - (Desjardins, 1972) (Desjardins, 1974) Desjardins developed the first eddy covariance flux tower to measure CO₂ during his PhD research, titled “A study of CO₂ and sensible heat fluxes using the eddy correlation technique.”\n(Morgenstern et al., 2004) The authors chose the Q₁₀ model over the activation energy (Arrhenius) model because both gave similar fits, but the Q₁₀ model allowed for a statistically more appropriate linear regression via logarithmic transformation, helping to deal with noise and heteroscedasticity in EC data.\n\\[\n\\begin{equation}R = A e^{BT} = R_{\\text{ref}} Q_{10}^{(T - T_{\\text{ref}})/10}\\end{equation}\n\\]\n（Gilmanov et al., 2003) The first empirically based estimates of GPP"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Timeline",
+    "section": "",
+    "text": "Thanks for checking out my web site!"
   }
 ]
