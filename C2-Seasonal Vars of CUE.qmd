@@ -6,13 +6,13 @@ format:
     title-block-style: none
 ---
 
-## CHAPTER 2-Understanding Seasonal Variations of Carbon Use Efficiency and Autotrophic Respiration Using Eddy Covariance Observations
+# CHAPTER 2-Understanding Seasonal Variations of Carbon Use Efficiency and Autotrophic Respiration Using Eddy Covariance Observations
 
 **Overview:** Carbon use efficiency (CUE), defined as the ratio of net primary production (NPP, where NPP = GPP − R~a~) to gross primary production (GPP), is a key indicator of how efficiently ecosystems convert assimilated carbon into biomass. Due to the challenges of directly measuring NPP, CUE has often been assumed to be nearly constant across ecosystems over the past two decades. As a result, little attention has been given to its seasonal or temporal variability. However, a recent study has introduced new methods to estimate NPP and autotrophic respiration (R~a~) by using ecosystem respiration (R~eco~) and GPP derived from eddy covariance (EC) data. These approaches suggest that CUE can vary significantly among ecosystems and over time. In this study, I apply this novel method using the refined GPP and R~eco~ data from previous chapter to investigate the seasonal dynamics of both CUE and R~a~.
 
-### Related Papers
+## **Related Papers**
 
-#### Data
+### Data
 
 *Doughty, C. E., Goldsmith, G. R., Raab, N., Girardin, C. A. J., Amezquita, F. F., Huaraca‑Huasco, W. H., Silva‑Espejo, J. E., Araujo‑Murakami, A., da Costa, M. C., da Costa, A. C. L., Rocha, W., Galbraith, D., Meir, P., Metcalfe, D. B., & Malhi, Y. (2018). What controls variation in carbon use efficiency among Amazonian tropical forests?* *Biotropica, 50*(1), 16–25. <https://doi.org/10.1111/btp.12504>
 
