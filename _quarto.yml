@@ -26,3 +26,6 @@ format:
 
 editor: source
 
+git add .
+git commit -m "Re-publish Quarto site"
+git push origin main
