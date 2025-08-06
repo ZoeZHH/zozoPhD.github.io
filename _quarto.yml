@@ -9,7 +9,7 @@ website:
       - href: index.qmd
         text: Home
 
-      - C1-Improved Partitioning Algorithms.qmd
+      - C1-Partitioning Algorithms.qmd
       - C2-Seasonal Vars of CUE.qmd
       - C3-Coordination of MCUE/VCUE.qmd
     tools:
