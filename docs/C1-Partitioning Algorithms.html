@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Let’s Talk C Here – Zoe PhD Info</title>
+<title>EC Partitioning – Zoe PhD Info</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,35 +67,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -121,14 +92,12 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">C1-Partitioning Algorithms.qmd</span>
-    </span>
+    <a class="nav-link active" href="./C1-Partitioning Algorithms.html" aria-current="page"> 
+<span class="menu-text">EC Partitioning</span></a>
   </li>  
   <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">C2-Seasonal Vars of CUE.qmd</span>
-    </span>
+    <a class="nav-link" href="./C2-Seasonal Vars of CUE.html"> 
+<span class="menu-text">C in Remote Sensing</span></a>
   </li>  
   <li class="nav-item">
     <span class="nav-link">
@@ -147,23 +116,15 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#c-models" id="toc-c-models" class="nav-link active" data-scroll-target="#c-models">C Models</a></li>
-  <li><a href="#project-2" id="toc-project-2" class="nav-link" data-scroll-target="#project-2">Project 2</a></li>
-  <li><a href="#project-3" id="toc-project-3" class="nav-link" data-scroll-target="#project-3">Project 3</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Let’s Talk C Here</h1>
+<h1 class="title">EC Partitioning</h1>
 </div>
 
 
@@ -180,41 +141,8 @@ window.Quarto = {
 </header>
 
 
-<section id="c-models" class="level2">
-<h2 class="anchored" data-anchor-id="c-models">C Models</h2>
-<p>Researchers developed three ways for predicting global GPP!</p>
-<ol type="1">
-<li><p>Dynamic global vegetation models (DGVMs)</p>
-<p>Methods: Compute GPP based on complex process-based algorithms</p>
-<p>Benefits: lalala</p>
-<p>Limitations:</p>
-<ul>
-<li>Underestimate the effect of atmospheric dryness on GPP and overestimate the current increase in GPP</li>
-</ul></li>
-<li><p>Flux-data driven models</p>
-<p>Methods: Eddy-covariance flux measurements</p>
-<p>Benefits:</p>
-<p>Limitations:</p></li>
-<li><p>Remote-sensing based models (RSMs)</p>
-<p>Methods: Use algorithms based on satellite retrievals of land-surface properties</p>
-<p><span class="math display">\[GPP = LUE\times PAR\times fAPAR \]</span></p>
-<p>LUE is light use efficiency, PAR is incident photosynthetically active radiation and fAPAR is the fraction of photosynthetically available radiation absorbed by vegetation</p>
-<p>Benefits: Compared to DGVMs, fewer assumptions about vegetation dynamic and productivity</p>
-<p>Comapred to flux-data driven models, more extensive data</p>
-<p>Limitations:</p>
-<ul>
-<li>Validity of RSM-based are challenging due to lack of independent, global-scale empirical data on GPP</li>
-</ul></li>
-</ol>
-</section>
-<section id="project-2" class="level2">
-<h2 class="anchored" data-anchor-id="project-2">Project 2</h2>
-</section>
-<section id="project-3" class="level2">
-<h2 class="anchored" data-anchor-id="project-3">Project 3</h2>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
