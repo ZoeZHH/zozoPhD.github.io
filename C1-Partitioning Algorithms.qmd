@@ -1,4 +1,5 @@
 ---
-title: "C1-Partitioning Algorithms"
+title: "C1-Improving Daytime Partitioning Algorithms in Eddy Covariance Observations: Incorporating Absorbed PAR and Canopy Temperature"
 ---
 
+An eddy covariance (EC) flux tower equipped with gas analyzers continuously measures the exchange of carbon flux between land and atmosphere. With over 1,400 EC towers operating globally, this network plays a key role in monitoring the terrestrial carbon cycle. The CO~2~ analyzer provides measurements of net ecosystem exchange (NEE), which represents the balance between carbon uptake through photosynthesis (gross primary production, GPP) and carbon release through ecosystem respiration (R~eco~). However, GPP and R~eco~ are not directly measured and must be estimated by applying partitioning algorithms to the NEE data. Current partitioning methods have limitations in accuracy. In this study, we aim to improve these algorithms by incorporating more precise measurements of absorbed photosynthetically active radiation (PAR) and canopy temperature (T~c~). These refinements are expected to enhance the reliability of carbon flux estimates and deepen our understanding of ecosystem carbon dynamics.
