@@ -3,7 +3,6 @@ title: ""
 about:
   id: me
   template: broadside
-  # image: img/profile.png
 ---
 
 ## QE Preparations Timeline
