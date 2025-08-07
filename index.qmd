@@ -1,19 +1,69 @@
 ---
-title: "Timeline"
+title: ""
 about:
   id: me
   template: broadside
-  image: img/profile.png
+  # image: img/profile.png
 ---
 
-:::{#me}
+::: {#me}
+## QE Preparations Timeline
 
-## Goals
+| Dates | Col2 | Col3 |
+|-------|------|------|
+|       |      |      |
+|       |      |      |
+|       |      |      |
+|       |      |      |
+|       |      |      |
+|       |      |      |
+|       |      |      |
+|       |      |      |
+|       |      |      |
+|       |      |      |
+|       |      |      |
+|       |      |      |
+|       |      |      |
+|       |      |      |
 
-## Education
+2025/08/07-2025/08/23 Chapter 1 Literature Glance (15 Days)
+
+2025/08/25 Chapter 1 Proposal Writing & Bibliography Writing
+
+2025/08/26-2025/09/17 Chapter 2 Literature Glance (20 Days)
+
+2025/09/18-2025/09/20 Chapter 2 Proposal Writing, Chapter 1 Preliminary Results, Chapter 2 Bibliography Writing
+
+2025/09/22-2025/10/11 Chapter 3 Literature Glance (18 Days)
+
+2025/10/13 & 2025/10/14 Bibliography writing (Chapter 3 new)
+
+2025/10/15 - 2025/10/17 Proposal writing (Chapter 3 new)
+
+2025/10/18 Revision of 3rd Bibliography
+
+2025/10/20 Submission of Proposal to Remi, Bibliography to Committee Members
+
+2025/10/27 - 2025/11/22 Review 24 submitted papers
+
+2025/11/24: Final Proposal Submission
+
+2025/11/28 - 2025/12/05: PhD CE
+
+12/12: PhD OE
+
+## DDLs
+
+2025/09/22 Chapter 1 & 2 Proposal and Bibliography submit to Remi
+
+2025/10/14 Bibliography submit to Remi (with Chapter 3 new)\
+2025/10/20 Bibliography submit to committee members
+
+2025/10/20 Submission of proposal to Remi
+
+2025/08/26
 
 ## Experience
-
 :::
 
 Thanks for checking out my web site!
