@@ -14,6 +14,8 @@ website:
         text: C2-Seasonal Vars of CUE
       - href: C3-Coordination of MCUE VCUE.qmd
         text: C3-Coordination of MCUE VCUE
+      - href: EC_basic.qmd
+        text: EC Basic
     tools:
       - icon: github
         href: https://github.com/ZoeZHH
