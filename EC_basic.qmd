@@ -6,10 +6,15 @@ format:
     title-block-style: none
 ---
 
-## CHAPTER 3-The coordination between MCUE and VCUE
+## u\* filtering
 
-**Overview:**
+<img src="img/u%2A%20threshold.png" alt="u* threshold" style="float: right; margin-left: 15px; width: 300px;"/>
 
-### Related Papers
+At night, clear and calm conditions, atmosphere becomes stably stratified (cool air settles near ground, warm air sits above -\> suppress vertical mixing) -\> CO~2~ produced near the surface by respiration accumulation close to the ground BUT EC measure vertical fluxes of CO~2~ which rely on turbulence -\> underestimate the true respiration happening at the surface
 
-Tao, F., Huang, Y., Hungate, B. A., Manzoni, S., Frey, S. D., Schmidt, M. W. I., Reichstein, M., Carvalhais, N., Ciais, P., Jiang, L., Lehmann, J., Wang, Y.‑P., Houlton, B. Z., Ahrens, B., Mishra, U., Hugelius, G., Hocking, T. D., Lu, X., Shi, Z., Viatkin, K., … Luo, Y. (2023). Microbial carbon use efficiency promotes global soil carbon storage. Nature, 618(7967), 981–985. https://doi.org/10.1038/s41586-023-06042-3
+Scientists assumes a threshold of u\* (detect the **minimum amount of turbulence** needed for reliable nighttime NEE (ecosystem respiration) measurements), two methods:\
+- The moving point method (Papale et al., 2006 https://doi.org/10.5194/bg-3-571-2006):\
+Seperate BINS: Only nighttime data used (R~g~ \< 10 W m-2) -\> seasonal splitting (data are split by seasons to account for changes in surface properties) -\> temperature subsets (each season is further split into 6 temperature bins using quantiles, to ensure homogeneity of respiration rates, temperature is closely related to respiration rates!) -\> within each temperature subset, u\* is divided into \~20 bins with equal number of points
+
+Moving Point Test: For each bin i, compute mean NEE of bin i ($\mu_i$) and mean NEE of the next 10 bins ($\mu_{i+1\,\ldots\,i+10}$) -\> Check if $\mu_i > 0.95 \times \operatorname{mean}(\mu_{i+1}, \ldots, \mu_{i+10})$ and this holds for $\mu_{i+1}$-\>If so, bin i's mean u\* is the threshold\
+- The breakpoint detection method
