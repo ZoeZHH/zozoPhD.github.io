@@ -14,18 +14,18 @@
     "text": "Doughty, C. E., Goldsmith, G. R., Raab, N., Girardin, C. A. J., Amezquita, F. F., Huaraca‑Huasco, W. H., Silva‑Espejo, J. E., Araujo‑Murakami, A., da Costa, M. C., da Costa, A. C. L., Rocha, W., Galbraith, D., Meir, P., Metcalfe, D. B., & Malhi, Y. (2018). What controls variation in carbon use efficiency among Amazonian tropical forests? Biotropica, 50(1), 16–25. https://doi.org/10.1111/btp.12504\nMalhi, Y., Girardin, C., Metcalfe, D. B., Doughty, C. E., Aragão, L. E. O. C., Rifai, S. W., Oliveras, I., Shenkin, A., Aguirre‑Gutiérrez, J., Dahlsjö, C. A. L., Riutta, T., Berenguer, E., Moore, S., Huasco, W. H., Salinas, N., da Costa, A. C. L., Bentley, L. P., Adu‑Bredu, S., Marthews, T. R., … Phillips, O. L. (2021). The Global Ecosystems Monitoring network: Monitoring ecosystem productivity and carbon cycling across the tropics. Biological Conservation, 253, Article 108889. https://doi.org/10.1016/j.biocon.2020.108889\nLu, X., Chung, C., Malhi, Y., & Huang, C. (2025). Global patterns in the allocation of forest net primary production. Journal of Biogeography, –– (Advance online publication). https://doi.org/10.1111/jbi.15094 Lund University+10climate.ox.ac.uk+10onesearch.nihlibrary.ors.nih.gov+10"
   },
   {
-    "objectID": "C3-Coordination of MCUE VCUE.html",
-    "href": "C3-Coordination of MCUE VCUE.html",
+    "objectID": "EC_basic.html",
+    "href": "EC_basic.html",
     "title": "Zoe PhD Info",
     "section": "",
-    "text": "Overview:\n\n\nTao, F., Huang, Y., Hungate, B. A., Manzoni, S., Frey, S. D., Schmidt, M. W. I., Reichstein, M., Carvalhais, N., Ciais, P., Jiang, L., Lehmann, J., Wang, Y.‑P., Houlton, B. Z., Ahrens, B., Mishra, U., Hugelius, G., Hocking, T. D., Lu, X., Shi, Z., Viatkin, K., … Luo, Y. (2023). Microbial carbon use efficiency promotes global soil carbon storage. Nature, 618(7967), 981–985. https://doi.org/10.1038/s41586-023-06042-3"
+    "text": "At night, clear and calm conditions, atmosphere becomes stably stratified (cool air settles near ground, warm air sits above -&gt; suppress vertical mixing) -&gt; CO2 produced near the surface by respiration accumulation close to the ground BUT EC measure vertical fluxes of CO2 which rely on turbulence -&gt; underestimate the true respiration happening at the surface\nScientists assumes a threshold of u* (detect the minimum amount of turbulence needed for reliable nighttime NEE (ecosystem respiration) measurements), two methods:\n- The moving point method (Papale et al., 2006 https://doi.org/10.5194/bg-3-571-2006):\nSeperate BINS: Only nighttime data used (Rg &lt; 10 W m-2) -&gt; seasonal splitting (data are split by seasons to account for changes in surface properties) -&gt; temperature subsets (each season is further split into 6 temperature bins using quantiles, to ensure homogeneity of respiration rates, temperature is closely related to respiration rates!) -&gt; within each temperature subset, u* is divided into ~20 bins with equal number of points\nMoving Point Test: For each bin i, compute mean NEE of bin i (\\(\\mu_i\\)) and mean NEE of the next 10 bins (\\(\\mu_{i+1\\,\\ldots\\,i+10}\\)) -&gt; Check if \\(\\mu_i &gt; 0.95 \\times \\operatorname{mean}(\\mu_{i+1}, \\ldots, \\mu_{i+10})\\) and this holds for \\(\\mu_{i+1}\\)-&gt;If so, bin i’s mean u* is the threshold\n- The breakpoint detection method"
   },
   {
-    "objectID": "C3-Coordination of MCUE VCUE.html#chapter-3-the-coordination-between-mcue-and-vcue",
-    "href": "C3-Coordination of MCUE VCUE.html#chapter-3-the-coordination-between-mcue-and-vcue",
+    "objectID": "EC_basic.html#u-filtering",
+    "href": "EC_basic.html#u-filtering",
     "title": "Zoe PhD Info",
     "section": "",
-    "text": "Overview:\n\n\nTao, F., Huang, Y., Hungate, B. A., Manzoni, S., Frey, S. D., Schmidt, M. W. I., Reichstein, M., Carvalhais, N., Ciais, P., Jiang, L., Lehmann, J., Wang, Y.‑P., Houlton, B. Z., Ahrens, B., Mishra, U., Hugelius, G., Hocking, T. D., Lu, X., Shi, Z., Viatkin, K., … Luo, Y. (2023). Microbial carbon use efficiency promotes global soil carbon storage. Nature, 618(7967), 981–985. https://doi.org/10.1038/s41586-023-06042-3"
+    "text": "At night, clear and calm conditions, atmosphere becomes stably stratified (cool air settles near ground, warm air sits above -&gt; suppress vertical mixing) -&gt; CO2 produced near the surface by respiration accumulation close to the ground BUT EC measure vertical fluxes of CO2 which rely on turbulence -&gt; underestimate the true respiration happening at the surface\nScientists assumes a threshold of u* (detect the minimum amount of turbulence needed for reliable nighttime NEE (ecosystem respiration) measurements), two methods:\n- The moving point method (Papale et al., 2006 https://doi.org/10.5194/bg-3-571-2006):\nSeperate BINS: Only nighttime data used (Rg &lt; 10 W m-2) -&gt; seasonal splitting (data are split by seasons to account for changes in surface properties) -&gt; temperature subsets (each season is further split into 6 temperature bins using quantiles, to ensure homogeneity of respiration rates, temperature is closely related to respiration rates!) -&gt; within each temperature subset, u* is divided into ~20 bins with equal number of points\nMoving Point Test: For each bin i, compute mean NEE of bin i (\\(\\mu_i\\)) and mean NEE of the next 10 bins (\\(\\mu_{i+1\\,\\ldots\\,i+10}\\)) -&gt; Check if \\(\\mu_i &gt; 0.95 \\times \\operatorname{mean}(\\mu_{i+1}, \\ldots, \\mu_{i+10})\\) and this holds for \\(\\mu_{i+1}\\)-&gt;If so, bin i’s mean u* is the threshold\n- The breakpoint detection method"
   },
   {
     "objectID": "index.html",
@@ -47,6 +47,20 @@
     "title": "Zoe PhD Info",
     "section": "QE Deadlines",
     "text": "QE Deadlines\n\n\n\n\n\n\n\n\nDates\nSubmissions\nNotes\n\n\n\n\n09/22\nChapter 1&2 Proposal and Bibliography DRAFT\nSubmit to Remi\n\n\n10/14\nBibliography DRAFT\nSubmit to Remi\n\n\n10/20 the best\n10/27 the latest\nBibliography FINAL\nSubmit to all committee members\nSuggest 2 months\n\n\n10/20\nProposal DRAFT\nSubmit to Remi\n\n\n11/07 the latest\nProposal FINAL\nSubmit to all committee members\nSuggest 6-8 weeks\n\n\n11/28\nSubmission of CE\nSubmit to all committee members\n\n\n12/12\nOral Presentation"
+  },
+  {
+    "objectID": "C3-Coordination of MCUE VCUE.html",
+    "href": "C3-Coordination of MCUE VCUE.html",
+    "title": "Zoe PhD Info",
+    "section": "",
+    "text": "Overview:\n\n\nTao, F., Huang, Y., Hungate, B. A., Manzoni, S., Frey, S. D., Schmidt, M. W. I., Reichstein, M., Carvalhais, N., Ciais, P., Jiang, L., Lehmann, J., Wang, Y.‑P., Houlton, B. Z., Ahrens, B., Mishra, U., Hugelius, G., Hocking, T. D., Lu, X., Shi, Z., Viatkin, K., … Luo, Y. (2023). Microbial carbon use efficiency promotes global soil carbon storage. Nature, 618(7967), 981–985. https://doi.org/10.1038/s41586-023-06042-3"
+  },
+  {
+    "objectID": "C3-Coordination of MCUE VCUE.html#chapter-3-the-coordination-between-mcue-and-vcue",
+    "href": "C3-Coordination of MCUE VCUE.html#chapter-3-the-coordination-between-mcue-and-vcue",
+    "title": "Zoe PhD Info",
+    "section": "",
+    "text": "Overview:\n\n\nTao, F., Huang, Y., Hungate, B. A., Manzoni, S., Frey, S. D., Schmidt, M. W. I., Reichstein, M., Carvalhais, N., Ciais, P., Jiang, L., Lehmann, J., Wang, Y.‑P., Houlton, B. Z., Ahrens, B., Mishra, U., Hugelius, G., Hocking, T. D., Lu, X., Shi, Z., Viatkin, K., … Luo, Y. (2023). Microbial carbon use efficiency promotes global soil carbon storage. Nature, 618(7967), 981–985. https://doi.org/10.1038/s41586-023-06042-3"
   },
   {
     "objectID": "C1-Partitioning Algorithms.html",

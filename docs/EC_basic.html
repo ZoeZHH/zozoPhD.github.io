@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>c2-seasonal-vars-of-cue – Zoe PhD Info</title>
+<title>ec_basic – Zoe PhD Info</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -96,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">C1-Partitioning Algorithms</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./C2-Seasonal Vars of CUE.html" aria-current="page"> 
+    <a class="nav-link" href="./C2-Seasonal Vars of CUE.html"> 
 <span class="menu-text">C2-Seasonal Vars of CUE</span></a>
   </li>  
   <li class="nav-item">
@@ -104,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">C3-Coordination of MCUE VCUE</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./EC_basic.html"> 
+    <a class="nav-link active" href="./EC_basic.html" aria-current="page"> 
 <span class="menu-text">EC Basic</span></a>
   </li>  
 </ul>
@@ -124,13 +153,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#chapter-2-understanding-seasonal-variations-of-carbon-use-efficiency-and-autotrophic-respiration-using-eddy-covariance-observations" id="toc-chapter-2-understanding-seasonal-variations-of-carbon-use-efficiency-and-autotrophic-respiration-using-eddy-covariance-observations" class="nav-link active" data-scroll-target="#chapter-2-understanding-seasonal-variations-of-carbon-use-efficiency-and-autotrophic-respiration-using-eddy-covariance-observations"><strong>CHAPTER 2-Understanding Seasonal Variations of Carbon Use Efficiency and Autotrophic Respiration Using Eddy Covariance Observations</strong></a>
-  <ul class="collapse">
-  <li><a href="#related-papers" id="toc-related-papers" class="nav-link" data-scroll-target="#related-papers"><strong>Related Papers</strong></a>
-  <ul class="collapse">
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  </ul></li>
-  </ul></li>
+  <li><a href="#u-filtering" id="toc-u-filtering" class="nav-link active" data-scroll-target="#u-filtering">u* filtering</a></li>
   </ul>
 </nav>
     </div>
@@ -140,20 +163,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="chapter-2-understanding-seasonal-variations-of-carbon-use-efficiency-and-autotrophic-respiration-using-eddy-covariance-observations" class="level1">
-<h1><strong>CHAPTER 2-Understanding Seasonal Variations of Carbon Use Efficiency and Autotrophic Respiration Using Eddy Covariance Observations</strong></h1>
-<p><strong>Overview:</strong> Carbon use efficiency (CUE), defined as the ratio of net primary production (NPP, where NPP = GPP − R<sub>a</sub>) to gross primary production (GPP), is a key indicator of how efficiently ecosystems convert assimilated carbon into biomass. Due to the challenges of directly measuring NPP, CUE has often been assumed to be nearly constant across ecosystems over the past two decades. As a result, little attention has been given to its seasonal or temporal variability. However, a recent study has introduced new methods to estimate NPP and autotrophic respiration (R<sub>a</sub>) by using ecosystem respiration (R<sub>eco</sub>) and GPP derived from eddy covariance (EC) data. These approaches suggest that CUE can vary significantly among ecosystems and over time. In this study, I apply this novel method using the refined GPP and R<sub>eco</sub> data from previous chapter to investigate the seasonal dynamics of both CUE and R<sub>a</sub>.</p>
-<section id="related-papers" class="level2">
-<h2 class="anchored" data-anchor-id="related-papers"><strong>Related Papers</strong></h2>
-<section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
-<p><em>Doughty, C. E., Goldsmith, G. R., Raab, N., Girardin, C. A. J., Amezquita, F. F., Huaraca‑Huasco, W. H., Silva‑Espejo, J. E., Araujo‑Murakami, A., da Costa, M. C., da Costa, A. C. L., Rocha, W., Galbraith, D., Meir, P., Metcalfe, D. B., &amp; Malhi, Y. (2018). What controls variation in carbon use efficiency among Amazonian tropical forests?</em> <em>Biotropica, 50</em>(1), 16–25. <a href="https://doi.org/10.1111/btp.12504" class="uri">https://doi.org/10.1111/btp.12504</a></p>
-<p>Malhi, Y., Girardin, C., Metcalfe, D. B., Doughty, C. E., Aragão, L. E. O. C., Rifai, S. W., Oliveras, I., Shenkin, A., Aguirre‑Gutiérrez, J., Dahlsjö, C. A. L., Riutta, T., Berenguer, E., Moore, S., Huasco, W. H., Salinas, N., da Costa, A. C. L., Bentley, L. P., Adu‑Bredu, S., Marthews, T. R., … Phillips, O. L. (2021). The Global Ecosystems Monitoring network: Monitoring ecosystem productivity and carbon cycling across the tropics. <em>Biological Conservation, 253</em>, Article 108889. <a href="https://doi.org/10.1016/j.biocon.2020.108889" class="uri">https://doi.org/10.1016/j.biocon.2020.108889</a></p>
-<p>Lu, X., Chung, C., Malhi, Y., &amp; Huang, C. (2025). Global patterns in the allocation of forest net primary production. <em>Journal of Biogeography</em>, <em>––</em> (Advance online publication). <a href="https://doi.org/10.1111/jbi.15094" class="uri">https://doi.org/10.1111/jbi.15094</a> <a href="https://www.climate.ox.ac.uk/publication/2082102/dimensions?utm_source=chatgpt.com" alt="https://www.climate.ox.ac.uk/publication/2082102/dimensions?utm_source=chatgpt.com"><u>Lund University+10climate.ox.ac.uk+10onesearch.nihlibrary.ors.nih.gov+10</u></a></p>
+<section id="u-filtering" class="level2">
+<h2 class="anchored" data-anchor-id="u-filtering">u* filtering</h2>
+<p><img src="img/u* threshold.png" alt="u* threshold" style="float: right; margin-left: 15px; width: 300px;"></p>
+<p>At night, clear and calm conditions, atmosphere becomes stably stratified (cool air settles near ground, warm air sits above -&gt; suppress vertical mixing) -&gt; CO<sub>2</sub> produced near the surface by respiration accumulation close to the ground BUT EC measure vertical fluxes of CO<sub>2</sub> which rely on turbulence -&gt; underestimate the true respiration happening at the surface</p>
+<p>Scientists assumes a threshold of u* (detect the <strong>minimum amount of turbulence</strong> needed for reliable nighttime NEE (ecosystem respiration) measurements), two methods:<br>
+- The moving point method (Papale et al., 2006 https://doi.org/10.5194/bg-3-571-2006):<br>
+Seperate BINS: Only nighttime data used (R<sub>g</sub> &lt; 10 W m-2) -&gt; seasonal splitting (data are split by seasons to account for changes in surface properties) -&gt; temperature subsets (each season is further split into 6 temperature bins using quantiles, to ensure homogeneity of respiration rates, temperature is closely related to respiration rates!) -&gt; within each temperature subset, u* is divided into ~20 bins with equal number of points</p>
+<p>Moving Point Test: For each bin i, compute mean NEE of bin i (<span class="math inline">\(\mu_i\)</span>) and mean NEE of the next 10 bins (<span class="math inline">\(\mu_{i+1\,\ldots\,i+10}\)</span>) -&gt; Check if <span class="math inline">\(\mu_i &gt; 0.95 \times \operatorname{mean}(\mu_{i+1}, \ldots, \mu_{i+10})\)</span> and this holds for <span class="math inline">\(\mu_{i+1}\)</span>-&gt;If so, bin i’s mean u* is the threshold<br>
+- The breakpoint detection method</p>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->

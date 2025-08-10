@@ -8,7 +8,7 @@ format:
 
 ## u\* filtering
 
-<img src="img/u%2A%20threshold.png" alt="u* threshold" style="float: right; margin-left: 15px; width: 300px;"/>
+<img src="img/u%2A%20threshold.png" alt="u* threshold" style="float: right; margin-left: 15px; " width="381"/>
 
 At night, clear and calm conditions, atmosphere becomes stably stratified (cool air settles near ground, warm air sits above -\> suppress vertical mixing) -\> CO~2~ produced near the surface by respiration accumulation close to the ground BUT EC measure vertical fluxes of CO~2~ which rely on turbulence -\> underestimate the true respiration happening at the surface
 
