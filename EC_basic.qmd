@@ -17,4 +17,3 @@ Scientists assumes a threshold of u\* (detect the **minimum amount of turbulence
 Seperate BINS: Only nighttime data used (R~g~ \< 10 W m-2) -\> seasonal splitting (data are split by seasons to account for changes in surface properties) -\> temperature subsets (each season is further split into 6 temperature bins using quantiles, to ensure homogeneity of respiration rates, temperature is closely related to respiration rates!) -\> within each temperature subset, u\* is divided into \~20 bins with equal number of points
 
 Moving Point Test: For each bin i, compute mean NEE of bin i ($\mu_i$) and mean NEE of the next 10 bins ($\mu_{i+1\,\ldots\,i+10}$) -\> Check if $\mu_i > 0.95 \times \operatorname{mean}(\mu_{i+1}, \ldots, \mu_{i+10})$ and this holds for $\mu_{i+1}$-\>If so, bin i's mean u\* is the threshold\
-- The breakpoint detection method
