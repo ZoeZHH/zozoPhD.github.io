@@ -25,7 +25,7 @@ Moving Point Test: For each bin i, compute mean NEE of bin i ($\mu_i$) and mean 
 Overview: Tables were created for each site so that missing values of F~NEE~ could be "looked-up" based on environmental conditions associated with the missing data.
 
 **Pick a gap** in the cleaned (QC + u\* filtered) flux data (`VAR_fall` is NA).\
-**Set the search window** — user-defined `WinDays.i` days before and after the gap; full window length = `2 × WinDays.i` days.
+**Set the search window** — user-defined `WinDays.i` days before and after the gap; full window length = `2 × WinDays.i` days.\
 **Choose condition variables and tolerances** — up to 5 meteorological drivers (e.g., `Rg` ±50 W m⁻², `Tair` ±2.5 °C, `VPD` ±5 hPa).\
 - **Special rule:** If the first variable is `Rg`, reduce tolerance at low light to a minimum of 20 W m⁻² and never exceed the original tolerance, to avoid mismatching dark and bright conditions.\
 **Find candidate records** inside the time window that:\

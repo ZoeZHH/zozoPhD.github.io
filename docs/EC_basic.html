@@ -154,6 +154,11 @@ window.Quarto = {
    
   <ul>
   <li><a href="#u-filtering" id="toc-u-filtering" class="nav-link active" data-scroll-target="#u-filtering">u* filtering</a></li>
+  <li><a href="#gap-filling" id="toc-gap-filling" class="nav-link" data-scroll-target="#gap-filling">Gap-filling</a>
+  <ul class="collapse">
+  <li><a href="#look-up-tables" id="toc-look-up-tables" class="nav-link" data-scroll-target="#look-up-tables">Look-up Tables</a></li>
+  <li><a href="#mean-diurnal-course" id="toc-mean-diurnal-course" class="nav-link" data-scroll-target="#mean-diurnal-course">Mean Diurnal Course</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -172,8 +177,52 @@ window.Quarto = {
 Seperate BINS: Only nighttime data used (R<sub>g</sub> &lt; 10 W m-2) -&gt; seasonal splitting (data are split by seasons to account for changes in surface properties) -&gt; temperature subsets (each season is further split into 6 temperature bins using quantiles, to ensure homogeneity of respiration rates, temperature is closely related to respiration rates!) -&gt; within each temperature subset, u* is divided into ~20 bins with equal number of points</p>
 <p>Moving Point Test: For each bin i, compute mean NEE of bin i (<span class="math inline">\(\mu_i\)</span>) and mean NEE of the next 10 bins (<span class="math inline">\(\mu_{i+1\,\ldots\,i+10}\)</span>) -&gt; Check if <span class="math inline">\(\mu_i &gt; 0.95 \times \operatorname{mean}(\mu_{i+1}, \ldots, \mu_{i+10})\)</span> and this holds for <span class="math inline">\(\mu_{i+1}\)</span>-&gt;If so, bin i’s mean u* is the threshold<br>
 </p>
+</section>
+<section id="gap-filling" class="level2">
+<h2 class="anchored" data-anchor-id="gap-filling">Gap-filling</h2>
+<section id="look-up-tables" class="level3">
+<h3 class="anchored" data-anchor-id="look-up-tables">Look-up Tables</h3>
+<p>Overview: Tables were created for each site so that missing values of F<sub>NEE</sub> could be “looked-up” based on environmental conditions associated with the missing data.</p>
+<p><strong>Pick a gap</strong> in the cleaned (QC + u* filtered) flux data (<code>VAR_fall</code> is NA).<br>
+<strong>Set the search window</strong> — user-defined <code>WinDays.i</code> days before and after the gap; full window length = <code>2 × WinDays.i</code> days. <strong>Choose condition variables and tolerances</strong> — up to 5 meteorological drivers (e.g., <code>Rg</code> ±50 W m⁻², <code>Tair</code> ±2.5 °C, <code>VPD</code> ±5 hPa).<br>
+- <strong>Special rule:</strong> If the first variable is <code>Rg</code>, reduce tolerance at low light to a minimum of 20 W m⁻² and never exceed the original tolerance, to avoid mismatching dark and bright conditions.<br>
+<strong>Find candidate records</strong> inside the time window that:<br>
+- Have a measured original value (<code>VAR_orig</code> not NA), and<br>
+- For each active driver, the absolute difference from the gap’s value is less than the set tolerance (using the adjusted <code>Rg</code> tolerance if applicable).<br>
+<strong>Check sample size:</strong> Require at least 2 valid matches to proceed.<br>
+<strong>Fill the gap:</strong><br>
+- Value = mean of all matching records.<br>
+- Uncertainty = standard deviation (SD) of the matching records.<br>
+- <code>fnum</code> = number of matches used.<br>
+<strong>Assign method code and QC:</strong><br>
+- <code>fmeth = 1</code> if ≥3 drivers used; <code>fmeth = 2</code> if only 1 driver used.<br>
+- QC = 1 for short windows (≤14 days full span for ≥3 drivers; ≤14 or ≤28 days for 1 driver), QC = 2 for medium windows, QC = 3 for long windows.<br>
+<strong>Write results back:</strong> Store filled value, number of matches, SD, method code, window length, and QC in <code>VAR_fall</code> and related columns. Only fill <code>VAR_f</code> if it’s still NA.<br>
+<strong>Skip if no fill:</strong> If &lt;2 matches found, leave the gap for later methods (e.g., MDC) in the MDS cascade.</p>
+</section>
+<section id="mean-diurnal-course" class="level3">
+<h3 class="anchored" data-anchor-id="mean-diurnal-course">Mean Diurnal Course</h3>
+<p>Overview: Fills missing flux values by averaging measurements from the same time of day (±1 hour) on nearby days, assuming that conditions at the same time of day are similar on days close together. Medium performance but it has advantage that this approach can be used even if no meteorological information is available.</p>
+<p><strong>Pick a gap</strong> in the cleaned (QC + u* filtered) flux data (<code>VAR_fall</code> is NA).<br>
+<strong>Set the search window</strong> — by default ±7 days around the gap (user-defined <code>WinDays.i</code>), giving a full window length of <code>2 × WinDays + 1</code> days.<br>
+<strong>Identify same-time-of-day neighbors</strong>:<br>
+Use the gap’s position in the day and collect indices for:<br>
+- The current day: ±2 records (≈±1 hour) around the gap time.<br>
+- Each day up to <code>WinDays.i</code> days before and after: same-time ±1 hour.<br>
+<strong>Keep only measured points</strong>: Remove any candidate records where the original flux (<code>VAR_orig</code>) is NA.<br>
+<strong>Check sample size</strong>: Require at least 2 valid neighbors to proceed.<br>
+<strong>Fill the gap</strong>:<br>
+- Value = mean of all valid neighbors.<br>
+- Uncertainty = standard deviation (SD) of those neighbors.<br>
+- <code>fnum</code> = number of neighbors used.<br>
+<strong>Assign method code and QC</strong>:<br>
+- <code>fmeth = 3</code> (MDC method).<br>
+- <code>fwin</code> = number of days spanned (<code>2 × WinDays + 1</code>).<br>
+- QC = 1 if ≤1 day used; 2 if &gt;1–5 days; 3 if &gt;5 days.<br>
+<strong>Write results back</strong>: Store filled value, number of points, SD, method code, window length, and QC in <code>VAR_fall</code> and related columns. Only fill <code>VAR_f</code> if it’s still NA.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
