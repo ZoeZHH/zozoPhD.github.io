@@ -66,7 +66,7 @@ Use the gap’s position in the day and collect indices for:\
 
 ### Marginal Distribution Sampling (MDS)
 
-![ Figure 2. Gap filling flowchart](img/gapfilling.png){alt="gap filling" style="float: right; margin-left: 15px;" width="450" height="350"}
+![ Figure 2. Gap filling flowchart (Reichstein et al., 2005)](img/gapfilling.png){alt="gap filling" style="float: right; margin-left: 15px;" width="450" height="350"}
 
 Overview: To solve the 1) covariation of the fluxes with the meteorological variables and 2) temporal autocorrelation based on LUT and MDC
 
@@ -76,3 +76,5 @@ Overview: To solve the 1) covariation of the fluxes with the meteorological vari
 -\> the same approach is taken, but similar meteorological conditions can only be defined via Rg deviation less than 50 W m 2\
 (3) Radiation data is missing\
 -\> the missing value is replaced by the average value at the same time of the day (1 h), i.e. by the mean diurnal course. In this case, the window size starts with 0.5 days
+
+For other gap filling methods and related evaluations, 10.1016/j.agrformet.2007.08.011
