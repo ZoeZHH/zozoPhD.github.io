@@ -20,7 +20,7 @@ Moving Point Test: For each bin i, compute mean NEE of bin i ($\mu_i$) and mean 
 
 ## Gap-filling
 
-### Look-up Tables
+### Look-up Tables (LUT)
 
 Overview: Tables were created for each site so that missing values of F~NEE~ could be "looked-up" based on environmental conditions associated with the missing data.
 
@@ -42,7 +42,7 @@ Overview: Tables were created for each site so that missing values of F~NEE~ cou
 **Write results back:** Store filled value, number of matches, SD, method code, window length, and QC in `VAR_fall` and related columns. Only fill `VAR_f` if it’s still NA.\
 **Skip if no fill:** If \<2 matches found, leave the gap for later methods (e.g., MDC) in the MDS cascade.
 
-### Mean Diurnal Course
+### Mean Diurnal Course (MDC)
 
 Overview: Fills missing flux values by averaging measurements from the same time of day (±1 hour) on nearby days, assuming that conditions at the same time of day are similar on days close together. Medium performance but it has advantage that this approach can be used even if no meteorological information is available.
 
@@ -63,3 +63,14 @@ Use the gap’s position in the day and collect indices for: \
 - `fwin` = number of days spanned (`2 × WinDays + 1`).\
 - QC = 1 if ≤1 day used; 2 if \>1–5 days; 3 if \>5 days.\
 **Write results back**: Store filled value, number of points, SD, method code, window length, and QC in `VAR_fall` and related columns. Only fill `VAR_f` if it’s still NA.
+
+### Marginal Distribution Sampling (MDS)
+
+Overview: To solve the 1) covariation of the fluxes with the meteorological variables and 2) temporal autocorrelation based on LUT and MDC
+
+\(1\) Only the data of direct interest are missing, but all meteorological data are available \
+-\> \[LUT\] the missing value is replaced by the average value under similar meteorological conditions within a time-window of 7 days. Similar meteorological conditions are present when Rg, Tair and VPD do not deviate by more than 50 W m 2, 2.5 1C, and 5.0 hPa, respectively. If no similar meteorological conditions, averaging window is increased to 14 days.\
+(2) Air temperature or VPD is missing, but radiation is available\
+-\> the same approach is taken, but similar meteorological conditions can only be defined via Rg deviation less than 50 W m 2\
+(3) Radiation data is missing\
+-\> the missing value is replaced by the average value at the same time of the day (1 h), i.e. by the mean diurnal course. In this case, the window size starts with 0.5 days
