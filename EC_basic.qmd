@@ -49,7 +49,7 @@ Overview: Fills missing flux values by averaging measurements from the same time
 **Pick a gap** in the cleaned (QC + u\* filtered) flux data (`VAR_fall` is NA).\
 **Set the search window** — by default ±7 days around the gap (user-defined `WinDays.i`), giving a full window length of `2 × WinDays + 1` days.\
 **Identify same-time-of-day neighbors**:\
-Use the gap’s position in the day and collect indices for: \
+Use the gap’s position in the day and collect indices for:\
 - The current day: ±2 records (≈±1 hour) around the gap time.\
 - Each day up to `WinDays.i` days before and after: same-time ±1 hour.\
 **Keep only measured points**: Remove any candidate records where the original flux (`VAR_orig`) is NA.\
@@ -66,9 +66,11 @@ Use the gap’s position in the day and collect indices for: \
 
 ### Marginal Distribution Sampling (MDS)
 
+![ Figure 2. Gap filling flowchart](img/gapfilling.png){alt="gap filling" style="float: right; margin-left: 15px;" width="450" height="350"}
+
 Overview: To solve the 1) covariation of the fluxes with the meteorological variables and 2) temporal autocorrelation based on LUT and MDC
 
-\(1\) Only the data of direct interest are missing, but all meteorological data are available \
+\(1\) Only the data of direct interest are missing, but all meteorological data are available\
 -\> \[LUT\] the missing value is replaced by the average value under similar meteorological conditions within a time-window of 7 days. Similar meteorological conditions are present when Rg, Tair and VPD do not deviate by more than 50 W m 2, 2.5 1C, and 5.0 hPa, respectively. If no similar meteorological conditions, averaging window is increased to 14 days.\
 (2) Air temperature or VPD is missing, but radiation is available\
 -\> the same approach is taken, but similar meteorological conditions can only be defined via Rg deviation less than 50 W m 2\
