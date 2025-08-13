@@ -66,7 +66,7 @@ Use the gap’s position in the day and collect indices for:\
 
 ### Marginal Distribution Sampling (MDS)
 
-![ Figure 2. Gap filling flowchart (Reichstein et al., 2005)](img/gapfilling.png){alt="gap filling" style="float: right; margin-left: 15px;" width="450" height="350"}
+![gap filling](img/gapfilling.png){style="float: right; margin-left: 15px;" width="450" height="350"}
 
 Overview: To solve the 1) covariation of the fluxes with the meteorological variables and 2) temporal autocorrelation based on LUT and MDC
 
@@ -78,3 +78,7 @@ Overview: To solve the 1) covariation of the fluxes with the meteorological vari
 -\> the missing value is replaced by the average value at the same time of the day (1 h), i.e. by the mean diurnal course. In this case, the window size starts with 0.5 days
 
 For other gap filling methods and related evaluations, 10.1016/j.agrformet.2007.08.011
+
+## Daytime Partitioning
+
+Step 1: Estimated E0 for 12 days windows. Only records which temperature above -1 °C as the night fit assumes microbial/plant respiration responds smoothly to temperature (unfrozen). Resample the subset with replacement (bootstrap) so some points are repeated or omitted, get differen E~0~ and calculate the standatd deviation of E~0~ (). T~Ref~ set as the median temperature of the window. We got missing estimates, report for non-valid windows with too few valid records (minwindow = 10), missing estimates then filled during the smoothing in step2.
