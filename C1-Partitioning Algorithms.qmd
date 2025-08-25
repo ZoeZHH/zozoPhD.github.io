@@ -14,7 +14,7 @@ format:
 
 ### Methodology
 
-#### Flux Data Post-Processing: 
+#### Flux Data Post-Processing:
 
 -   (Papale et al., 2006) the first paper came out on suggesting a standardized processing with EC data
 
@@ -28,8 +28,12 @@ Wutzler, T., Lucas-Moffat, A., Migliavacca, M., Knauer, J., Sickel, K., Šigut, 
 
 Pastorello, G., Trotta, C., Canfora, E., Chu, H., Christianson, D., Cheah, Y.-W., Poindexter, C., Chen, J., Elbashandy, A., Humphrey, M., Isaac, P., Polidori, D., Reichstein, M., Ribeca, A., Van Ingen, C., Vuichard, N., Zhang, L., Amiro, B., Ammann, C., … Papale, D. (2020). The FLUXNET2015 dataset and the ONEFlux processing pipeline for eddy covariance data. *Scientific Data*, *7*(1), 225. https://doi.org/10.1038/s41597-020-0534-3
 
-#### Daytime Partitioning: 
+#### Daytime Partitioning:
 
 -   (Lasslop et al., 2010) the theories under daytime partitioning
 
 Lasslop, G., Reichstein, M., Papale, D., Richardson, A. D., Arneth, A., Barr, A., Stoy, P., & Wohlfahrt, G. (2010). Separation of net ecosystem exchange into assimilation and respiration using a light response curve approach: Critical issues and global evaluation. *Global Change Biology*, *16*(1), 187–208. https://doi.org/10.1111/j.1365-2486.2009.02041.x
+
+-   (Lasslop et al., 2012) identify the proper driving temperature for partitioning
+
+Lasslop, G., Migliavacca, M., Bohrer, G., Reichstein, M., Bahn, M., Ibrom, A., Jacobs, C., Kolari, P., Papale, D., Vesala, T., Wohlfahrt, G., & Cescatti, A. (2012). On the choice of the driving temperature for eddy-covariance carbon dioxide flux partitioning. Biogeosciences, 9(12), 5243–5259. https://doi.org/10.5194/bg-9-5243-2012

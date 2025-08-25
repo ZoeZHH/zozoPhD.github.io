@@ -82,3 +82,6 @@ For other gap filling methods and related evaluations, 10.1016/j.agrformet.2007.
 ## Daytime Partitioning
 
 Step 1: Estimated E0 for 12 days windows. Only records which temperature above -1 °C as the night fit assumes microbial/plant respiration responds smoothly to temperature (unfrozen). Resample the subset with replacement (bootstrap) so some points are repeated or omitted, get differen E~0~ and calculate the standatd deviation of E~0~ (). T~Ref~ set as the median temperature of the window. We got missing estimates, report for non-valid windows with too few valid records (minwindow = 10), missing estimates then filled during the smoothing in step2.
+
+Notes to learn:
+1. Bootstrap
