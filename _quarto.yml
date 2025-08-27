@@ -16,6 +16,8 @@ website:
         text: C3-Coordination of MCUE VCUE
       - href: EC_basic.qmd
         text: EC Basic
+      - href: CUE.qmd
+        text: CUE Review
     tools:
       - icon: github
         href: https://github.com/ZoeZHH
