@@ -12,6 +12,12 @@ format:
 
 ## **Related Papers**
 
+### Findings
+
+Through analysing 26 papers, 60 data points to reject the hypothesis: CUE is constant among forest types.
+
+DeLUCIA, E. H., Drake, J. E., Thomas, R. B., & Gonzalez‐Meler, M. (2007). Forest carbon use efficiency: Is respiration a constant fraction of gross primary production? Global Change Biology, 13(6), 1157–1167. https://doi.org/10.1111/j.1365-2486.2007.01365.x
+
 ### Data
 
 *Doughty, C. E., Goldsmith, G. R., Raab, N., Girardin, C. A. J., Amezquita, F. F., Huaraca‑Huasco, W. H., Silva‑Espejo, J. E., Araujo‑Murakami, A., da Costa, M. C., da Costa, A. C. L., Rocha, W., Galbraith, D., Meir, P., Metcalfe, D. B., & Malhi, Y. (2018). What controls variation in carbon use efficiency among Amazonian tropical forests?* *Biotropica, 50*(1), 16–25. <https://doi.org/10.1111/btp.12504>
