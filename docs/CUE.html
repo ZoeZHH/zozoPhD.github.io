@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>c1-partitioning-algorithms – Zoe PhD Info</title>
+<title>cue – Zoe PhD Info</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./C1-Partitioning Algorithms.html" aria-current="page"> 
+    <a class="nav-link" href="./C1-Partitioning Algorithms.html"> 
 <span class="menu-text">C1-Partitioning Algorithms</span></a>
   </li>  
   <li class="nav-item">
@@ -108,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">EC Basic</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./CUE.html"> 
+    <a class="nav-link active" href="./CUE.html" aria-current="page"> 
 <span class="menu-text">CUE Review</span></a>
   </li>  
 </ul>
@@ -128,12 +128,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#chapter-1-improving-daytime-partitioning-algorithms-in-eddy-covariance-observations-incorporating-absorbed-par-and-canopy-temperature" id="toc-chapter-1-improving-daytime-partitioning-algorithms-in-eddy-covariance-observations-incorporating-absorbed-par-and-canopy-temperature" class="nav-link active" data-scroll-target="#chapter-1-improving-daytime-partitioning-algorithms-in-eddy-covariance-observations-incorporating-absorbed-par-and-canopy-temperature">CHAPTER 1-Improving Daytime Partitioning Algorithms in Eddy Covariance Observations: Incorporating Absorbed PAR and Canopy Temperature</a>
+  <li><a href="#theoretical-cue" id="toc-theoretical-cue" class="nav-link active" data-scroll-target="#theoretical-cue">Theoretical CUE</a>
   <ul class="collapse">
-  <li><a href="#related-papers" id="toc-related-papers" class="nav-link" data-scroll-target="#related-papers">Related Papers</a>
-  <ul class="collapse">
-  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
-  </ul></li>
+  <li><a href="#what-is-cue" id="toc-what-is-cue" class="nav-link" data-scroll-target="#what-is-cue">What is CUE?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -144,42 +141,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="chapter-1-improving-daytime-partitioning-algorithms-in-eddy-covariance-observations-incorporating-absorbed-par-and-canopy-temperature" class="level1">
-<h1>CHAPTER 1-Improving Daytime Partitioning Algorithms in Eddy Covariance Observations: Incorporating Absorbed PAR and Canopy Temperature</h1>
-<p><strong>Overview:</strong> An eddy covariance (EC) flux tower equipped with gas analyzers continuously measures the exchange of carbon flux between land and atmosphere. With over 1,400 EC towers operating globally, this network plays a key role in monitoring the terrestrial carbon cycle. The CO<sub>2</sub> analyzer provides measurements of net ecosystem exchange (NEE), which represents the balance between carbon uptake through photosynthesis (gross primary production, GPP) and carbon release through ecosystem respiration (R<sub>eco</sub>). However, GPP and R<sub>eco</sub> are not directly measured and must be estimated by applying partitioning algorithms to the NEE data. Current partitioning methods have limitations in accuracy. In this study, we aim to improve these algorithms by incorporating more precise measurements of absorbed photosynthetically active radiation (PAR) and canopy temperature (T<sub>c</sub>). These refinements are expected to enhance the reliability of carbon flux estimates and deepen our understanding of ecosystem carbon dynamics.</p>
-<section id="related-papers" class="level2">
-<h2 class="anchored" data-anchor-id="related-papers">Related Papers</h2>
-<section id="methodology" class="level3">
-<h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
-<section id="flux-data-post-processing" class="level4">
-<h4 class="anchored" data-anchor-id="flux-data-post-processing">Flux Data Post-Processing:</h4>
-<ul>
-<li>(Papale et al., 2006) the first paper came out on suggesting a standardized processing with EC data</li>
-</ul>
-<p>Papale, D., Reichstein, M., Aubinet, M., Canfora, E., Bernhofer, C., Kutsch, W., Longdoz, B., Rambal, S., Valentini, R., Vesala, T., &amp; Yakir, D. (2006). Towards a standardized processing of Net Ecosystem Exchange measured with eddy covariance technique: Algorithms and uncertainty estimation. <em>Biogeosciences</em>, <em>3</em>(4), 571–583. https://doi.org/10.5194/bg-3-571-2006</p>
-<ul>
-<li>(Wutzler et al., 2018) introduces all important procedures that conduct by REddyProc for EC postprocessing steps.</li>
-</ul>
-<p>Wutzler, T., Lucas-Moffat, A., Migliavacca, M., Knauer, J., Sickel, K., Šigut, L., Menzer, O., &amp; Reichstein, M. (2018). Basic and extensible post-processing of eddy covariance flux data with REddyProc. Biogeosciences, 15(16), 5015–5030. https://doi.org/10.5194/bg-15-5015-2018</p>
-<ul>
-<li>(Pastorello et al., 2020) the ONEFlux pipeline that currently formally employed by FLUXNET</li>
-</ul>
-<p>Pastorello, G., Trotta, C., Canfora, E., Chu, H., Christianson, D., Cheah, Y.-W., Poindexter, C., Chen, J., Elbashandy, A., Humphrey, M., Isaac, P., Polidori, D., Reichstein, M., Ribeca, A., Van Ingen, C., Vuichard, N., Zhang, L., Amiro, B., Ammann, C., … Papale, D. (2020). The FLUXNET2015 dataset and the ONEFlux processing pipeline for eddy covariance data. <em>Scientific Data</em>, <em>7</em>(1), 225. https://doi.org/10.1038/s41597-020-0534-3</p>
-</section>
-<section id="daytime-partitioning" class="level4">
-<h4 class="anchored" data-anchor-id="daytime-partitioning">Daytime Partitioning:</h4>
-<ul>
-<li>(Lasslop et al., 2010) the theories under daytime partitioning</li>
-</ul>
-<p>Lasslop, G., Reichstein, M., Papale, D., Richardson, A. D., Arneth, A., Barr, A., Stoy, P., &amp; Wohlfahrt, G. (2010). Separation of net ecosystem exchange into assimilation and respiration using a light response curve approach: Critical issues and global evaluation. <em>Global Change Biology</em>, <em>16</em>(1), 187–208. https://doi.org/10.1111/j.1365-2486.2009.02041.x</p>
-<ul>
-<li>(Lasslop et al., 2012) identify the proper driving temperature for partitioning</li>
-</ul>
-<p>Lasslop, G., Migliavacca, M., Bohrer, G., Reichstein, M., Bahn, M., Ibrom, A., Jacobs, C., Kolari, P., Papale, D., Vesala, T., Wohlfahrt, G., &amp; Cescatti, A. (2012). On the choice of the driving temperature for eddy-covariance carbon dioxide flux partitioning. Biogeosciences, 9(12), 5243–5259. https://doi.org/10.5194/bg-9-5243-2012</p>
+<section id="theoretical-cue" class="level2">
+<h2 class="anchored" data-anchor-id="theoretical-cue">Theoretical CUE</h2>
+<section id="what-is-cue" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-cue">What is CUE?</h3>
+<p>CUE = NPP / GPP = (GPP - R) / GPP, R<sub>a</sub> = R<sub>g</sub> (growth respiration) + R<sub>m</sub> (maintenance respiration), NPP = <strong>Δ</strong> (standing biomass) + losses</p>
+<p>Required 2nd review: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2486.2007.01365.x<br>
+Lowest value of CUE (0.22) was for 115 year-old stand of <em>Picea mariana</em>, the highest value was for a 5-year-old stand of <em>Populus nigra</em> exposed to elevated atmospheric CO2</p>
+<p>Boreal forest - CUE 0.32 -&gt; high rates of C loss during dormant season? can be examined by GPP/foliage ratio<br>
+Tropical forests - CUE 0.46<br>
+Temperate deciduous forests - CUE 0.59</p>
+<p>Autotrophic respiration (R<sub>a</sub>) = sum of all mitochondrial respiration by autotrophs.</p>
 
 
-</section>
-</section>
 </section>
 </section>
 

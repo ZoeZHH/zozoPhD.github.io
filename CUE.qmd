@@ -8,6 +8,8 @@ format:
 
 ## Theoretical CUE
 
+### Understanding GPP and Ra on leaf-level
+
 ### What is CUE?
 
 CUE = NPP / GPP = (GPP - R) / GPP, R~a~ = R~g~ (growth respiration) + R~m~ (maintenance respiration), NPP = **Δ** (standing biomass) + losses
