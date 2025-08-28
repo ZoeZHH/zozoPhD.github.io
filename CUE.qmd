@@ -10,11 +10,13 @@ format:
 
 ### What is CUE?
 
-CUE = NPP / GPP = (GPP - R) / GPP, R = R~g~ (growth respiration) + R~m~ (maintenance respiration), NPP = **Δ** (standing biomass) + losses
+CUE = NPP / GPP = (GPP - R) / GPP, R~a~ = R~g~ (growth respiration) + R~m~ (maintenance respiration), NPP = **Δ** (standing biomass) + losses
 
-Required 2nd review: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2486.2007.01365.x \
+Required 2nd review: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2486.2007.01365.x\
 Lowest value of CUE (0.22) was for 115 year-old stand of *Picea mariana*, the highest value was for a 5-year-old stand of *Populus nigra* exposed to elevated atmospheric CO2
 
 Boreal forest - CUE 0.32 -\> high rates of C loss during dormant season? can be examined by GPP/foliage ratio\
 Tropical forests - CUE 0.46\
 Temperate deciduous forests - CUE 0.59
+
+Autotrophic respiration (R~a~) = sum of all mitochondrial respiration by autotrophs.
