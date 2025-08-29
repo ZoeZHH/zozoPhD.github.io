@@ -6,9 +6,35 @@ format:
     title-block-style: none
 ---
 
+------------------------------------------------------------------------
+
 ## Theoretical CUE
 
 ### Understanding GPP and Ra on leaf-level
+
+Chloroplasts are organelles that conduct photosynthesis, where the photosynthetic pigment chlorophyll captures the energy from sunlight, converts it, and stores it in the energy-storage molecules ATP and NADPH while freeing oxygen from water in plant and algal cells.
+
+::: {layout="[[1,1]]"}
+![Figure 1. Leaf Structure](img/leafstructure.png){width="50%"} ![Figure 2. Chloroplast](img/Chloroplast.png){width="42%"}
+:::
+
+In photosynthesis-light reaction stage, light-dependent reactions convert light energy (absorbed by chlorophyll) into chemical energy (NADPH and ATP) required for the Calvin Cycle.
+
+**Step 1: Light absorption by chlorophyll**; In Photosystem II, chlorophyll absorbs about 4 photons, exciting electrons to a higher energy state. These electrons are transferred into an electron transport chain.
+
+**Step 2: Water splitting**; The oxygen-evolving complex splits 2 water molecules into 4 electrons, 4 protons, and one oxygen molecules. The 4 electrons replace those lost from Photosystem II, the protons accumulate in the thylakoid lumen, and oxygen is released as a byproduct.
+
+**Step 3: Electron transport chain**; 4 electrons move through plastoquinone, cytochrome b6f, and plastocyanin. This transfer drives proton pumping into the lumen, further increasing the proton gradient.
+
+**Step 4: Photosystem I and NADPH formation**; Electrons reach Photosystem I at a lower energy level and are re-excited by light. They are passed to ferredoxin and then to NADP+ reductase, reducing 2 NADP+ to 2 NADPH.
+
+**Step 5: ATP synthesis**; The accumulation of protons in the lumen from water splitting and proton pumping drives their return through ATP synthase, producing about three molecules of ATP from ADP and inorganic phosphate.
+
+![Figure 3. Photosynthesis - Light Reaction](img/LightReaction.png){width="600" height="300"}
+
+In photosynthesis - calvin cycle stage, carbon fixation happened, which NADPH and ATP are used to convert CO~2~ into carbohydrates. There are three phases included: caboxylation, reduction and regeneration.
+
+Carboxylation (carbon fixation): the 5-carbon sugar molecule RuBP from carbohydrates pools combine with CO2 to form two 3C molecules, under the catalyzation of the enzyme Rubisco
 
 ### What is CUE?
 
