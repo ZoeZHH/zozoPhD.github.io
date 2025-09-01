@@ -10,7 +10,7 @@ format:
 
 ## Theoretical CUE
 
-### Understanding GPP and Ra on leaf-level  Leaf Structure: <https://www.youtube.com/watch?v=pwymX2LxnQs>
+### Understanding GPP and Ra on leaf-level Leaf Structure: <https://www.youtube.com/watch?v=pwymX2LxnQs>
 
 Chloroplasts are organelles that conduct photosynthesis, where the photosynthetic pigment chlorophyll captures the energy from sunlight, converts it, and stores it in the energy-storage molecules ATP and NADPH while freeing oxygen from water in plant and algal cells.
 
