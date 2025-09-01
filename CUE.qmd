@@ -10,12 +10,12 @@ format:
 
 ## Theoretical CUE
 
-### Understanding GPP and Ra on leaf-level
+### Understanding GPP and Ra on leaf-level  Leaf Structure: <https://www.youtube.com/watch?v=pwymX2LxnQs>
 
 Chloroplasts are organelles that conduct photosynthesis, where the photosynthetic pigment chlorophyll captures the energy from sunlight, converts it, and stores it in the energy-storage molecules ATP and NADPH while freeing oxygen from water in plant and algal cells.
 
 ::: {layout="[[1,1]]"}
-![Figure 1. Leaf Structure](img/leafstructure.png){width="50%"} ![Figure 2. Chloroplast](img/Chloroplast.png){width="42%"}
+![Figure 1. Leaf Structure](img/leafstructure.png){width="43%"}![Figure 2. Chloroplast](img/Chloroplast.png){width="56%"}
 :::
 
 In photosynthesis-light reaction stage, light-dependent reactions convert light energy (absorbed by chlorophyll) into chemical energy (NADPH and ATP) required for the Calvin Cycle.
@@ -34,7 +34,22 @@ In photosynthesis-light reaction stage, light-dependent reactions convert light 
 
 In photosynthesis - calvin cycle stage, carbon fixation happened, which NADPH and ATP are used to convert CO~2~ into carbohydrates. There are three phases included: caboxylation, reduction and regeneration.
 
-Carboxylation (carbon fixation): the 5-carbon sugar molecule RuBP from carbohydrates pools combine with CO2 to form two 3C molecules, under the catalyzation of the enzyme Rubisco
+**Carboxylation (carbon fixation)**: the 5-carbon sugar molecule RuBP from carbohydrates pools combine with CO2 to form two 3C molecules, under the catalyzation of the enzyme Rubisco.
+
+**Reduction**: the 3C molecules are reduced using ATP and NADPH and then transformed into 3C carbohydrates, a monosaccharide, which is small part exported and then transformed into more complex C compunds
+
+**Regeneration**: the large part of 3C compounds not exported is reused and combined using additional ATP to regenrate the 5C-RuBP.
+
+(Photorespiration happened in the process, which reduce 30-50% net CO2 uptake. Rubisco favors oxygenase, part of them with the energy to produce CO2 instaed of O2)
+
+Refer to the light energy:
+
+Incoming solar radiation -\> about 43.8% are in PAR wavelengths can be used for photosynthesis\
+Gibbs free energy to conert a umol CO2 to glucose is 0.47 J, photo energy to assimilate a umol CO2 is 1.75 J -\> 27% photosynthetic efficiency for absorbed PAR -\> the maximum quantum efficiency is 0.125\
+But actually: 0.081 for C3 plants and 0.040 for C4 plants\
+Only 50% GPP converted to biomass growth -\> 1-2% of total solar radiation to biomass build!
+
+<https://bio.libretexts.org/Learning_Objects/Worksheets/Biology_Tutorials/Cellular_Respiration>
 
 ### What is CUE?
 
