@@ -51,6 +51,12 @@ Only 50% GPP converted to biomass growth -\> 1-2% of total solar radiation to bi
 
 <https://bio.libretexts.org/Learning_Objects/Worksheets/Biology_Tutorials/Cellular_Respiration>
 
+Autotrophic respiration includes leaf (light+dark), stem and root respiration.
+
+1.  Glycolysis
+2.  Krebs (TCA) cycle
+3.  Electron Transport chain (ETC)
+
 ### What is CUE?
 
 CUE = NPP / GPP = (GPP - R) / GPP, R~a~ = R~g~ (growth respiration) + R~m~ (maintenance respiration), NPP = **Δ** (standing biomass) + losses
