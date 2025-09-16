@@ -9,8 +9,8 @@ title: ""
 | 08/07-08/23   | Chapter 1 Literature Glance                 | 15 Days |
 | 08/25         | Chapter 1 Proposal & Bibliography Writing   |         |
 | 08/26-09/17   | Chapter 2 Literature Glance                 | 20 Days |
-| 09/18-09/20   | Chapter 1&2 Proposal & Bibliography Writing | 3 Days  |
-| 09/22-10/11   | Chapter 3 Literature Glance                 | 18 Days |
+| 09/18-09/28   | Chapter 1&2 Proposal & Bibliography Writing | 11 Days |
+| 09/28-10/11   | Chapter 3 Literature Glance                 | 18 Days |
 | 10/13-10/14   | Bibliography Writing                        | 2 Days  |
 | 10/15-10/17   | Proposal Writing                            | 3 Days  |
 | 10/18         | Revision of Bibliography                    |         |
@@ -23,7 +23,7 @@ title: ""
 +------------------+---------------------------------------------+---------------------------------+
 | Dates            | Submissions                                 | Notes                           |
 +==================+=============================================+=================================+
-| 09/22            | Chapter 1&2 Proposal and Bibliography DRAFT | Submit to Remi                  |
+| 09/29            | Chapter 1&2 Proposal and Bibliography DRAFT | Submit to Remi                  |
 +------------------+---------------------------------------------+---------------------------------+
 | 10/14            | Bibliography DRAFT                          | Submit to Remi                  |
 +------------------+---------------------------------------------+---------------------------------+
