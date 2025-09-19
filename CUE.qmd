@@ -100,3 +100,9 @@ Herb dung = herbivore fecal biomass, included as an NPP component to capture car
 $$
 R_{a} = R_{\text{canopy}} + R_{\text{stems}} + R_{\text{rhizosphere}}
 $$
+
+R~stems~ (woody respiration) is measured using a closed dynamic chamber (SRC-1) connected to an IRGA (EGM-4) on permanent collars sealed to tree boles at 1.3 m height, typically across \~25 trees per plot.
+
+R~canopy~ (leaf respiration) is measured as leaf dark respiration with an IRGA and cuvette on \~20 trees per plot, using both sunlit and shaded branches. Branches are re-cut underwater to restore conductivity and leaves are dark-adapted in black bags before measurement.
+
+R~rhizosphere~ is derived from total soil CO~2~ efflux measured with an IRGA (EGM-4) and SRC-1 on permanent soil collars. Partitioning experiments use shallow collars (10 cm) for total respiration and deep collars (40 cm) excluding roots and mycorrhizae, with controls for disturbance effects.
