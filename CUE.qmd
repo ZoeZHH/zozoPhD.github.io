@@ -69,3 +69,34 @@ Tropical forests - CUE 0.46\
 Temperate deciduous forests - CUE 0.59
 
 Autotrophic respiration (R~a~) = sum of all mitochondrial respiration by autotrophs.
+
+## Methods on Measuring CUE
+
+### Global Ecosystem Monitoring (GEM)
+
+GEM network is a network of sites where the productivity and carbon cycling of terrestrial ecosystems is tracked through a standard protocol, and frequently integrated with data on plant functional traits and broader environmental variables, such as tree species community composition, soil and climate.
+
+$$
+\text{NPP} = \text{NPP}_{\text{Above Ground Wood (ACW)}} 
++ \text{NPP}_{\text{litter fall}} 
++ \text{NPP}_{\text{fine roots}} 
++ \text{NPP}_{\text{coarse root}} 
++ \text{NPP}_{\text{understory}} 
++ \text{Herb dung}
+$$
+
+NPP~ACW~ include NPP from wood production and branch turnover. For wood production, we can calculate from forest censuses on annual scale or using the dendrometer bands at a seasonal scale. Then growth rates can be converted into woody biomass by (Chave et al., 2014): $\ln(\text{AGB}) = \alpha + \beta \ln(\rho \times D^2 \times H) + \varepsilon$ (D is trunk diameter, H is tree height); Fallen branch is compensated by new branch growth, calculate by volume (length*diameter)*wood density then converted to dry biomass.
+
+NPP~litterfall~ is the sum of leaf litterfall (outflow) and changes in canopy leaf biomass (inflow). Litterfall is separated into leaves, twigs, and reproductive parts, dried to biomass, and converted to C (using \~50% of dry mass). At some sites, leaf herbivory is quantified by scanning fallen leaves. Seasonal canopy productivity is derived from canopy leaf area index (LAI, from hemispherical photos) combined with specific leaf area (SLA, leaf area per unit mass) to estimate canopy leaf biomass.
+
+NPP~fine\ roots~ is a frequently neglected component of NPP measurements due to the challenge two measure.Two methods are accepted here: 1) installations of root-free ingrowth cores and samples after 3 months (Ingrowth cores → harvest new root dry mass → convert to carbon (\~50% of dry mass) → scale by incubation time and ground area → annual NPP) or 2) trace root growth manually at set intervals through rhizotron (a transparent observation panel installed in the soil).
+
+NPP~coarse\ roots~ is not directly measured but estimated by multiplying aboveground woody productivity with biome-specific allometric relationships.
+
+NPP~understory~ is estimated from seasonal quadrat harvests of aboveground herbaceous biomass, dried and converted to C (\~50% of dry mass). Productivity is calculated as the sum of positive biomass increments between harvests over the year, excluding declines due to turnover.
+
+Herb dung = herbivore fecal biomass, included as an NPP component to capture carbon fluxes from herbivory.
+
+$$
+R_{a} = R_{\text{canopy}} + R_{\text{stems}} + R_{\text{rhizosphere}}
+$$
