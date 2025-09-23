@@ -89,9 +89,9 @@ NPP~ACW~ include NPP from wood production and branch turnover. For wood producti
 
 NPP~litterfall~ is the sum of leaf litterfall (outflow) and changes in canopy leaf biomass (inflow). Litterfall is separated into leaves, twigs, and reproductive parts, dried to biomass, and converted to C (using \~50% of dry mass). At some sites, leaf herbivory is quantified by scanning fallen leaves. Seasonal canopy productivity is derived from canopy leaf area index (LAI, from hemispherical photos) combined with specific leaf area (SLA, leaf area per unit mass) to estimate canopy leaf biomass.
 
-NPP~fine\ roots~ is a frequently neglected component of NPP measurements due to the challenge two measure.Two methods are accepted here: 1) installations of root-free ingrowth cores and samples after 3 months (Ingrowth cores → harvest new root dry mass → convert to carbon (\~50% of dry mass) → scale by incubation time and ground area → annual NPP) or 2) trace root growth manually at set intervals through rhizotron (a transparent observation panel installed in the soil).
+NPP~fine roots~ is a frequently neglected component of NPP measurements due to the challenge two measure.Two methods are accepted here: 1) installations of root-free ingrowth cores and samples after 3 months (Ingrowth cores → harvest new root dry mass → convert to carbon (\~50% of dry mass) → scale by incubation time and ground area → annual NPP) or 2) trace root growth manually at set intervals through rhizotron (a transparent observation panel installed in the soil).
 
-NPP~coarse\ roots~ is not directly measured but estimated by multiplying aboveground woody productivity with biome-specific allometric relationships.
+NPP~coarse roots~ is not directly measured but estimated by multiplying aboveground woody productivity with biome-specific allometric relationships.
 
 NPP~understory~ is estimated from seasonal quadrat harvests of aboveground herbaceous biomass, dried and converted to C (\~50% of dry mass). Productivity is calculated as the sum of positive biomass increments between harvests over the year, excluding declines due to turnover.
 
