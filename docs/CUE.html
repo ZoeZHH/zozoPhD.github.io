@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -133,6 +162,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#understanding-gpp-and-ra-on-leaf-level-leaf-structure-httpswww.youtube.comwatchvpwymx2lxnqs" id="toc-understanding-gpp-and-ra-on-leaf-level-leaf-structure-httpswww.youtube.comwatchvpwymx2lxnqs" class="nav-link" data-scroll-target="#understanding-gpp-and-ra-on-leaf-level-leaf-structure-httpswww.youtube.comwatchvpwymx2lxnqs">Understanding GPP and Ra on leaf-level Leaf Structure: https://www.youtube.com/watch?v=pwymX2LxnQs</a></li>
   <li><a href="#what-is-cue" id="toc-what-is-cue" class="nav-link" data-scroll-target="#what-is-cue">What is CUE?</a></li>
   </ul></li>
+  <li><a href="#methods-on-measuring-cue" id="toc-methods-on-measuring-cue" class="nav-link" data-scroll-target="#methods-on-measuring-cue">Methods on Measuring CUE</a>
+  <ul class="collapse">
+  <li><a href="#global-ecosystem-monitoring-gem" id="toc-global-ecosystem-monitoring-gem" class="nav-link" data-scroll-target="#global-ecosystem-monitoring-gem">Global Ecosystem Monitoring (GEM)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -181,6 +214,12 @@ Gibbs free energy to conert a umol CO2 to glucose is 0.47 J, photo energy to ass
 But actually: 0.081 for C3 plants and 0.040 for C4 plants<br>
 Only 50% GPP converted to biomass growth -&gt; 1-2% of total solar radiation to biomass build!</p>
 <p><a href="https://bio.libretexts.org/Learning_Objects/Worksheets/Biology_Tutorials/Cellular_Respiration" class="uri">https://bio.libretexts.org/Learning_Objects/Worksheets/Biology_Tutorials/Cellular_Respiration</a></p>
+<p>Autotrophic respiration includes leaf (light+dark), stem and root respiration.</p>
+<ol type="1">
+<li>Glycolysis</li>
+<li>Krebs (TCA) cycle</li>
+<li>Electron Transport chain (ETC)</li>
+</ol>
 </section>
 <section id="what-is-cue" class="level3">
 <h3 class="anchored" data-anchor-id="what-is-cue">What is CUE?</h3>
@@ -191,6 +230,33 @@ Lowest value of CUE (0.22) was for 115 year-old stand of <em>Picea mariana</em>,
 Tropical forests - CUE 0.46<br>
 Temperate deciduous forests - CUE 0.59</p>
 <p>Autotrophic respiration (R<sub>a</sub>) = sum of all mitochondrial respiration by autotrophs.</p>
+</section>
+</section>
+<section id="methods-on-measuring-cue" class="level2">
+<h2 class="anchored" data-anchor-id="methods-on-measuring-cue">Methods on Measuring CUE</h2>
+<section id="global-ecosystem-monitoring-gem" class="level3">
+<h3 class="anchored" data-anchor-id="global-ecosystem-monitoring-gem">Global Ecosystem Monitoring (GEM)</h3>
+<p>GEM network is a network of sites where the productivity and carbon cycling of terrestrial ecosystems is tracked through a standard protocol, and frequently integrated with data on plant functional traits and broader environmental variables, such as tree species community composition, soil and climate.</p>
+<p><span class="math display">\[
+\text{NPP} = \text{NPP}_{\text{Above Ground Wood (ACW)}}
++ \text{NPP}_{\text{litter fall}}
++ \text{NPP}_{\text{fine roots}}
++ \text{NPP}_{\text{coarse root}}
++ \text{NPP}_{\text{understory}}
++ \text{Herb dung}
+\]</span></p>
+<p>NPP<sub>ACW</sub> include NPP from wood production and branch turnover. For wood production, we can calculate from forest censuses on annual scale or using the dendrometer bands at a seasonal scale. Then growth rates can be converted into woody biomass by (Chave et al., 2014): <span class="math inline">\(\ln(\text{AGB}) = \alpha + \beta \ln(\rho \times D^2 \times H) + \varepsilon\)</span> (D is trunk diameter, H is tree height); Fallen branch is compensated by new branch growth, calculate by volume (length<em>diameter)</em>wood density then converted to dry biomass.</p>
+<p>NPP<sub>litterfall</sub> is the sum of leaf litterfall (outflow) and changes in canopy leaf biomass (inflow). Litterfall is separated into leaves, twigs, and reproductive parts, dried to biomass, and converted to C (using ~50% of dry mass). At some sites, leaf herbivory is quantified by scanning fallen leaves. Seasonal canopy productivity is derived from canopy leaf area index (LAI, from hemispherical photos) combined with specific leaf area (SLA, leaf area per unit mass) to estimate canopy leaf biomass.</p>
+<p>NPP<sub>fine&nbsp;roots</sub> is a frequently neglected component of NPP measurements due to the challenge two measure.Two methods are accepted here: 1) installations of root-free ingrowth cores and samples after 3 months (Ingrowth cores → harvest new root dry mass → convert to carbon (~50% of dry mass) → scale by incubation time and ground area → annual NPP) or 2) trace root growth manually at set intervals through rhizotron (a transparent observation panel installed in the soil).</p>
+<p>NPP<sub>coarse&nbsp;roots</sub> is not directly measured but estimated by multiplying aboveground woody productivity with biome-specific allometric relationships.</p>
+<p>NPP<sub>understory</sub> is estimated from seasonal quadrat harvests of aboveground herbaceous biomass, dried and converted to C (~50% of dry mass). Productivity is calculated as the sum of positive biomass increments between harvests over the year, excluding declines due to turnover.</p>
+<p>Herb dung = herbivore fecal biomass, included as an NPP component to capture carbon fluxes from herbivory.</p>
+<p><span class="math display">\[
+R_{a} = R_{\text{canopy}} + R_{\text{stems}} + R_{\text{rhizosphere}}
+\]</span></p>
+<p>R<sub>stems</sub> (woody respiration) is measured using a closed dynamic chamber (SRC-1) connected to an IRGA (EGM-4) on permanent collars sealed to tree boles at 1.3 m height, typically across ~25 trees per plot.</p>
+<p>R<sub>canopy</sub> (leaf respiration) is measured as leaf dark respiration with an IRGA and cuvette on ~20 trees per plot, using both sunlit and shaded branches. Branches are re-cut underwater to restore conductivity and leaves are dark-adapted in black bags before measurement.</p>
+<p>R<sub>rhizosphere</sub> is derived from total soil CO<sub>2</sub> efflux measured with an IRGA (EGM-4) and SRC-1 on permanent soil collars. Partitioning experiments use shallow collars (10 cm) for total respiration and deep collars (40 cm) excluding roots and mycorrhizae, with controls for disturbance effects.</p>
 
 
 </section>
