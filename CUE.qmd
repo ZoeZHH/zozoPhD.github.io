@@ -115,20 +115,39 @@ R~rhizosphere~ is derived from total soil CO~2~ efflux measured with an IRGA (EG
 
 ### (Warring et al., 1998)
 
-NPP~ABG~ is determined allometric relationships with DBH
+NPP~a~ is determined allometric relationships with DBH
 
-R~g~ = 25% \* NPP~ABG~
+Rg~a~ = 25% \* NPP~a~
 
-TBCA = f(litterfall)
+TBCA = NPP~root~ + Rg~root~ + Rm~root~ = f(litterfall) = 130+1.92 \* Lf
 
-NPP~BG~ = 0.5TBCA, Rg~BG~ = 0.25TBCA, Rm~BG~ = 0.25TBCA
+NPP~root~ = 0.5TBCA, Rg~root~ = 0.25TBCA, Rm~root~ = 0.25TBCA
 
-Rm~sapwood~ = 0.07GPP OR Rm~stem&branch~ = 0.185GPP
+Rm~sapwood~ = 0.07GPP OR Rm~stem&branch~ = 0.185NPP~a~
 
 Rm~leaves~ = relationship with nitrogen content of living tissue
 
-NPP = NPP~ABG~ + NPP~BG~
+NPP = NPP~a~ + NPP~root~
 
-GPP = R~g~ + Rm~leaves~ + Rm~stem&branch~ + Rg~BG~ + NPP~ABG~ + NPP~BG~
+GPP = Rg~a~ + Rm~leaves~ + Rm~stem&branch~ + Rg~root~ + Rm~root~ + NPP~a~ + NPP~root~
 
 (Additional details can be obtained from the original publications. My take away is that: growth respiration = constant construction cost → easy, single multiplier; but maintenance respiration = ongoing cost of living tissue, organ-specific, and environment-dependent)
+
+Problems here:
+
+-   R~g~ of R~a~ is calculated from NPP, and then GPP is calculated from NPP, this lack of independence between estimates of NPP and GPP constrains the possible values of CUE to near 0.5. Thus, the conclusion that CUE is constant may be an artifact (DeLucia et al., 2007; Medlyn & Dewar, 1999)
+
+(Medlyn & Dewar, 1999)
+
+$$
+\frac{NPP}{GPP} = 
+\frac{NPP_a + NPP_{root}}
+{1.435 \, NPP_a + R_{m(l)} + 2 NPP_{root}}
+= \frac{1}{2 + a \,(b - 0.565)} ,
+$$
+
+where\
+- $a = \dfrac{NPP_a}{NPP}$ is the aboveground fraction of NPP,\
+- $b = \dfrac{R_{m(l)}}{NPP_a}$ is leaf maintenance relative to aboveground NPP.
+
+The two main assumption 1) Rg~root~ + Rm~root~ = NPP~root~ and 2) Rm~stem&branch~ = 0.185NPP~a,~ lead to 1) artefact CUE with NPP/GPP irrespective of the value a. If b is not 0, higher a could lead to great change of NPP/GPP. However, 2) a with upper limit 0.8, b varies from 0.2-2, CUE is still constrained 0.31-0.59.

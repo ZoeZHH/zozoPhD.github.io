@@ -165,6 +165,7 @@ window.Quarto = {
   <li><a href="#methods-on-measuring-cue" id="toc-methods-on-measuring-cue" class="nav-link" data-scroll-target="#methods-on-measuring-cue">Methods on Measuring CUE</a>
   <ul class="collapse">
   <li><a href="#global-ecosystem-monitoring-gem" id="toc-global-ecosystem-monitoring-gem" class="nav-link" data-scroll-target="#global-ecosystem-monitoring-gem">Global Ecosystem Monitoring (GEM)</a></li>
+  <li><a href="#warring-et-al.-1998" id="toc-warring-et-al.-1998" class="nav-link" data-scroll-target="#warring-et-al.-1998">(Warring et al., 1998)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -223,7 +224,10 @@ Only 50% GPP converted to biomass growth -&gt; 1-2% of total solar radiation to 
 </section>
 <section id="what-is-cue" class="level3">
 <h3 class="anchored" data-anchor-id="what-is-cue">What is CUE?</h3>
-<p>CUE = NPP / GPP = (GPP - R) / GPP, R<sub>a</sub> = R<sub>g</sub> (growth respiration) + R<sub>m</sub> (maintenance respiration), NPP = <strong>Δ</strong> (standing biomass) + losses</p>
+<p>CUE = NPP / GPP = (GPP - R<sub>a</sub>) / GPP,</p>
+<p>For Physiological/functional view of R<sub>a</sub>, R<sub>a</sub> = R<sub>g</sub> (growth respiration, the cost of building new tissues) + R<sub>m</sub> (maintenance respiration, the cost of keeping existing tissues alive and functional), this view is often used in models (e.g., process-based models, TRENDY, ORCHIDEE, etc) since it links respiration directly to carbon allocation and growth processes.</p>
+<p>For structural/biometric view of R<sub>a,</sub> R<sub>a</sub> = R<sub>leaves</sub> + R<sub>stems</sub> + R<sub>rhizosphere,</sub> this decomposition is used in field measurements, because respiration is measured by organ/tissue type rather than by physiological function.</p>
+<p>NPP = <strong>Δ</strong> (standing biomass) + losses</p>
 <p>Required 2nd review: https://onlinelibrary.wiley.com/doi/10.1111/j.1365-2486.2007.01365.x<br>
 Lowest value of CUE (0.22) was for 115 year-old stand of <em>Picea mariana</em>, the highest value was for a 5-year-old stand of <em>Populus nigra</em> exposed to elevated atmospheric CO2</p>
 <p>Boreal forest - CUE 0.32 -&gt; high rates of C loss during dormant season? can be examined by GPP/foliage ratio<br>
@@ -257,6 +261,18 @@ R_{a} = R_{\text{canopy}} + R_{\text{stems}} + R_{\text{rhizosphere}}
 <p>R<sub>stems</sub> (woody respiration) is measured using a closed dynamic chamber (SRC-1) connected to an IRGA (EGM-4) on permanent collars sealed to tree boles at 1.3 m height, typically across ~25 trees per plot.</p>
 <p>R<sub>canopy</sub> (leaf respiration) is measured as leaf dark respiration with an IRGA and cuvette on ~20 trees per plot, using both sunlit and shaded branches. Branches are re-cut underwater to restore conductivity and leaves are dark-adapted in black bags before measurement.</p>
 <p>R<sub>rhizosphere</sub> is derived from total soil CO<sub>2</sub> efflux measured with an IRGA (EGM-4) and SRC-1 on permanent soil collars. Partitioning experiments use shallow collars (10 cm) for total respiration and deep collars (40 cm) excluding roots and mycorrhizae, with controls for disturbance effects.</p>
+</section>
+<section id="warring-et-al.-1998" class="level3">
+<h3 class="anchored" data-anchor-id="warring-et-al.-1998">(Warring et al., 1998)</h3>
+<p>NPP<sub>ABG</sub> is determined allometric relationships with DBH</p>
+<p>R<sub>g</sub> = 25% * NPP<sub>ABG</sub></p>
+<p>TBCA = f(litterfall)</p>
+<p>NPP<sub>BG</sub> = 0.5TBCA, Rg<sub>BG</sub> = 0.25TBCA, Rm<sub>BG</sub> = 0.25TBCA</p>
+<p>Rm<sub>sapwood</sub> = 0.07GPP OR Rm<sub>stem&amp;branch</sub> = 0.185GPP</p>
+<p>Rm<sub>leaves</sub> = relationship with nitrogen content of living tissue</p>
+<p>NPP = NPP<sub>ABG</sub> + NPP<sub>BG</sub></p>
+<p>GPP = R<sub>g</sub> + Rm<sub>leaves</sub> + Rm<sub>stem&amp;branch</sub> + Rg<sub>BG</sub> + NPP<sub>ABG</sub> + NPP<sub>BG</sub></p>
+<p>(Additional details can be obtained from the original publications. My take away is that: growth respiration = constant construction cost → easy, single multiplier; but maintenance respiration = ongoing cost of living tissue, organ-specific, and environment-dependent)</p>
 
 
 </section>
