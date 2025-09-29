@@ -167,6 +167,10 @@ window.Quarto = {
   <li><a href="#global-ecosystem-monitoring-gem" id="toc-global-ecosystem-monitoring-gem" class="nav-link" data-scroll-target="#global-ecosystem-monitoring-gem">Global Ecosystem Monitoring (GEM)</a></li>
   <li><a href="#warring-et-al.-1998" id="toc-warring-et-al.-1998" class="nav-link" data-scroll-target="#warring-et-al.-1998">(Warring et al., 1998)</a></li>
   </ul></li>
+  <li><a href="#what-might-control-the-variations-of-cue" id="toc-what-might-control-the-variations-of-cue" class="nav-link" data-scroll-target="#what-might-control-the-variations-of-cue">What might control the variations of CUE?</a>
+  <ul class="collapse">
+  <li><a href="#doughty-et-al.-2017" id="toc-doughty-et-al.-2017" class="nav-link" data-scroll-target="#doughty-et-al.-2017">(Doughty et al., 2017)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -264,15 +268,40 @@ R_{a} = R_{\text{canopy}} + R_{\text{stems}} + R_{\text{rhizosphere}}
 </section>
 <section id="warring-et-al.-1998" class="level3">
 <h3 class="anchored" data-anchor-id="warring-et-al.-1998">(Warring et al., 1998)</h3>
-<p>NPP<sub>ABG</sub> is determined allometric relationships with DBH</p>
-<p>R<sub>g</sub> = 25% * NPP<sub>ABG</sub></p>
-<p>TBCA = f(litterfall)</p>
-<p>NPP<sub>BG</sub> = 0.5TBCA, Rg<sub>BG</sub> = 0.25TBCA, Rm<sub>BG</sub> = 0.25TBCA</p>
-<p>Rm<sub>sapwood</sub> = 0.07GPP OR Rm<sub>stem&amp;branch</sub> = 0.185GPP</p>
+<p>NPP<sub>a</sub> is determined allometric relationships with DBH</p>
+<p>Rg<sub>a</sub> = 25% * NPP<sub>a</sub></p>
+<p>TBCA = NPP<sub>root</sub> + Rg<sub>root</sub> + Rm<sub>root</sub> = f(litterfall) = 130+1.92 * Lf</p>
+<p>NPP<sub>root</sub> = 0.5TBCA, Rg<sub>root</sub> = 0.25TBCA, Rm<sub>root</sub> = 0.25TBCA</p>
+<p>Rm<sub>sapwood</sub> = 0.07GPP OR Rm<sub>stem&amp;branch</sub> = 0.185NPP<sub>a</sub></p>
 <p>Rm<sub>leaves</sub> = relationship with nitrogen content of living tissue</p>
-<p>NPP = NPP<sub>ABG</sub> + NPP<sub>BG</sub></p>
-<p>GPP = R<sub>g</sub> + Rm<sub>leaves</sub> + Rm<sub>stem&amp;branch</sub> + Rg<sub>BG</sub> + NPP<sub>ABG</sub> + NPP<sub>BG</sub></p>
+<p>NPP = NPP<sub>a</sub> + NPP<sub>root</sub></p>
+<p>GPP = Rg<sub>a</sub> + Rm<sub>leaves</sub> + Rm<sub>stem&amp;branch</sub> + Rg<sub>root</sub> + Rm<sub>root</sub> + NPP<sub>a</sub> + NPP<sub>root</sub></p>
 <p>(Additional details can be obtained from the original publications. My take away is that: growth respiration = constant construction cost → easy, single multiplier; but maintenance respiration = ongoing cost of living tissue, organ-specific, and environment-dependent)</p>
+<p>Problems here:</p>
+<ul>
+<li>R<sub>g</sub> of R<sub>a</sub> is calculated from NPP, and then GPP is calculated from NPP, this lack of independence between estimates of NPP and GPP constrains the possible values of CUE to near 0.5. Thus, the conclusion that CUE is constant may be an artifact (DeLucia et al., 2007; Medlyn &amp; Dewar, 1999)</li>
+</ul>
+<p>(Medlyn &amp; Dewar, 1999)</p>
+<p><span class="math display">\[
+\frac{NPP}{GPP} =
+\frac{NPP_a + NPP_{root}}
+{1.435 \, NPP_a + R_{m(l)} + 2 NPP_{root}}
+= \frac{1}{2 + a \,(b - 0.565)} ,
+\]</span></p>
+<p>where<br>
+- <span class="math inline">\(a = \dfrac{NPP_a}{NPP}\)</span> is the aboveground fraction of NPP,<br>
+- <span class="math inline">\(b = \dfrac{R_{m(l)}}{NPP_a}\)</span> is leaf maintenance relative to aboveground NPP.</p>
+<p>The two main assumption 1) Rg<sub>root</sub> + Rm<sub>root</sub> = NPP<sub>root</sub> and 2) Rm<sub>stem&amp;branch</sub> = 0.185NPP<sub>a,</sub> lead to 1) artefact CUE with NPP/GPP irrespective of the value a. If b is not 0, higher a could lead to great change of NPP/GPP. However, 2) a with upper limit 0.8, b varies from 0.2-2, CUE is still constrained 0.31-0.59.</p>
+</section>
+</section>
+<section id="what-might-control-the-variations-of-cue" class="level2">
+<h2 class="anchored" data-anchor-id="what-might-control-the-variations-of-cue">What might control the variations of CUE?</h2>
+<section id="doughty-et-al.-2017" class="level3">
+<h3 class="anchored" data-anchor-id="doughty-et-al.-2017">(Doughty et al., 2017)</h3>
+<ol type="1">
+<li>Temperature: Ra has often been estimated as a simple Q10 relationship with T -&gt; Warmer Ts increase Ra?</li>
+<li>Wood Residence Time (Biomass/NPPwood): younger forests allocating more C to growth and less to respiration than older forests (DeLucia et al.&nbsp;2007, Goulden et al.&nbsp;2011)</li>
+</ol>
 
 
 </section>

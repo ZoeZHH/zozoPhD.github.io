@@ -151,3 +151,14 @@ where\
 - $b = \dfrac{R_{m(l)}}{NPP_a}$ is leaf maintenance relative to aboveground NPP.
 
 The two main assumption 1) Rg~root~ + Rm~root~ = NPP~root~ and 2) Rm~stem&branch~ = 0.185NPP~a,~ lead to 1) artefact CUE with NPP/GPP irrespective of the value a. If b is not 0, higher a could lead to great change of NPP/GPP. However, 2) a with upper limit 0.8, b varies from 0.2-2, CUE is still constrained 0.31-0.59.
+
+## What might control the variations of CUE?
+
+### (Doughty et al., 2017)
+
+1.  Temperature: Ra has often been estimated as a simple Q10 relationship with T -\> Warmer Ts increase Ra?
+    -   No significant relationship between mean annual temperature and CUE at the plot scale. Only very small differences at the organ scale.
+2.  Wood Residence Time (Biomass/NPPwood): younger forests allocating more C to growth and less to respiration than older forests (DeLucia et al. 2007, Goulden et al. 2011)
+    -   No significant relationship between t~res~ and whole-plot CUE. But at the organ level, maintenance respiration of wood and roots was significantly higher in stands with t~res~ \>40 years
+3.  Soil Fertility: Higher CUE in forests with high-nutrient availability compared to forests with low- or medium nutrient availability. Vicca et al. (2012) found that forests with high nutrient availability invest 16+-4% more of their photosynthates in biomass production than forests with low-nutrient availability.
+    -   Significant positive relationship between soil fertility (CEC) and CUE. Low fertility sites showed higher rhizosphere respiration and lower CUE. Growth rhizosphere respiration was significantly higher at low fertility sites, but maintenance respiration did not differ.
