@@ -76,6 +76,10 @@ Temperate deciduous forests - CUE 0.59
 
 Autotrophic respiration (R~a~) = sum of all mitochondrial respiration by autotrophs.
 
+But actually the biometric measurements BP is commonly used as a proxy for NPP
+
+Vicca et al., 2012 introduce the Biomass production efficiency (BPE) as BP/GPP
+
 ## Methods on Measuring CUE
 
 ### Global Ecosystem Monitoring (GEM)
@@ -160,5 +164,7 @@ The two main assumption 1) Rg~root~ + Rm~root~ = NPP~root~ and 2) Rm~stem&branch
     -   No significant relationship between mean annual temperature and CUE at the plot scale. Only very small differences at the organ scale.
 2.  Wood Residence Time (Biomass/NPPwood): younger forests allocating more C to growth and less to respiration than older forests (DeLucia et al. 2007, Goulden et al. 2011)
     -   No significant relationship between t~res~ and whole-plot CUE. CUE generally increased in stands with t~res~ \<40. And at the organ level, maintenance respiration of wood and roots was significantly higher in stands with t~res~ \>40 years
-3.  **Soil Fertility**: Higher CUE in forests with high-nutrient availability compared to forests with low- or medium nutrient availability. Vicca et al. (2012) found that forests with high nutrient availability invest 16+-4% more of their photosynthates in biomass production than forests with low-nutrient availability.
+3.  **Soil Fertility**: Higher CUE in forests with high-nutrient availability compared to forests with low- or medium nutrient availability. Vicca et al. (2012) found that forests with high nutrient availability invest 16+-4% more of their photosynthates in biomass production than forests with low-nutrient availability, also supported by (Chapin, 1980) in this paper.
     -   Significant positive relationship between soil fertility (CEC) and CUE. Low fertility sites showed higher rhizosphere respiration and lower CUE (Plants try to get nutrients from roots, the mycorrhizae). Growth rhizosphere respiration was significantly higher at low fertility sites, but maintenance respiration did not differ.
+
+### (Vicca et al., 2012) focus on fertility of soils
