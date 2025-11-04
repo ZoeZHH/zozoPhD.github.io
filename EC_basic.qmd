@@ -79,9 +79,59 @@ Overview: To solve the 1) covariation of the fluxes with the meteorological vari
 
 For other gap filling methods and related evaluations, 10.1016/j.agrformet.2007.08.011
 
-## Daytime Partitioning
+## Daytime Partitioning REddyProc/PartitioningLasslop10.R
 
-Step 1: Estimated E0 for 12 days windows. Only records which temperature above -1 °C as the night fit assumes microbial/plant respiration responds smoothly to temperature (unfrozen). Resample the subset with replacement (bootstrap) so some points are repeated or omitted, get differen E~0~ and calculate the standatd deviation of E~0~ (). T~Ref~ set as the median temperature of the window. We got missing estimates, report for non-valid windows with too few valid records (minwindow = 10), missing estimates then filled during the smoothing in step2.
+1)  Entry Points: partitionNEEL () & partGLControl () partitionNEEL () is the master (wrapper) function that orchestrates all the sub-functions — it calls every key step of daytime partitioning in sequence: extract data → fit nighttime temperature sensitivity → fit daytime light-response curves → interpolate parameters → predict Reco and GPP → output results.\
+    partGLControl () is the “knobs panel” for daytime partitioning. \
+    **isFilterMeteoQualityFlag (default False)**; If TRUE, the LRC fit uses only non-gapfilled met drivers (Temp, VPD, Rg) where the \_QC == 0. Predictions still use gapfilled drivers.\
+    **isLasslopPriorsApplied (default TRUE);** Applies strong fixed priors/constraints on LRC parameters (α, β, k, Rref) in sparse/ill-conditioned windows.\
+    **smoothTempSensEstimateAcrossTime (default TRUE)**, Smooths the nighttime E0(t) estimates across windows before using them in daytime fits.\
+    **isBoundLowerNEEUncertainty (default TRUE);** Prevents tiny NEE_SE from giving a few points huge leverage (bounds sdNEE to max(0.2·\|NEE\|, 0.7)).\
+    **replaceMissingSdNEEParms (default c(0.2, 0.7))** and **neglectNEEUncertaintyOnMissing (default FALSE);** If NEE_SE is missing, replace with 20% of \|NEE\| but at least 0.7; OR if you set neglectNEEUncertaintyOnMissing=TRUE, set all sdNEE=1 when any are missing in a window.\
+    **minNRecInDayWindow (default 10)**; Minimum valid daytime records per window for fitting. If too high, you get NA windows (lost parameters → more interpolation). Too low → unstable fits.\
+    **isNeglectVPDEffect (default FALSE)** and **isRefitMissingVPDWithNeglectVPDEffect (default TRUE).** If VPD is scarce/missing, auto-refit LRC without VPD and use those parameters for predictions with missing VPD.\
+    **fixedTempSens (E0, sdE0, RRef)** If you provide a fixed E0 (and optionally RRef), REddyProc skips nighttime E0 estimation and uses your E0 (with sdE0 for bootstrap).\
+    **useNightimeBasalRespiration (default FALSE)** Implements Keenan (2019) modification: recompute nighttime Reco from nighttime-based Rref rather than daytime basal respiration.\
+    **isNeglectPotRadForNight (default FALSE)** Defines night using only Rg≤4 (ignoring potential radiation).\
+    **LRCFitConvergenceTolerance / nLRCFitConvergenceTolerance** Optimizer tolerances. Tighter → more precise but slower; looser → faster but slightly different parameters.\
+    **isUsingLasslopQualityConstraints (default FALSE)** and **minPropSaturation (default NA):** Extra data quality checks (beyond original Lasslop constraints) and a “sufficient saturation” criterion.**\
+    nBootUncertainty (default 30)** and **isSdPredComputed (default TRUE)** Bootstrap parameter SDs and propagate to sdReco/sdGPP. 30 is a good balance; set 0 for speed when you don’t need SDs.\
 
-Notes to learn:
-1. Bootstrap
+2)  Inputs and screening: partGLExtractStandardData() and replaceMissingSdByPercentage()
+
+    1\) partGLExtractStandardData() as the “clean-room loader” for daytime partitioning. It pulls the right columns from your input `ds`, applies quality flags the way you ask it to, decides which timesteps are day vs night (Lasslop-style), and prepares a compact data.frame that all later steps use.\
+    **Inputs & Controls:**\
+    NEEVar (NEE_f), QFNEEVar (NEE_fqc), QFNEEValue (default 0, which treated as "good/original"), NEESdVar (NEE_fsd)\
+    TempVar (Tair_f), QFTempVar (Tair_fqc), QFTempValue (as 0), \
+    VPDVar(VPD_f), QFVPDVar (VPD_fqc), QFVPDValue (as 0),\
+    RadVar (Rg_f), QFRadVar (Rg_fqc), QFRadValue (as 0),\
+    PotRadVar (PotRad_NEW)\
+    controlGLPart\$isFilterMeteoQualityFlag (default as False), use the filled met drivers as-is\
+    If TRUE, replace met drivers with only the “good/original” records per their QC flags; otherwise set to NA\
+    controlGLPart\$isNeglectPotRadForNight (default as False), day/night uses both Rg threshold and PotRad sign, TRUE by day/night depends only on Rg threshold\
+    **Quality-flag filtering:\
+    **fSetQF(ds, NEEVar, QFNEEVar, QFNEEValue), returns NEEFiltered: keeps only rows where the QF equals QFNEEValue (usually 0). Others become NA. This ensures daytime LRC fits don’t “trust” gap-filled NEE (consistent with Lasslop).\
+    Meteo drivers (only if isFilterMeteoQualityFlag == TRUE): NEW_FP_Temp = fSetQF(Tair_f, Tair_fqc, 0) else ds\[\["Tair_f"\]\]; NEW_FP_VPD = fSetQF(VPD_f, VPD_fqc, 0) else ds\[\["VPD_f"\]\]; NEW_FP_Rg = fSetQF(Rg_f, Rg_fqc, 0) else ds\[\["Rg_f"\]\]\
+    Most people leave isFilterMeteoQualityFlag = FALSE so that filled met drivers drive the prediction stage but are not required to be “original” for fitting (Lasslop’s standard practice still requires original/good NEE for fitting).\
+    **Day/Night Flags:\
+    **Radiation threshold: Rg \> 4 → day; Rg ≤ 4 → night (Lasslop 2010)\
+    Potential radiation guard (to avoid twilight artifacts): If isNeglectPotRadForNight == FALSE (default): isNight = (Rg ≤ 4) & (PotRad ≤ 0); isDay = (Rg \> 4) & (PotRad \> 0) If TRUE, the PotRad conditions are dropped: isNight = (Rg ≤ 4); isDay = (Rg \> 4)\
+    **Outputs:\
+    **partGLExtractStandardData() returns a compact data.frame named (by you) dsR with: \
+    sDateTime: just ds\[\[1\]\] (the first column, usually timestamps; kept for debugging) NEE: quality-filtered NEE (others are NA) sdNEE: standard deviation (uncertainty) of NEE; may be modified next step Temp: temperature series (possibly QC-filtered if you opted in) VPD: VPD series (possibly QC-filtered if you opted in) Rg: radiation series (possibly QC-filtered if you opted in) isDay: logical isNight: logical\
+    \
+    2) replaceMissingSdByPercentage() This is a tiny, vectorized helper that fills only the missing entries of a standard deviation vector using a conservative rule tied to the signal magnitude.\
+    SIGNATURE: replaceMissingSdByPercentage \<- function(sdX, x, perc = 0.2, minSdX = 0.7)\
+    For every record where the uncertainty (sdNEE) is missing, we fill it with the larger of two values: 20% of the absolute NEE flux magnitude, or 0.7 (the minimum allowed uncertainty).This way, all data points have a reasonable uncertainty estimate for weighting during light-response-curve fitting.
+
+3)  Nighttime temperature sensitivity:partGLFitNightTimeTRespSens(),partGLControlLasslopCompatible()
+
+4)  Daytime fitting over moving windows partGLFitLRCWindows(), partGLFitLRCOneWindow()
+
+5)  The light-response model families RectangularLRCFitter(), NonrectangularLRCFitter() / LogisticSigmoidLRCFitter()
+
+6)  Bootstrap & Uncertainty .bootStrapLRCFit(), Prediction SDs in partGLInterpolateFluxes()
+
+7)  From windows to HH, partGLInterpolateFluxes(), .partGPAssociateSpecialRows()
+
+8)  Nighttime Reco override & covariances .computeRecoNight(),computeAggregatedCovariance() (helper)

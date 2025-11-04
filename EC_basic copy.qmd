@@ -1,0 +1,77 @@
+---
+title: ""
+format:
+  html:
+    toc: true
+    title-block-style: none
+---
+
+# ASIAFLUX2025
+
+## 10/22 Morning Opening Talks
+
+Tropical peatlands cover \~21% of global peatland area
+
+**Oil Palm Plantations & Peatlands**
+
+\- Oil Palm trees require consistently moist, deep, and well-drained soil rich in humus. If planted oil palm trees on peatlands, which could 1) Disturb peatlands by drying lands before plantations and 2) Cause water flooding
+
+From [Kristell Hergoualc'h](https://scholar.google.co.id/citations?user=J60lrkoAAAAJ&hl=en): A conversion of forest peatlands to oil palm trees could release \~296 Mg CO2-C /ha/5yr
+
+## 10/22 Afternoon Scientific Talks
+
+14:00-14:30 Pelawan Room
+
+**Talk 1** - 14:00 Prabir Patra (20 min): "Regional sources and sinks of CO2, CH4 and N2O by atmospheric model and observation"
+
+Talk 2 - 14:20 **Yuji Shigefuji (10 min)**: "Overcoming global bias in gross primary productivity: an India-specific light use efficiency approach using eddy covariance flux observations"
+
+Underrepresented the parametrization in India
+
+Two-leaf model GPP = light use efficiency_sun\* absorbed par_sunlit leaves + light use efficiency_shade\* absorbed par_sunshade leaves
+
+New Modis product could perform better than old version.
+
+**Talk 3 - 14:30 Yuhei Yamamoto (10 min)**: "Satellite-Based Diurnal GPP Modeling in East Asia Using Himawari-8/9 and JapanFlux/KoFlux"
+
+Gaps: Light use efficiency should vary by sun location & direct/diffuse radiation
+
+14:40 - 14:50 Bayas Room
+
+Talk 4 - 14:40 **Jing Huang (10 min)**: "Drought-driven changes in microbial carbon use efficiency are regulated by POC and microbial life history strategy in a subtropical forest"
+
+Hypotheses: 1) Drought decrease soil MCUE, magnitude of the effect varying by soil depths -\> drought-induced changes in MCUE were depth-dependent, with opposite responses in surface (0-15 cm) and subsoil (0-30cm)...proteobacteria behaved differently, distinct pattern on soil -depths MCUE
+
+2\) Substrate availability is the dominant driver controlling MCUE under drought stress-\> POC and microbial lefe history strategy regulate drought effects on microbial CUE
+
+3\) Shifts in microbial community structure, particularly the ratio of Y- to A- strategies, govern the CUE responses by fundamentally altering resource allocation pattern under water limitation -\> Among microbial taxa, ptotebacteria is most crucial for MCUE
+
+15:00 - 15:20 Bayas Room
+
+Talk 6 - 15:00 **Luri Nurlaila Syahid (10 min)**: "Climate sensitivities of pan tropical tree crops"
+
+**Talk 7. Misaki Hase (10 min)**: "Phased response of vegetation to large climate anomalies in Tropical Asia detected by Himawari-8/9 AHI"
+
+15:20 - 15:30 Pelawan Room
+
+**Talk 8. Oliver Sonnentag (10 min)**: "From Boreal to Tropics: Net Ecosystem Carbon Balance of Peatlands Across Biomes"
+
+15:30 - 15:40 Seraya Room
+
+**Hojin Lee (10 min)**: "Spatiotemporal BVOC dynamics revealed by multi-scale observations in a temperate mixed forest of the Black Forest, Germany"
+
+**Xiangzhong Luo (20 min)** Advanced use of eddy covariance measurements to improve understanding of ecosystem functions
+
+Different ecosystems have different Amax (maximum photosynthetic rate)
+
+What decide that?
+
+1\) Light acclimation of ecosystem photosythesis
+
+2\) Thermal acclimation of ecosystem photosynthesis
+
+Hypothesis: elevated CO2 leads to long term increase in LUE
+
+-\> No long term trend of photosynthetic quantum yield (alpha)
+
+-\> Dryness control variations in alpha
