@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ec_basic – Zoe PhD Info</title>
+<title>ec_basic-copy – Zoe PhD Info</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,35 +67,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -133,7 +104,7 @@ window.Quarto = {
 <span class="menu-text">C3-Coordination of MCUE VCUE</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./EC_basic.html" aria-current="page"> 
+    <a class="nav-link" href="./EC_basic.html"> 
 <span class="menu-text">EC Basic</span></a>
   </li>  
   <li class="nav-item">
@@ -157,14 +128,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#u-filtering" id="toc-u-filtering" class="nav-link active" data-scroll-target="#u-filtering">u* filtering</a></li>
-  <li><a href="#gap-filling" id="toc-gap-filling" class="nav-link" data-scroll-target="#gap-filling">Gap-filling</a>
+  <li><a href="#asiaflux2025" id="toc-asiaflux2025" class="nav-link active" data-scroll-target="#asiaflux2025">ASIAFLUX2025</a>
   <ul class="collapse">
-  <li><a href="#look-up-tables-lut" id="toc-look-up-tables-lut" class="nav-link" data-scroll-target="#look-up-tables-lut">Look-up Tables (LUT)</a></li>
-  <li><a href="#mean-diurnal-course-mdc" id="toc-mean-diurnal-course-mdc" class="nav-link" data-scroll-target="#mean-diurnal-course-mdc">Mean Diurnal Course (MDC)</a></li>
-  <li><a href="#marginal-distribution-sampling-mds" id="toc-marginal-distribution-sampling-mds" class="nav-link" data-scroll-target="#marginal-distribution-sampling-mds">Marginal Distribution Sampling (MDS)</a></li>
+  <li><a href="#morning-opening-talks" id="toc-morning-opening-talks" class="nav-link" data-scroll-target="#morning-opening-talks">10/22 Morning Opening Talks</a></li>
+  <li><a href="#afternoon-scientific-talks" id="toc-afternoon-scientific-talks" class="nav-link" data-scroll-target="#afternoon-scientific-talks">10/22 Afternoon Scientific Talks</a></li>
   </ul></li>
-  <li><a href="#daytime-partitioning-reddyprocpartitioninglasslop10.r" id="toc-daytime-partitioning-reddyprocpartitioninglasslop10.r" class="nav-link" data-scroll-target="#daytime-partitioning-reddyprocpartitioninglasslop10.r">Daytime Partitioning REddyProc/PartitioningLasslop10.R</a></li>
   </ul>
 </nav>
     </div>
@@ -174,134 +142,48 @@ window.Quarto = {
 
 
 
-<section id="u-filtering" class="level2">
-<h2 class="anchored" data-anchor-id="u-filtering">u* filtering</h2>
-<p><img src="img/u* threshold.png" alt="u* threshold" style="float: right; margin-left: 15px; " width="467" height="657"></p>
-<p>At night, clear and calm conditions, atmosphere becomes stably stratified (cool air settles near ground, warm air sits above -&gt; suppress vertical mixing) -&gt; CO<sub>2</sub> produced near the surface by respiration accumulation close to the ground BUT EC measure vertical fluxes of CO<sub>2</sub> which rely on turbulence -&gt; underestimate the true respiration happening at the surface</p>
-<p>Scientists assumes a threshold of u* (detect the <strong>minimum amount of turbulence</strong> needed for reliable nighttime NEE (ecosystem respiration) measurements), two methods:<br>
-- The moving point method (Papale et al., 2006 https://doi.org/10.5194/bg-3-571-2006):<br>
-Seperate BINS: Only nighttime data used (R<sub>g</sub> &lt; 10 W m-2) -&gt; seasonal splitting (data are split by seasons to account for changes in surface properties) -&gt; temperature subsets (each season is further split into 6 temperature bins using quantiles, to ensure homogeneity of respiration rates, temperature is closely related to respiration rates!) -&gt; within each temperature subset, u* is divided into ~20 bins with equal number of points</p>
-<p>Moving Point Test: For each bin i, compute mean NEE of bin i (<span class="math inline">\(\mu_i\)</span>) and mean NEE of the next 10 bins (<span class="math inline">\(\mu_{i+1\,\ldots\,i+10}\)</span>) -&gt; Check if <span class="math inline">\(\mu_i &gt; 0.95 \times \operatorname{mean}(\mu_{i+1}, \ldots, \mu_{i+10})\)</span> and this holds for <span class="math inline">\(\mu_{i+1}\)</span>-&gt;If so, bin i’s mean u* is the threshold<br>
-</p>
+<section id="asiaflux2025" class="level1">
+<h1>ASIAFLUX2025</h1>
+<section id="morning-opening-talks" class="level2">
+<h2 class="anchored" data-anchor-id="morning-opening-talks">10/22 Morning Opening Talks</h2>
+<p>Tropical peatlands cover ~21% of global peatland area</p>
+<p><strong>Oil Palm Plantations &amp; Peatlands</strong></p>
+<p>- Oil Palm trees require consistently moist, deep, and well-drained soil rich in humus. If planted oil palm trees on peatlands, which could 1) Disturb peatlands by drying lands before plantations and 2) Cause water flooding</p>
+<p>From <a href="https://scholar.google.co.id/citations?user=J60lrkoAAAAJ&amp;hl=en">Kristell Hergoualc’h</a>: A conversion of forest peatlands to oil palm trees could release ~296 Mg CO2-C /ha/5yr</p>
 </section>
-<section id="gap-filling" class="level2">
-<h2 class="anchored" data-anchor-id="gap-filling">Gap-filling</h2>
-<section id="look-up-tables-lut" class="level3">
-<h3 class="anchored" data-anchor-id="look-up-tables-lut">Look-up Tables (LUT)</h3>
-<p>Overview: Tables were created for each site so that missing values of F<sub>NEE</sub> could be “looked-up” based on environmental conditions associated with the missing data.</p>
-<p><strong>Pick a gap</strong> in the cleaned (QC + u* filtered) flux data (<code>VAR_fall</code> is NA).<br>
-<strong>Set the search window</strong> — user-defined <code>WinDays.i</code> days before and after the gap; full window length = <code>2 × WinDays.i</code> days.<br>
-<strong>Choose condition variables and tolerances</strong> — up to 5 meteorological drivers (e.g., <code>Rg</code> ±50 W m⁻², <code>Tair</code> ±2.5 °C, <code>VPD</code> ±5 hPa).<br>
-- <strong>Special rule:</strong> If the first variable is <code>Rg</code>, reduce tolerance at low light to a minimum of 20 W m⁻² and never exceed the original tolerance, to avoid mismatching dark and bright conditions.<br>
-<strong>Find candidate records</strong> inside the time window that:<br>
-- Have a measured original value (<code>VAR_orig</code> not NA), and<br>
-- For each active driver, the absolute difference from the gap’s value is less than the set tolerance (using the adjusted <code>Rg</code> tolerance if applicable).<br>
-<strong>Check sample size:</strong> Require at least 2 valid matches to proceed.<br>
-<strong>Fill the gap:</strong><br>
-- Value = mean of all matching records.<br>
-- Uncertainty = standard deviation (SD) of the matching records.<br>
-- <code>fnum</code> = number of matches used.<br>
-<strong>Assign method code and QC:</strong><br>
-- <code>fmeth = 1</code> if ≥3 drivers used; <code>fmeth = 2</code> if only 1 driver used.<br>
-- QC = 1 for short windows (≤14 days full span for ≥3 drivers; ≤14 or ≤28 days for 1 driver), QC = 2 for medium windows, QC = 3 for long windows.<br>
-<strong>Write results back:</strong> Store filled value, number of matches, SD, method code, window length, and QC in <code>VAR_fall</code> and related columns. Only fill <code>VAR_f</code> if it’s still NA.<br>
-<strong>Skip if no fill:</strong> If &lt;2 matches found, leave the gap for later methods (e.g., MDC) in the MDS cascade.</p>
-</section>
-<section id="mean-diurnal-course-mdc" class="level3">
-<h3 class="anchored" data-anchor-id="mean-diurnal-course-mdc">Mean Diurnal Course (MDC)</h3>
-<p>Overview: Fills missing flux values by averaging measurements from the same time of day (±1 hour) on nearby days, assuming that conditions at the same time of day are similar on days close together. Medium performance but it has advantage that this approach can be used even if no meteorological information is available.</p>
-<p><strong>Pick a gap</strong> in the cleaned (QC + u* filtered) flux data (<code>VAR_fall</code> is NA).<br>
-<strong>Set the search window</strong> — by default ±7 days around the gap (user-defined <code>WinDays.i</code>), giving a full window length of <code>2 × WinDays + 1</code> days.<br>
-<strong>Identify same-time-of-day neighbors</strong>:<br>
-Use the gap’s position in the day and collect indices for:<br>
-- The current day: ±2 records (≈±1 hour) around the gap time.<br>
-- Each day up to <code>WinDays.i</code> days before and after: same-time ±1 hour.<br>
-<strong>Keep only measured points</strong>: Remove any candidate records where the original flux (<code>VAR_orig</code>) is NA.<br>
-<strong>Check sample size</strong>: Require at least 2 valid neighbors to proceed.<br>
-<strong>Fill the gap</strong>:<br>
-- Value = mean of all valid neighbors.<br>
-- Uncertainty = standard deviation (SD) of those neighbors.<br>
-- <code>fnum</code> = number of neighbors used.<br>
-<strong>Assign method code and QC</strong>:<br>
-- <code>fmeth = 3</code> (MDC method).<br>
-- <code>fwin</code> = number of days spanned (<code>2 × WinDays + 1</code>).<br>
-- QC = 1 if ≤1 day used; 2 if &gt;1–5 days; 3 if &gt;5 days.<br>
-<strong>Write results back</strong>: Store filled value, number of points, SD, method code, window length, and QC in <code>VAR_fall</code> and related columns. Only fill <code>VAR_f</code> if it’s still NA.</p>
-</section>
-<section id="marginal-distribution-sampling-mds" class="level3">
-<h3 class="anchored" data-anchor-id="marginal-distribution-sampling-mds">Marginal Distribution Sampling (MDS)</h3>
-<div class="quarto-figure quarto-figure-center" style="float: right; margin-left: 15px;">
-<figure class="figure">
-<p><img src="img/gapfilling.png" width="450" height="350" class="figure-img"></p>
-<figcaption>gap filling</figcaption>
-</figure>
-</div>
-<p>Overview: To solve the 1) covariation of the fluxes with the meteorological variables and 2) temporal autocorrelation based on LUT and MDC</p>
-<p>(1) Only the data of direct interest are missing, but all meteorological data are available<br>
--&gt; [LUT] the missing value is replaced by the average value under similar meteorological conditions within a time-window of 7 days. Similar meteorological conditions are present when Rg, Tair and VPD do not deviate by more than 50 W m 2, 2.5 1C, and 5.0 hPa, respectively. If no similar meteorological conditions, averaging window is increased to 14 days.<br>
-(2) Air temperature or VPD is missing, but radiation is available<br>
--&gt; the same approach is taken, but similar meteorological conditions can only be defined via Rg deviation less than 50 W m 2<br>
-(3) Radiation data is missing<br>
--&gt; the missing value is replaced by the average value at the same time of the day (1 h), i.e.&nbsp;by the mean diurnal course. In this case, the window size starts with 0.5 days</p>
-<p>For other gap filling methods and related evaluations, 10.1016/j.agrformet.2007.08.011</p>
-</section>
-</section>
-<section id="daytime-partitioning-reddyprocpartitioninglasslop10.r" class="level2">
-<h2 class="anchored" data-anchor-id="daytime-partitioning-reddyprocpartitioninglasslop10.r">Daytime Partitioning REddyProc/PartitioningLasslop10.R</h2>
-<ol type="1">
-<li><p>Entry Points: partitionNEEL () &amp; partGLControl () partitionNEEL () is the master (wrapper) function that orchestrates all the sub-functions — it calls every key step of daytime partitioning in sequence: extract data → fit nighttime temperature sensitivity → fit daytime light-response curves → interpolate parameters → predict Reco and GPP → output results.<br>
-partGLControl () is the “knobs panel” for daytime partitioning.<br>
-<strong>isFilterMeteoQualityFlag (default False)</strong>; If TRUE, the LRC fit uses only non-gapfilled met drivers (Temp, VPD, Rg) where the _QC == 0. Predictions still use gapfilled drivers.<br>
-<strong>isLasslopPriorsApplied (default TRUE);</strong> Applies strong fixed priors/constraints on LRC parameters (α, β, k, Rref) in sparse/ill-conditioned windows.<br>
-<strong>smoothTempSensEstimateAcrossTime (default TRUE)</strong>, Smooths the nighttime E0(t) estimates across windows before using them in daytime fits.<br>
-<strong>isBoundLowerNEEUncertainty (default TRUE);</strong> Prevents tiny NEE_SE from giving a few points huge leverage (bounds sdNEE to max(0.2·|NEE|, 0.7)).<br>
-<strong>replaceMissingSdNEEParms (default c(0.2, 0.7))</strong> and <strong>neglectNEEUncertaintyOnMissing (default FALSE);</strong> If NEE_SE is missing, replace with 20% of |NEE| but at least 0.7; OR if you set neglectNEEUncertaintyOnMissing=TRUE, set all sdNEE=1 when any are missing in a window.<br>
-<strong>minNRecInDayWindow (default 10)</strong>; Minimum valid daytime records per window for fitting. If too high, you get NA windows (lost parameters → more interpolation). Too low → unstable fits.<br>
-<strong>isNeglectVPDEffect (default FALSE)</strong> and <strong>isRefitMissingVPDWithNeglectVPDEffect (default TRUE).</strong> If VPD is scarce/missing, auto-refit LRC without VPD and use those parameters for predictions with missing VPD.<br>
-<strong>fixedTempSens (E0, sdE0, RRef)</strong> If you provide a fixed E0 (and optionally RRef), REddyProc skips nighttime E0 estimation and uses your E0 (with sdE0 for bootstrap).<br>
-<strong>useNightimeBasalRespiration (default FALSE)</strong> Implements Keenan (2019) modification: recompute nighttime Reco from nighttime-based Rref rather than daytime basal respiration.<br>
-<strong>isNeglectPotRadForNight (default FALSE)</strong> Defines night using only Rg≤4 (ignoring potential radiation).<br>
-<strong>LRCFitConvergenceTolerance / nLRCFitConvergenceTolerance</strong> Optimizer tolerances. Tighter → more precise but slower; looser → faster but slightly different parameters.<br>
-<strong>isUsingLasslopQualityConstraints (default FALSE)</strong> and <strong>minPropSaturation (default NA):</strong> Extra data quality checks (beyond original Lasslop constraints) and a “sufficient saturation” criterion.<strong><br>
-nBootUncertainty (default 30)</strong> and <strong>isSdPredComputed (default TRUE)</strong> Bootstrap parameter SDs and propagate to sdReco/sdGPP. 30 is a good balance; set 0 for speed when you don’t need SDs.<br>
-</p></li>
-<li><p>Inputs and screening: partGLExtractStandardData() and replaceMissingSdByPercentage()</p>
-<p>1) partGLExtractStandardData() as the “clean-room loader” for daytime partitioning. It pulls the right columns from your input <code>ds</code>, applies quality flags the way you ask it to, decides which timesteps are day vs night (Lasslop-style), and prepares a compact data.frame that all later steps use.<br>
-<strong>Inputs &amp; Controls:</strong><br>
-NEEVar (NEE_f), QFNEEVar (NEE_fqc), QFNEEValue (default 0, which treated as “good/original”), NEESdVar (NEE_fsd)<br>
-TempVar (Tair_f), QFTempVar (Tair_fqc), QFTempValue (as 0),<br>
-VPDVar(VPD_f), QFVPDVar (VPD_fqc), QFVPDValue (as 0),<br>
-RadVar (Rg_f), QFRadVar (Rg_fqc), QFRadValue (as 0),<br>
-PotRadVar (PotRad_NEW)<br>
-controlGLPart$isFilterMeteoQualityFlag (default as False), use the filled met drivers as-is<br>
-If TRUE, replace met drivers with only the “good/original” records per their QC flags; otherwise set to NA<br>
-controlGLPart$isNeglectPotRadForNight (default as False), day/night uses both Rg threshold and PotRad sign, TRUE by day/night depends only on Rg threshold<br>
-<strong>Quality-flag filtering:<br>
-</strong>fSetQF(ds, NEEVar, QFNEEVar, QFNEEValue), returns NEEFiltered: keeps only rows where the QF equals QFNEEValue (usually 0). Others become NA. This ensures daytime LRC fits don’t “trust” gap-filled NEE (consistent with Lasslop).<br>
-Meteo drivers (only if isFilterMeteoQualityFlag == TRUE): NEW_FP_Temp = fSetQF(Tair_f, Tair_fqc, 0) else ds[[“Tair_f”]]; NEW_FP_VPD = fSetQF(VPD_f, VPD_fqc, 0) else ds[[“VPD_f”]]; NEW_FP_Rg = fSetQF(Rg_f, Rg_fqc, 0) else ds[[“Rg_f”]]<br>
-Most people leave isFilterMeteoQualityFlag = FALSE so that filled met drivers drive the prediction stage but are not required to be “original” for fitting (Lasslop’s standard practice still requires original/good NEE for fitting).<br>
-<strong>Day/Night Flags:<br>
-</strong>Radiation threshold: Rg &gt; 4 → day; Rg ≤ 4 → night (Lasslop 2010)<br>
-Potential radiation guard (to avoid twilight artifacts): If isNeglectPotRadForNight == FALSE (default): isNight = (Rg ≤ 4) &amp; (PotRad ≤ 0); isDay = (Rg &gt; 4) &amp; (PotRad &gt; 0) If TRUE, the PotRad conditions are dropped: isNight = (Rg ≤ 4); isDay = (Rg &gt; 4)<br>
-<strong>Outputs:<br>
-</strong>partGLExtractStandardData() returns a compact data.frame named (by you) dsR with:<br>
-sDateTime: just ds[[1]] (the first column, usually timestamps; kept for debugging) NEE: quality-filtered NEE (others are NA) sdNEE: standard deviation (uncertainty) of NEE; may be modified next step Temp: temperature series (possibly QC-filtered if you opted in) VPD: VPD series (possibly QC-filtered if you opted in) Rg: radiation series (possibly QC-filtered if you opted in) isDay: logical isNight: logical<br>
-<br>
-</p>
-<ol start="2" type="1">
-<li>replaceMissingSdByPercentage() This is a tiny, vectorized helper that fills only the missing entries of a standard deviation vector using a conservative rule tied to the signal magnitude.<br>
-SIGNATURE: replaceMissingSdByPercentage &lt;- function(sdX, x, perc = 0.2, minSdX = 0.7)<br>
-For every record where the uncertainty (sdNEE) is missing, we fill it with the larger of two values: 20% of the absolute NEE flux magnitude, or 0.7 (the minimum allowed uncertainty).This way, all data points have a reasonable uncertainty estimate for weighting during light-response-curve fitting.</li>
-</ol></li>
-<li><p>Nighttime temperature sensitivity:partGLFitNightTimeTRespSens(),partGLControlLasslopCompatible()</p></li>
-<li><p>Daytime fitting over moving windows partGLFitLRCWindows(), partGLFitLRCOneWindow()</p></li>
-<li><p>The light-response model families RectangularLRCFitter(), NonrectangularLRCFitter() / LogisticSigmoidLRCFitter()</p></li>
-<li><p>Bootstrap &amp; Uncertainty .bootStrapLRCFit(), Prediction SDs in partGLInterpolateFluxes()</p></li>
-<li><p>From windows to HH, partGLInterpolateFluxes(), .partGPAssociateSpecialRows()</p></li>
-<li><p>Nighttime Reco override &amp; covariances .computeRecoNight(),computeAggregatedCovariance() (helper)</p></li>
-</ol>
+<section id="afternoon-scientific-talks" class="level2">
+<h2 class="anchored" data-anchor-id="afternoon-scientific-talks">10/22 Afternoon Scientific Talks</h2>
+<p>14:00-14:30 Pelawan Room</p>
+<p><strong>Talk 1</strong> - 14:00 Prabir Patra (20 min): “Regional sources and sinks of CO2, CH4 and N2O by atmospheric model and observation”</p>
+<p>Talk 2 - 14:20 <strong>Yuji Shigefuji (10 min)</strong>: “Overcoming global bias in gross primary productivity: an India-specific light use efficiency approach using eddy covariance flux observations”</p>
+<p>Underrepresented the parametrization in India</p>
+<p>Two-leaf model GPP = light use efficiency_sun* absorbed par_sunlit leaves + light use efficiency_shade* absorbed par_sunshade leaves</p>
+<p>New Modis product could perform better than old version.</p>
+<p><strong>Talk 3 - 14:30 Yuhei Yamamoto (10 min)</strong>: “Satellite-Based Diurnal GPP Modeling in East Asia Using Himawari-8/9 and JapanFlux/KoFlux”</p>
+<p>Gaps: Light use efficiency should vary by sun location &amp; direct/diffuse radiation</p>
+<p>14:40 - 14:50 Bayas Room</p>
+<p>Talk 4 - 14:40 <strong>Jing Huang (10 min)</strong>: “Drought-driven changes in microbial carbon use efficiency are regulated by POC and microbial life history strategy in a subtropical forest”</p>
+<p>Hypotheses: 1) Drought decrease soil MCUE, magnitude of the effect varying by soil depths -&gt; drought-induced changes in MCUE were depth-dependent, with opposite responses in surface (0-15 cm) and subsoil (0-30cm)…proteobacteria behaved differently, distinct pattern on soil -depths MCUE</p>
+<p>2) Substrate availability is the dominant driver controlling MCUE under drought stress-&gt; POC and microbial lefe history strategy regulate drought effects on microbial CUE</p>
+<p>3) Shifts in microbial community structure, particularly the ratio of Y- to A- strategies, govern the CUE responses by fundamentally altering resource allocation pattern under water limitation -&gt; Among microbial taxa, ptotebacteria is most crucial for MCUE</p>
+<p>15:00 - 15:20 Bayas Room</p>
+<p>Talk 6 - 15:00 <strong>Luri Nurlaila Syahid (10 min)</strong>: “Climate sensitivities of pan tropical tree crops”</p>
+<p><strong>Talk 7. Misaki Hase (10 min)</strong>: “Phased response of vegetation to large climate anomalies in Tropical Asia detected by Himawari-8/9 AHI”</p>
+<p>15:20 - 15:30 Pelawan Room</p>
+<p><strong>Talk 8. Oliver Sonnentag (10 min)</strong>: “From Boreal to Tropics: Net Ecosystem Carbon Balance of Peatlands Across Biomes”</p>
+<p>15:30 - 15:40 Seraya Room</p>
+<p><strong>Hojin Lee (10 min)</strong>: “Spatiotemporal BVOC dynamics revealed by multi-scale observations in a temperate mixed forest of the Black Forest, Germany”</p>
+<p><strong>Xiangzhong Luo (20 min)</strong> Advanced use of eddy covariance measurements to improve understanding of ecosystem functions</p>
+<p>Different ecosystems have different Amax (maximum photosynthetic rate)</p>
+<p>What decide that?</p>
+<p>1) Light acclimation of ecosystem photosythesis</p>
+<p>2) Thermal acclimation of ecosystem photosynthesis</p>
+<p>Hypothesis: elevated CO2 leads to long term increase in LUE</p>
+<p>-&gt; No long term trend of photosynthetic quantum yield (alpha)</p>
+<p>-&gt; Dryness control variations in alpha</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

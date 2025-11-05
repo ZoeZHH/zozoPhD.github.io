@@ -82,7 +82,7 @@ For other gap filling methods and related evaluations, 10.1016/j.agrformet.2007.
 ## Daytime Partitioning REddyProc/PartitioningLasslop10.R
 
 1)  Entry Points: partitionNEEL () & partGLControl () partitionNEEL () is the master (wrapper) function that orchestrates all the sub-functions — it calls every key step of daytime partitioning in sequence: extract data → fit nighttime temperature sensitivity → fit daytime light-response curves → interpolate parameters → predict Reco and GPP → output results.\
-    partGLControl () is the “knobs panel” for daytime partitioning. \
+    partGLControl () is the “knobs panel” for daytime partitioning.\
     **isFilterMeteoQualityFlag (default False)**; If TRUE, the LRC fit uses only non-gapfilled met drivers (Temp, VPD, Rg) where the \_QC == 0. Predictions still use gapfilled drivers.\
     **isLasslopPriorsApplied (default TRUE);** Applies strong fixed priors/constraints on LRC parameters (α, β, k, Rref) in sparse/ill-conditioned windows.\
     **smoothTempSensEstimateAcrossTime (default TRUE)**, Smooths the nighttime E0(t) estimates across windows before using them in daytime fits.\
@@ -102,7 +102,7 @@ For other gap filling methods and related evaluations, 10.1016/j.agrformet.2007.
     1\) partGLExtractStandardData() as the “clean-room loader” for daytime partitioning. It pulls the right columns from your input `ds`, applies quality flags the way you ask it to, decides which timesteps are day vs night (Lasslop-style), and prepares a compact data.frame that all later steps use.\
     **Inputs & Controls:**\
     NEEVar (NEE_f), QFNEEVar (NEE_fqc), QFNEEValue (default 0, which treated as "good/original"), NEESdVar (NEE_fsd)\
-    TempVar (Tair_f), QFTempVar (Tair_fqc), QFTempValue (as 0), \
+    TempVar (Tair_f), QFTempVar (Tair_fqc), QFTempValue (as 0),\
     VPDVar(VPD_f), QFVPDVar (VPD_fqc), QFVPDValue (as 0),\
     RadVar (Rg_f), QFRadVar (Rg_fqc), QFRadValue (as 0),\
     PotRadVar (PotRad_NEW)\
@@ -117,21 +117,41 @@ For other gap filling methods and related evaluations, 10.1016/j.agrformet.2007.
     **Radiation threshold: Rg \> 4 → day; Rg ≤ 4 → night (Lasslop 2010)\
     Potential radiation guard (to avoid twilight artifacts): If isNeglectPotRadForNight == FALSE (default): isNight = (Rg ≤ 4) & (PotRad ≤ 0); isDay = (Rg \> 4) & (PotRad \> 0) If TRUE, the PotRad conditions are dropped: isNight = (Rg ≤ 4); isDay = (Rg \> 4)\
     **Outputs:\
-    **partGLExtractStandardData() returns a compact data.frame named (by you) dsR with: \
+    **partGLExtractStandardData() returns a compact data.frame named (by you) dsR with:\
     sDateTime: just ds\[\[1\]\] (the first column, usually timestamps; kept for debugging) NEE: quality-filtered NEE (others are NA) sdNEE: standard deviation (uncertainty) of NEE; may be modified next step Temp: temperature series (possibly QC-filtered if you opted in) VPD: VPD series (possibly QC-filtered if you opted in) Rg: radiation series (possibly QC-filtered if you opted in) isDay: logical isNight: logical\
     \
     2) replaceMissingSdByPercentage() This is a tiny, vectorized helper that fills only the missing entries of a standard deviation vector using a conservative rule tied to the signal magnitude.\
     SIGNATURE: replaceMissingSdByPercentage \<- function(sdX, x, perc = 0.2, minSdX = 0.7)\
     For every record where the uncertainty (sdNEE) is missing, we fill it with the larger of two values: 20% of the absolute NEE flux magnitude, or 0.7 (the minimum allowed uncertainty).This way, all data points have a reasonable uncertainty estimate for weighting during light-response-curve fitting.
 
-3)  Nighttime temperature sensitivity:partGLFitNightTimeTRespSens(),partGLControlLasslopCompatible()
+3)  Nighttime temperature sensitivity:R/PartitioningLasslop10Nighttime.R\
+    partGLFitNightTimeTRespSens(), estimate the night-based respiration parameters required by the daytime (Lasslop-style) partitioning: E0, sdE0 and Rref.\
+    **Inputs and Windowing:\
+    **Inputs: data with columns NEE, Temp (°C), isNight, isDay, (and typically sdNEE, Rg, VPD present).\
+    Windowing: winSizeNight (default 12 days): length of each night fit window.\
+    winSizeRefInDays (default 4 days): reference/anchor window (aligns centers for daytime partitioning, which uses 4 days windows).\
+    strideInDays (default 2 days): step between window centers (creates overlap).\
+    nRecInDay (default 48): records per day (half-hourly data).\
+    For robustness, winExtendSizes (default 24 & 48 days), larger windows tried if 12-day fit fails (only if controlGLPart\$isExtendTRefWindow = TRUE).\
+    **Processing STEPS:\
+    **1. Estimate E0 per window. For each window, calls partGLFitNightTempSensOneWindow(), which 1) Filters to valid night records (finite NEE & Temp, isNight=TRUE; optionally trims ≤ −1 °C if enough points); 2) Chooses fit reference temperature TRefFit (median night Temp unless fixed in control); 3) Fits Lloyd–Taylor on (NEE vs Temp) to get E0, sdE0, and RRefFit (at TRefFit). If 𝐸0∉\[50, 400\] or fit fail E0 = NA\
+    2. Recover failed E0 windows by extending window size (optional). If some E0 are NA and controlGLPart\$isExtendTRefWindow=TRUE, repeat Step 2 for larger windows (winExtendSizes, e.g., 24d then 48d) and fill only those windows that were NA.\
+    3. Sanity check for too few valid E0. If fewer than 5 finite E0 and fewer than 10% of windows succeed → stop(); the series is too sparse to proceed. \
+    4. Preserve raw estimates before smoothing. Copy E0 → E0Fit, sdE0 → sdE0Fit (bookkeeping).\
+    5. Smooth E0 over time (optional), happened through Year-by-year Gaussian Process smoothing (via mlegp), using sdE0\^2 as nugget when controlGLPart\$smoothTempSensEstimateAcrossTime = TRUE\
+    6. Estimate RRef at 15 °C using smoothed E0. alls applyWindows() with partGLFitNightRespRefOneWindow(), With E0 fixed for that window and compute Rref.\
+    7. Fill leading NA in RRef. \
+    8. Return the parameter series.
 
-4)  Daytime fitting over moving windows partGLFitLRCWindows(), partGLFitLRCOneWindow()
+```{=html}
+<!-- -->
+```
+1)  Daytime fitting over moving windows partGLFitLRCWindows(), partGLFitLRCOneWindow()
 
-5)  The light-response model families RectangularLRCFitter(), NonrectangularLRCFitter() / LogisticSigmoidLRCFitter()
+2)  The light-response model families RectangularLRCFitter(), NonrectangularLRCFitter() / LogisticSigmoidLRCFitter()
 
-6)  Bootstrap & Uncertainty .bootStrapLRCFit(), Prediction SDs in partGLInterpolateFluxes()
+3)  Bootstrap & Uncertainty .bootStrapLRCFit(), Prediction SDs in partGLInterpolateFluxes()
 
-7)  From windows to HH, partGLInterpolateFluxes(), .partGPAssociateSpecialRows()
+4)  From windows to HH, partGLInterpolateFluxes(), .partGPAssociateSpecialRows()
 
-8)  Nighttime Reco override & covariances .computeRecoNight(),computeAggregatedCovariance() (helper)
+5)  Nighttime Reco override & covariances .computeRecoNight(),computeAggregatedCovariance() (helper)
