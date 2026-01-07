@@ -120,9 +120,10 @@ For other gap filling methods and related evaluations, 10.1016/j.agrformet.2007.
     **partGLExtractStandardData() returns a compact data.frame named (by you) dsR with:\
     sDateTime: just ds\[\[1\]\] (the first column, usually timestamps; kept for debugging) NEE: quality-filtered NEE (others are NA) sdNEE: standard deviation (uncertainty) of NEE; may be modified next step Temp: temperature series (possibly QC-filtered if you opted in) VPD: VPD series (possibly QC-filtered if you opted in) Rg: radiation series (possibly QC-filtered if you opted in) isDay: logical isNight: logical\
     \
-    2) replaceMissingSdByPercentage() This is a tiny, vectorized helper that fills only the missing entries of a standard deviation vector using a conservative rule tied to the signal magnitude.\
-    SIGNATURE: replaceMissingSdByPercentage \<- function(sdX, x, perc = 0.2, minSdX = 0.7)\
-    For every record where the uncertainty (sdNEE) is missing, we fill it with the larger of two values: 20% of the absolute NEE flux magnitude, or 0.7 (the minimum allowed uncertainty).This way, all data points have a reasonable uncertainty estimate for weighting during light-response-curve fitting.
+
+    2)  replaceMissingSdByPercentage() This is a tiny, vectorized helper that fills only the missing entries of a standard deviation vector using a conservative rule tied to the signal magnitude.\
+        SIGNATURE: replaceMissingSdByPercentage \<- function(sdX, x, perc = 0.2, minSdX = 0.7)\
+        For every record where the uncertainty (sdNEE) is missing, we fill it with the larger of two values: 20% of the absolute NEE flux magnitude, or 0.7 (the minimum allowed uncertainty).This way, all data points have a reasonable uncertainty estimate for weighting during light-response-curve fitting.
 
 3)  Nighttime temperature sensitivity:R/PartitioningLasslop10Nighttime.R\
     partGLFitNightTimeTRespSens(), estimate the night-based respiration parameters required by the daytime (Lasslop-style) partitioning: E0, sdE0 and Rref.\
@@ -134,24 +135,25 @@ For other gap filling methods and related evaluations, 10.1016/j.agrformet.2007.
     nRecInDay (default 48): records per day (half-hourly data).\
     For robustness, winExtendSizes (default 24 & 48 days), larger windows tried if 12-day fit fails (only if controlGLPart\$isExtendTRefWindow = TRUE).\
     **Processing STEPS:\
-    **1. Estimate E0 per window. For each window, calls partGLFitNightTempSensOneWindow(), which 1) Filters to valid night records (finite NEE & Temp, isNight=TRUE; optionally trims ≤ −1 °C if enough points); 2) Chooses fit reference temperature TRefFit (median night Temp unless fixed in control); 3) Fits Lloyd–Taylor on (NEE vs Temp) to get E0, sdE0, and RRefFit (at TRefFit). If 𝐸0∉\[50, 400\] or fit fail E0 = NA\
-    2. Recover failed E0 windows by extending window size (optional). If some E0 are NA and controlGLPart\$isExtendTRefWindow=TRUE, repeat Step 2 for larger windows (winExtendSizes, e.g., 24d then 48d) and fill only those windows that were NA.\
-    3. Sanity check for too few valid E0. If fewer than 5 finite E0 and fewer than 10% of windows succeed → stop(); the series is too sparse to proceed. \
-    4. Preserve raw estimates before smoothing. Copy E0 → E0Fit, sdE0 → sdE0Fit (bookkeeping).\
-    5. Smooth E0 over time (optional), happened through Year-by-year Gaussian Process smoothing (via mlegp), using sdE0\^2 as nugget when controlGLPart\$smoothTempSensEstimateAcrossTime = TRUE\
-    6. Estimate RRef at 15 °C using smoothed E0. alls applyWindows() with partGLFitNightRespRefOneWindow(), With E0 fixed for that window and compute Rref.\
-    7. Fill leading NA in RRef. \
-    8. Return the parameter series.
+    **1) Estimate E0 per window. For each window, calls partGLFitNightTempSensOneWindow(), which 1) Filters to valid night records (finite NEE & Temp, isNight=TRUE; optionally trims ≤ −1 °C if enough points); 2) Chooses fit reference temperature TRefFit (median night Temp unless fixed in control); 3) Fits Lloyd–Taylor on (NEE vs Temp) to get E0, sdE0, and RRefFit (at TRefFit). If 𝐸0∉\[50, 400\] or fit fail E0 = NA\
 
-```{=html}
-<!-- -->
-```
-1)  Daytime fitting over moving windows partGLFitLRCWindows(), partGLFitLRCOneWindow()
+    2)  Recover failed E0 windows by extending window size (optional). If some E0 are NA and controlGLPart\$isExtendTRefWindow=TRUE, repeat Step 2 for larger windows (winExtendSizes, e.g., 24d then 48d) and fill only those windows that were NA.\
+    3)  Sanity check for too few valid E0. If fewer than 5 finite E0 and fewer than 10% of windows succeed → stop(); the series is too sparse to proceed.\
+    4)  Preserve raw estimates before smoothing. Copy E0 → E0Fit, sdE0 → sdE0Fit (bookkeeping).\
+    5)  Smooth E0 over time (optional), happened through Year-by-year Gaussian Process smoothing (via mlegp), using sdE0\^2 as nugget when controlGLPart\$smoothTempSensEstimateAcrossTime = TRUE\
+    6)  Estimate RRef at 15 °C using smoothed E0. alls applyWindows() with partGLFitNightRespRefOneWindow(), With E0 fixed for that window and compute Rref.\
+    7)  Fill leading NA in RRef.\
+    8)  Return the parameter series.
 
-2)  The light-response model families RectangularLRCFitter(), NonrectangularLRCFitter() / LogisticSigmoidLRCFitter()
+4)  Daytime fitting over moving windows partGLFitLRCWindows(), partGLFitLRCOneWindow()\
+    partGLFitLRCOneWindow() fits the rectangular hyperbolic LRC in a single daytime window, using E0 (sdE0) and RRef that were determined from nighttime for that same window.\
+    \
+    partGLFitLRCWindows() loops over many windows, calls partGLFitLRCOneWindow() repeatedly, collects all results, merges them with the corresponding nighttime E₀ and RRef, and returns one tidy data frame of window-wise parameters.
 
-3)  Bootstrap & Uncertainty .bootStrapLRCFit(), Prediction SDs in partGLInterpolateFluxes()
+5)  The light-response model families RectangularLRCFitter(), NonrectangularLRCFitter() / LogisticSigmoidLRCFitter()
 
-4)  From windows to HH, partGLInterpolateFluxes(), .partGPAssociateSpecialRows()
+6)  Bootstrap & Uncertainty .bootStrapLRCFit(), Prediction SDs in partGLInterpolateFluxes()
 
-5)  Nighttime Reco override & covariances .computeRecoNight(),computeAggregatedCovariance() (helper)
+7)  From windows to HH, partGLInterpolateFluxes(), .partGPAssociateSpecialRows()
+
+8)  Nighttime Reco override & covariances .computeRecoNight(),computeAggregatedCovariance() (helper)

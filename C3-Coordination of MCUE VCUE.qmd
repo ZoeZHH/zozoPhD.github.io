@@ -6,10 +6,11 @@ format:
     title-block-style: none
 ---
 
-## CHAPTER 3-The coordination between MCUE and VCUE
+## CHAPTER 3 - Longterm of VCUE
 
 **Overview:**
 
-### Related Papers
+### Specific Studies
 
-Tao, F., Huang, Y., Hungate, B. A., Manzoni, S., Frey, S. D., Schmidt, M. W. I., Reichstein, M., Carvalhais, N., Ciais, P., Jiang, L., Lehmann, J., Wang, Y.‑P., Houlton, B. Z., Ahrens, B., Mishra, U., Hugelius, G., Hocking, T. D., Lu, X., Shi, Z., Viatkin, K., … Luo, Y. (2023). Microbial carbon use efficiency promotes global soil carbon storage. Nature, 618(7967), 981–985. https://doi.org/10.1038/s41586-023-06042-3
+Ecosystem carbon use efficiency at global scale from upscaling eddy-covariance data with machine learning and MODIS products (Campos-Taberner et al., 2025)
+
