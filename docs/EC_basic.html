@@ -293,8 +293,37 @@ sDateTime: just ds[[1]] (the first column, usually timestamps; kept for debuggin
 SIGNATURE: replaceMissingSdByPercentage &lt;- function(sdX, x, perc = 0.2, minSdX = 0.7)<br>
 For every record where the uncertainty (sdNEE) is missing, we fill it with the larger of two values: 20% of the absolute NEE flux magnitude, or 0.7 (the minimum allowed uncertainty).This way, all data points have a reasonable uncertainty estimate for weighting during light-response-curve fitting.</li>
 </ol></li>
-<li><p>Nighttime temperature sensitivity:partGLFitNightTimeTRespSens(),partGLControlLasslopCompatible()</p></li>
-<li><p>Daytime fitting over moving windows partGLFitLRCWindows(), partGLFitLRCOneWindow()</p></li>
+<li><p>Nighttime temperature sensitivity:R/PartitioningLasslop10Nighttime.R<br>
+partGLFitNightTimeTRespSens(), estimate the night-based respiration parameters required by the daytime (Lasslop-style) partitioning: E0, sdE0 and Rref.<br>
+<strong>Inputs and Windowing:<br>
+</strong>Inputs: data with columns NEE, Temp (°C), isNight, isDay, (and typically sdNEE, Rg, VPD present).<br>
+Windowing: winSizeNight (default 12 days): length of each night fit window.<br>
+winSizeRefInDays (default 4 days): reference/anchor window (aligns centers for daytime partitioning, which uses 4 days windows).<br>
+strideInDays (default 2 days): step between window centers (creates overlap).<br>
+nRecInDay (default 48): records per day (half-hourly data).<br>
+For robustness, winExtendSizes (default 24 &amp; 48 days), larger windows tried if 12-day fit fails (only if controlGLPart$isExtendTRefWindow = TRUE).<br>
+<strong>Processing STEPS:<br>
+</strong>1) Estimate E0 per window. For each window, calls partGLFitNightTempSensOneWindow(), which 1) Filters to valid night records (finite NEE &amp; Temp, isNight=TRUE; optionally trims ≤ −1 °C if enough points); 2) Chooses fit reference temperature TRefFit (median night Temp unless fixed in control); 3) Fits Lloyd–Taylor on (NEE vs Temp) to get E0, sdE0, and RRefFit (at TRefFit). If 𝐸0∉[50, 400] or fit fail E0 = NA<br>
+</p>
+<ol start="2" type="1">
+<li>Recover failed E0 windows by extending window size (optional). If some E0 are NA and controlGLPart$isExtendTRefWindow=TRUE, repeat Step 2 for larger windows (winExtendSizes, e.g., 24d then 48d) and fill only those windows that were NA.<br>
+</li>
+<li>Sanity check for too few valid E0. If fewer than 5 finite E0 and fewer than 10% of windows succeed → stop(); the series is too sparse to proceed.<br>
+</li>
+<li>Preserve raw estimates before smoothing. Copy E0 → E0Fit, sdE0 → sdE0Fit (bookkeeping).<br>
+</li>
+<li>Smooth E0 over time (optional), happened through Year-by-year Gaussian Process smoothing (via mlegp), using sdE0^2 as nugget when controlGLPart$smoothTempSensEstimateAcrossTime = TRUE<br>
+</li>
+<li>Estimate RRef at 15 °C using smoothed E0. alls applyWindows() with partGLFitNightRespRefOneWindow(), With E0 fixed for that window and compute Rref.<br>
+</li>
+<li>Fill leading NA in RRef.<br>
+</li>
+<li>Return the parameter series.</li>
+</ol></li>
+<li><p>Daytime fitting over moving windows partGLFitLRCWindows(), partGLFitLRCOneWindow()<br>
+partGLFitLRCOneWindow() fits the rectangular hyperbolic LRC in a single daytime window, using E0 (sdE0) and RRef that were determined from nighttime for that same window.<br>
+<br>
+partGLFitLRCWindows() loops over many windows, calls partGLFitLRCOneWindow() repeatedly, collects all results, merges them with the corresponding nighttime E₀ and RRef, and returns one tidy data frame of window-wise parameters.</p></li>
 <li><p>The light-response model families RectangularLRCFitter(), NonrectangularLRCFitter() / LogisticSigmoidLRCFitter()</p></li>
 <li><p>Bootstrap &amp; Uncertainty .bootStrapLRCFit(), Prediction SDs in partGLInterpolateFluxes()</p></li>
 <li><p>From windows to HH, partGLInterpolateFluxes(), .partGPAssociateSpecialRows()</p></li>

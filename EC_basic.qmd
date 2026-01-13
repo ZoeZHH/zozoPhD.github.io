@@ -6,6 +6,42 @@ format:
     title-block-style: none
 ---
 
+## Carbon-Cycle Concepts
+
+(Chapin et al., 2006) Reconciling Carbon-cycle Concepts, Terminology, and Methods
+
+Research gap and aims: NEP has been used both to represent GPP-ER and net C accumulation rate previously, leading to confusion about what NEP estimates in the literature actually represent.\
+-\> this study is designed to clearly defined C-cycling concepts and terminology
+
+Takeaways:
+
+NEP (ecosystem-centered quantity) = GPP - ER (Ra+Rh), positive as carbon gain by ecosystem\
+NPP = GPP - Ra\
+NECB as net rate of C accumulation in ecosystems = dC/dt \
+NECB = -NEE + F~CO~ + F~CH4~ + F~VOC~ + F~DIC~ + F~DOC~ + F~PC~ \
+NEE (atmospheric-centered quantity), positive as carbon gain by the atmosphere, negative the opposite. NEE = ER - GPP\
+**Gross primary production (GPP)** is the sum of gross C fixation by autotrophic C-fixing tissues per unit ground or water area and time.\
+**Autotrophic respiration (AR)** is the sum of respiration (CO2 production) by all living parts of primary producers per unit ground or water area and time.\
+**Heterotrophic respiration (HR)** is the respiration rate of heterotrophic organisms (animals and microbes) summed per unit ground or water area and time.\
+**Ecosystem respiration (ER)** is the respiration of all organisms summed per unit ground or water area and time.\
+**Net primary production (NPP)** is GPP - AR. It includes not only the growth of primary producers (biomass accumulation and tissue turnover above and belowground in terrestrial ecosystems) but also the C transfer to herbivores and root symbionts (for example, mycorrhizal fungi), the excretion of organic C from algae, and the production of root exudates and plant VOCs (Long and others 1989; Clark and others 2001; Kesselmeier and others 2002). "**Published summaries of data on terrestrial NPP are, however, usually based on data from litterfall and aboveground biomass accumulation and therefore are not closely aligned to the concept of NPP as the imbalance between GPP and AR (Clark and others 2001)"**
+
+A common conceptual framework (ecosystem as a volume with explicitly top, bottom and sides):
+
+![](images/Screenshot 2026-01-13 at 8.41.31 PM.png){width="331"}
+
+Strictly speaking, NEP ≠ NEE\
+NEE as Net CO₂ flux across the ecosystem–atmosphere boundary.\
+But NEP as Net **biological imbalance** between carbon fixation and respiration, may include accounts for the respiration that *produces* inorganic carbon (DIC, Organic C+O2​→CO2+H2O, CO2​(g)⇌ CO2​(aq) and others conversions), respiration followed by lateral hydrological export, respiration in diffusion-limited environments.....
+
+And definitely, NECB ≠ NEP\
+Other important fluxes include leaching loss from (or input to) the ecosystem of DOC; emission of CH4, CO, and VOCs; erosion; fire; harvest; and other vertical and lateral C transfers not include in NEP\
+Also, when inorganic C enters or leaves ecosystems for reasons other than an imbalance between GPP and ER.
+
+\
+Hints:\
+NEE is opposite in sign to NEP and NECB because NEE is defined by atmospheric scientists as a C input to the atmosphere, whereas NEP and NECB are defined by ecologists as C inputs to ecosystems.
+
 ## u\* filtering
 
 <img src="img/u%2A%20threshold.png" alt="u* threshold" style="float: right; margin-left: 15px; " width="467" height="657"/>
