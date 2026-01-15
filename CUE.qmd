@@ -57,6 +57,11 @@ Autotrophic respiration includes leaf (light+dark), stem and root respiration.
 2.  Krebs (TCA) cycle
 3.  Electron Transport chain (ETC)
 
+### **PCE, GPP, NPP**
+
+GPP=photosynthesis\
+PCE=Ra+Growth+Storage+Other uses
+
 ### What is CUE?
 
 CUE = NPP / GPP = (GPP - R~a~) / GPP,
@@ -157,6 +162,37 @@ where\
 The two main assumption 1) Rg~root~ + Rm~root~ = NPP~root~ and 2) Rm~stem&branch~ = 0.185NPP~a,~ lead to 1) artefact CUE with NPP/GPP irrespective of the value a. If b is not 0, higher a could lead to great change of NPP/GPP. However, 2) a with upper limit 0.8, b varies from 0.2-2, CUE is still constrained 0.31-0.59.
 
 ## What might control the variations of CUE?
+
+**Section 1 - Controls of C Components**\
+(Luyssaert et al., 2007) \
+NPP, GPP of ecosystems that are already limited by low precipitation (P) sums (\>800 mm) or low mean annual temperatures (T) (\< 5 celsius degrees), 71% explained GPP, 36% explained NPP.\
+- When P \> 800 mm, GPP increases with T\
+- When T \> 5, GPP increases with P\
+- Similar, NPP increases with T and P\
+- For tropical forests, precipitation \>1500 mm, no relationship as beneficial effect appear to saturate
+
+(Metcalfe et al., 2010) throughfall experiment\
+- NPP was lower on TFE plot relative to control -\> lower P, lower NPP\
+- higher Rauto flux of TFE plot -\> lower P, higher Ra\
+- CUE_control (wet) \> CUE_TFE (dry)\
+\
+(Araujo-Murakami et al., 2013)\
+- NPP wet \> NPP dry (NPP of 15.50 ± 0.89 Mg C ha−1 year−1 for Kenia-wet and 11.27 ± 0.68 Mg C ha−1 year−1 for Kenia-dry)\
+- Ra wet \> Ra dry (18.64 ± 2.78 Mg C ha−1 year−1 for Kenia–wet and 15.61 ± 2.61 Mg C ha−1 year−1 for Kenia-dry.)\
+- GPP wet \> GPP dry (decreased precipitation and solar radiation)\
+- CUE wet \> CUE dry (increase of NPP \> increase of Ra)
+
+(Rowland et al., 2013) \
+GPP-Ra/GPP\
+GPP higher in dry season as radiation increased (10.87 vs. 10.09)\
+Ra increased by 4% from wet season to dry season (6.83 vs. 6.53)\
+CUE increases from wet to dry season by 5.38 +- 0.3%\
+
+**Section 2 - NPP~VOC~**
+
+Malhi et al. (2009) showed that NPP~VOC~ is a small component of the carbon budget in a central Amazonian forest (0.1 ± 0.05 Mg C ha−1 year−1)\
+And that near-closure of the carbon budget for several sites in Brazil suggests that the other neglected NPP terms are relatively minor. -\> the allocation to root exudates and to mycorrhizae is neglected\
+\
 
 ### (Doughty et al., 2017)
 

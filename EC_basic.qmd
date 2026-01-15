@@ -193,3 +193,6 @@ For other gap filling methods and related evaluations, 10.1016/j.agrformet.2007.
 7)  From windows to HH, partGLInterpolateFluxes(), .partGPAssociateSpecialRows()
 
 8)  Nighttime Reco override & covariances .computeRecoNight(),computeAggregatedCovariance() (helper)
+
+GPP records: \
+(Rowland et al., 2014) /Aggregated Canopy Model/3756.7 +-19.1 gC m-2 yr-1

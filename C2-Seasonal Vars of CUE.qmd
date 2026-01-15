@@ -49,3 +49,91 @@ DeLUCIA, E. H., Drake, J. E., Thomas, R. B., & Gonzalez‐Meler, M. (2007). Fore
 Malhi, Y., Girardin, C., Metcalfe, D. B., Doughty, C. E., Aragão, L. E. O. C., Rifai, S. W., Oliveras, I., Shenkin, A., Aguirre‑Gutiérrez, J., Dahlsjö, C. A. L., Riutta, T., Berenguer, E., Moore, S., Huasco, W. H., Salinas, N., da Costa, A. C. L., Bentley, L. P., Adu‑Bredu, S., Marthews, T. R., … Phillips, O. L. (2021). The Global Ecosystems Monitoring network: Monitoring ecosystem productivity and carbon cycling across the tropics. *Biological Conservation, 253*, Article 108889. <https://doi.org/10.1016/j.biocon.2020.108889>
 
 Lu, X., Chung, C., Malhi, Y., & Huang, C. (2025). Global patterns in the allocation of forest net primary production. *Journal of Biogeography*, *––* (Advance online publication). <https://doi.org/10.1111/jbi.15094> [[Lund University+10climate.ox.ac.uk+10onesearch.nihlibrary.ors.nih.gov+10]{.underline}](https://www.climate.ox.ac.uk/publication/2082102/dimensions?utm_source=chatgpt.com){alt="https://www.climate.ox.ac.uk/publication/2082102/dimensions?utm_source=chatgpt.com"}
+
+### Specific Studies
+
+**Two 1 ha plots (drainage shallow soils vs. humid amazonian forests) in Southern Amazonian Forests in Bolivia (Araujo-Murakami et al., 2013)**
+
+Tropical forests with CUE near 0.3, which is lower than temperate forests 0.5 as 1) old-growth systems and a higher CUE is associated with recovery from disturbance or systems are naturally more dynamics\
+\
+Southern Amazon: dry, less studied\
+Central and eastern: more humid, most large-scale C cycling measurements have taken place\
+NPP in tropical forests: allocation patterns were fairly consistent across sites, little variance in canopy allocation but shifting allocation between fine roots and woody tissue NPP\
+\
+Differences between long-term and short-term disturbances:\
+Long-term drought (Metcalfe et a., 2010): lower CUE\
+Single disturbance event (Malhi et al., 2009): increase CUE as more C is allocated to biomass production during recovery phase
+
+Research Qs: 1) how do seasonal cycles of components of Ra and NPP vary between two plots? 2) what is total budget of NPP and respiration, and how does this budget varies between humid and more xeric plot? 3) Do C allocation patterns and CUE differ between humid and dry plots?\
+\
+Site Specifics:\
+- relatively high fertility\
+- low acidity\
+- Two plots (Kenia-wet, Kenia-dry)\
+Kenia-wet: deeper soils, large trees, typical Amazon biome\
+Kenia-dry: higher wood density, thorny branches, small leaves, humid amazon forest zone
+
+Results:\
+**Peak** of rainy season: December to February\
+Dry season (less than 100 mm rainfall yr-1): April to September\
+coldest temperatures (as austral winter): May-July\
+\
+1) Fine root NPP: Kenia-**wet** had significantly more total fine root NPP than Kenia-dry\
+2) Aboveground woody NPP: kenia-**dry** is higher\
+3) Canopy-NPP (total litterfall): Kenia-dry vs **wet** during dry (0.30 vs. 0.66)\
+4) Branch turnover NPP: overall similar (wet\>dry a bit?), strong seasonal cycle\
+5) Ra (Rleaves, Rstems, Rrhizo) lower over the dry seasons\
+6) Woody respiration was significantly greater at Kenia-wet (P \< 0.05)\
+7) Kenia-dry had lower LAI and lower average leaf photosynthesis than Kenia-wet (The abundant drought-deciduous trees in Kenia-dry lost most of their leaves in the dry season)\
+8）NPP higher at wet compared to dry (15.50 ± 0.89 vs. 11.27 ± 0.68), Ra higher at wet compared to dry (18.64 ± 2.78 vs. 15.61 ± 2.61)；CUE 0.45 ± 0.05 at Kenia-wet vs. 0.42 ± 0.05 at Kenia-dry
+
+Hints: Decreased in precipitation with decreased in solar radiation-\>further decrease photosynthesis\
+The evergreen Kenia-wet plot displays strong seasonality in leaf flush with a bimodal peak in March and October, new leaves are flushing to coincide with the peaks in radiation, this has similarities to sites in the eastern Amazon, where leaf flush tends to correspond with the dry season, with highest sunlight.
+
+**First study in western Amazonia, 2 1 ha plots in south-eastern Peru (CUE = NPP/PCE) (Malhi et al., 2014)**
+
+Research Qs:
+
+(1) How do the components of NPP vary over the seasonal cycle in these two plots, and how do they relate to climate conditions?
+(2) How do the components of autotrophic and heterotrophic respiration vary over the seasonal cycle in these two plots, and how do they relate to climate conditions?
+(3) How does the total cycle of carbon production, carbon-use efficiency (the ratio of NPP to GPP) and NPP allocation differ between the plots, and compare with previously published results from Brazilian Amazonia?
+
+\- higher wood productivity, turnover and different species composition and lower wood density compared to eastern Amazonian forests
+
+Study Sites:\
+TAM-05 VS. TAM-06\
+Peak of the rainy season: December to February\
+Dry season (\<100mm/month): May-September\
+Solar radiation: late dry, early wet season, August-November\
+SWC: TAM-05 21.8% (more sand) Vs. TAM-06 35.5%
+
+Main Findings:\
+- Leaf fall rise in mid-dry season, peaking at the end of the dry season\
+- Fine root growth showed substantial seasonality in phase with the rainfall pattern, peak in peak wet season, a minimum in dry season\
+- 15.0 ± 0.8 Mg C ha−1 year−1 /14.2 ± 1.0 Mg C ha−1 year−1 (TAM05/TAM06)\
+- 0.42 ± 0.05/0.41 ± 0.05\
+- NPP show seasonal variations, lower over dry and higher over wet\
+- Ra no significant seasonality in both sites, TAM06 not significant but Ra lower over dry (when Ra decreases smaller than NPP, suggests CUE decreases)\
+- CUE is highest in the wet season (October–March), being 0.37 ± 0.06/0.44 ± 0.09 in TAM-05/06, and reaches its lowest values in the wet–dry transition (April–June), being 0.29 ± 0.08/0.27 ± 0.08.\
+\
+Hints: In this study, assume BP is close to total actual NPP, and retain the terminology NPP for the sum of the biomass production components, and carbon use efficiency (CUE) for the ratio NPP/GPP.
+
+Plant Carbon Expenditure (PCE) is approximated to GPP from a long term perspective but may not be equivalent to GPP if there is a substantial seasonal cycle of storage of non-structural carbohydrates (e.g. if products of “excess” GPP are stored in one season and allocated to NPP or metabolism in another season)\
+\
+On a seasonal timescale, we distinguish PCE from GPP, significant seasonal storage of C in the form of NSCs. NSC accumulation in dry season and depletion in wet season
+
+**Strong seasonality in the carbon storage and carbon use efficiency of an Eastern Amazonian forest (**0.36+-0.02**)**
+
+Site Descriptions:\
+French Guiana: A long (August–November) and short (March) dry season.\
+\
+Methods: Data Assimilation Linked Carbon Model (DALEC) Model\
+Dry season when SWC all days where the mean daily SWC was \<0.12 m-3 m-3\
+GPP simulated using ACM with radiation, T, CO2, SWC, LAI, leaf nitrogen\
+NPP =GPP-Ra\
+Ra measured using component respiration measurements, including leaf respiration, stem respiration, root and rhizosphere respiration\
+CUE = GPP-Ra/GPP
+
+The 5% increase in CUE in the dry season was caused by a greater dry season increases in GPP (8%) than in Ra (4%; Table 3) suggesting that this forest is more efficient at investing carbon in the dry season\
+**\
+NPP/CUE in a temperate apple orchard**
