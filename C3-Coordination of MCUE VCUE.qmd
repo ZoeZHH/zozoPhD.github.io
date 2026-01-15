@@ -8,7 +8,25 @@ format:
 
 ## CHAPTER 3 - Longterm of VCUE
 
-**Overview:**
+### Overview
+Research gap and aim: considerable uncertainties remain regarding the current status of terrestrial sinks and the fate of the carbon sequestered by the terrestrial biosphere over both short and long timescales. 
+
+assembled a comprehensive global database for forest ecosystems, which includes carbon budget variables (fluxes and stocks), ecosystem traits (e.g. leaf area index, age), as well as ancillary site information such as management regime, climate, and soil characteristics.
+
+Key ideas:
+NPP = fNPP + wNPP +rNPP + mNPP
+foliage NPP (fNPP), wood (wNPP, including branches and stems), root (rNPP, including coarse and fine roots) production, mNPP as those are difficult to measure (C invested in understorty plant growth and in reproductive organs, lost in herbivory, emitted as VOC and methane, and exuded from roots or transferred to mycorrhizae) mNPP was estimated to be 11% but can easily amount to 20% of the sum of fNPP, wNPP, and rNPP in tropical forests
+
+NPP=NEP+Rh
+Rh describes fluxes of decomposition by microbial activity, it includes decomposition of current year biomass but also contain decomposition of organic matter that accumulated in ecosystem during last decades.
+
+Key Findings:
+NPP increases with increasing temperature but appears to saturate beyond 10
+low NPP values observed with low precipitation
+Given a sufficient amount of precipitation (4800 mm), GPP increases with increasing temperatures
+
+Interesting points:
+Where the C sink in GPP is only sustained for minutes, the sink or source quantified as the NECB equals the long-term carbon-sequestration by ecosystems. 
 
 ### Specific Studies
 
@@ -16,3 +34,4 @@ Ecosystem carbon use efficiency at global scale from upscaling eddy-covariance d
 
 Main findings:
 a global trend of (–1.2 ± 0.3) × 10–3 yr− 1 is reported for mean global CUE from 2001 to 2023
+

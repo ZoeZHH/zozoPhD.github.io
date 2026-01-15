@@ -12,6 +12,30 @@ format:
 
 ## **Related Papers**
 
+Shifts in plant respiration and carbon use efficiency at a large-scale drought experiment in the eastern Amazon (Metcalfe et al., 2010)
+
+Research gap and question: The effects of drought upon ecosystem structure and function in the Amazon are potentially large but remain poorly defined.-\> A range of studies from drought experiments in the Amazon have examined numerous C cycle components in isolation, but none have yet synthesized these individual components to construct a full C budget of a droughted Amazon forest. In this study, to examine the impacts of a large-scale through-fall exclusion (TFE) treatment in an eastern Amazon primary rainforest on ecosystem C cycling and partitioning.
+
+Related Concepts: Plant Carbon Expenditure (PCE), total C plants use for processes like respiration and growth: PCE = NPP + Ra Gross primary productivity (GPP) is the total quantity of C entering the forest via photosynthesis GPP \~ PCE \~ Reco under steady-state conditions NTP (net change in tree C balance) = PCE - GPP NTP tells us whether trees are gaining C (NTP \< 0), losing C (NTP \> 0) or in balance (NTP \~ 0)
+
+Methods: 1 ha plot (TFE plot) was modified by the installation of plastic panels placed at 1–2 m above the ground,
+
+Carbon Component How It Was Quantified (Key Method + Instrument) Canopy NPP: Monthly litterfall traps; LAI from hemispherical photos; LMA from harvested leaves. Stem & branch NPP: Annual DBH measurements; biomass from allometric equations; branch fall from transects. Fine root NPP: Soil cores (0–30 cm); roots washed, dried, weighed. Coarse root NPP: Deep soil pits (to 3 m); biomass scaled using depth/diameter ratios. DOC export: Literature value from Amazon catchment study. VOC / CH₄ emissions: Literature-based estimate (no field measurements). Leaf respiration: Leaf gas exchange using portable IRGA chambers (dark respiration). Stem respiration: Literature respiration rates scaled by stem surface area. Soil respiration: Closed dynamic chambers + IRGA; monthly CO₂ efflux at 25 points per plot. Dead wood respiration: Chamber-based CO₂ efflux measurements on woody debris pieces.
+
+Main Findings:
+
+**ABOUT CUE**
+
+Greater Reco in the TFE plot was mainly attributable to the higher Rauto flux of 25.8 ± 3.4 t C ha)1 yr)1 compared with 22.4 ± 2.8 t C ha-1 yr-1 in the control
+
+Total estimated NPP was 2.4 ± 1.4 t C ha-1 yr-1 lower on the TFE plot relative to the control (Table 2, Fig. 3a).
+
+**CUE = NPP/Ra+NPP, with precipitation, Ra increases, NPP decreases, Ra increases bigger than NPP decreases, denominator larger CUE decreases**
+
+The TFE treatment was associated with a lower CUE in all plant organs, but particularly canopy CUE (control, 0.41 ± 0.07; TFE, 0.30 ± 0.07). The overall effect was a lower ecosystem CUE in the TFE plot of 0.24 ± 0.04 compared with 0.32 ± 0.04 in the control plot (Table 2, Fig. 4).
+
+Drought reduced carbon allocation to roots and/or increased root mortality, leading to lower below-ground biomass.
+
 ### Findings
 
 Through analysing 26 papers, 60 data points to reject the hypothesis: CUE is constant among forest types.

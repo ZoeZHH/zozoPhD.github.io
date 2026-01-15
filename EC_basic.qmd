@@ -17,8 +17,8 @@ Takeaways:
 
 NEP (ecosystem-centered quantity) = GPP - ER (Ra+Rh), positive as carbon gain by ecosystem\
 NPP = GPP - Ra\
-NECB as net rate of C accumulation in ecosystems = dC/dt \
-NECB = -NEE + F~CO~ + F~CH4~ + F~VOC~ + F~DIC~ + F~DOC~ + F~PC~ \
+NECB as net rate of C accumulation in ecosystems = dC/dt\
+NECB = -NEE + F~CO~ + F~CH4~ + F~VOC~ + F~DIC~ + F~DOC~ + F~PC~\
 NEE (atmospheric-centered quantity), positive as carbon gain by the atmosphere, negative the opposite. NEE = ER - GPP\
 **Gross primary production (GPP)** is the sum of gross C fixation by autotrophic C-fixing tissues per unit ground or water area and time.\
 **Autotrophic respiration (AR)** is the sum of respiration (CO2 production) by all living parts of primary producers per unit ground or water area and time.\
@@ -28,7 +28,7 @@ NEE (atmospheric-centered quantity), positive as carbon gain by the atmosphere, 
 
 A common conceptual framework (ecosystem as a volume with explicitly top, bottom and sides):
 
-![](images/Screenshot 2026-01-13 at 8.41.31 PM.png){width="331"}
+![](images/Screenshot%202026-01-13%20at%208.41.31%20PM.png){width="331"}
 
 Strictly speaking, NEP ≠ NEE\
 NEE as Net CO₂ flux across the ecosystem–atmosphere boundary.\
@@ -39,8 +39,8 @@ Other important fluxes include leaching loss from (or input to) the ecosystem of
 Also, when inorganic C enters or leaves ecosystems for reasons other than an imbalance between GPP and ER.
 
 \
-Hints:\
-NEE is opposite in sign to NEP and NECB because NEE is defined by atmospheric scientists as a C input to the atmosphere, whereas NEP and NECB are defined by ecologists as C inputs to ecosystems.
+\
+**Hints:** NEE is opposite in sign to NEP and NECB because NEE is defined by atmospheric scientists as a C input to the atmosphere, whereas NEP and NECB are defined by ecologists as C inputs to ecosystems.
 
 ## u\* filtering
 
