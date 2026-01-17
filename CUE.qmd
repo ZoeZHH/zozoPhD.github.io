@@ -164,7 +164,7 @@ The two main assumption 1) Rg~root~ + Rm~root~ = NPP~root~ and 2) Rm~stem&branch
 ## What might control the variations of CUE?
 
 **Section 1 - Controls of C Components**\
-(Luyssaert et al., 2007) \
+(Luyssaert et al., 2007)\
 NPP, GPP of ecosystems that are already limited by low precipitation (P) sums (\>800 mm) or low mean annual temperatures (T) (\< 5 celsius degrees), 71% explained GPP, 36% explained NPP.\
 - When P \> 800 mm, GPP increases with T\
 - When T \> 5, GPP increases with P\
@@ -182,7 +182,7 @@ NPP, GPP of ecosystems that are already limited by low precipitation (P) sums (\
 - GPP wet \> GPP dry (decreased precipitation and solar radiation)\
 - CUE wet \> CUE dry (increase of NPP \> increase of Ra)
 
-(Rowland et al., 2013) \
+(Rowland et al., 2013)\
 GPP-Ra/GPP\
 GPP higher in dry season as radiation increased (10.87 vs. 10.09)\
 Ra increased by 4% from wet season to dry season (6.83 vs. 6.53)\
