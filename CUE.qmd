@@ -12,6 +12,21 @@ format:
 
 ### Understanding GPP and Ra on leaf-level Leaf Structure: <https://www.youtube.com/watch?v=pwymX2LxnQs>
 
+```{mermaid}
+flowchart TD
+  A[Calvin cycle<br/>(CO₂ fixation)] --> B[Triose phosphates<br/>(3C sugars)]
+  B --> C[Soluble sugars<br/>(sucrose, hexoses)<br/><i>NSC chemical forms</i>]
+
+  C --> D{Allocation decision}
+
+  D -->|Immediate use| E[Respiration (Ra)<br/>Metabolism<br/>Exudates]
+  D -->|Growth| F[Structural growth<br/>Cell walls, wood, roots<br/><i>Irreversible biomass</i>]
+  D -->|Storage| G[NSC storage<br/>Starch, reserves<br/>(ΔNSC ≠ 0)]
+
+  G -->|Mobilization<br/>when demand > supply| E
+  G -->|Mobilization| F
+```
+
 Chloroplasts are organelles that conduct photosynthesis, where the photosynthetic pigment chlorophyll captures the energy from sunlight, converts it, and stores it in the energy-storage molecules ATP and NADPH while freeing oxygen from water in plant and algal cells.
 
 ::: {layout="[[1,1]]"}
