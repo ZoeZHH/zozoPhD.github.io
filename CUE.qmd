@@ -14,18 +14,22 @@ format:
 
 ```{mermaid}
 flowchart TD
-  A[Calvin cycle<br/>(CO₂ fixation)] --> B[Triose phosphates<br/>(3C sugars)]
-  B --> C[Soluble sugars<br/>(sucrose, hexoses)<br/><i>NSC chemical forms</i>]
+  A["Calvin cycle (CO2 fixation)"] --> B["Triose phosphates (3C sugars)"]
+  B --> C["Soluble sugars (sucrose, hexoses) - NSC forms"]
 
-  C --> D{Allocation decision}
+  C --> D{"Allocation decision"}
 
-  D -->|Immediate use| E[Respiration (Ra)<br/>Metabolism<br/>Exudates]
-  D -->|Growth| F[Structural growth<br/>Cell walls, wood, roots<br/><i>Irreversible biomass</i>]
-  D -->|Storage| G[NSC storage<br/>Starch, reserves<br/>(ΔNSC ≠ 0)]
+  D -->|"Immediate use"| E["Respiration (Ra), metabolism, exudates"]
+  D -->|"Growth"| F["Structural growth: cell walls, wood, roots (irreversible)"]
+  D -->|"Storage"| G["NSC storage: starch, reserves (Delta NSC)"]
 
-  G -->|Mobilization<br/>when demand > supply| E
-  G -->|Mobilization| F
+  G -->|"Mobilization when demand > supply"| E
+  G -->|"Mobilization"| F
 ```
+
+Photosynthesis domain: Calvin cycle → GPP
+
+Allocation / use domain: GPP → Ra + NPP + ΔNSC (+ exports)
 
 Chloroplasts are organelles that conduct photosynthesis, where the photosynthetic pigment chlorophyll captures the energy from sunlight, converts it, and stores it in the energy-storage molecules ATP and NADPH while freeing oxygen from water in plant and algal cells.
 
@@ -115,7 +119,7 @@ $$
 + \text{Herb dung}
 $$
 
-NPP~ACW~ include NPP from wood production and branch turnover. For wood production, we can calculate from forest censuses on annual scale or using the dendrometer bands at a seasonal scale. Then growth rates can be converted into woody biomass by (Chave et al., 2014): $\ln(\text{AGB}) = \alpha + \beta \ln(\rho \times D^2 \times H) + \varepsilon$ (D is trunk diameter, H is tree height); Fallen branch is compensated by new branch growth, calculate by volume (length*diameter)*wood density then converted to dry biomass.
+NPP~ACW~ include NPP from wood production and branch turnover. For wood production, we can calculate from forest censuses on annual scale or using the dendrometer bands at a seasonal scale. Then growth rates can be converted into woody biomass by (Chave et al., 2014): $\ln(\text{AGB}) = \alpha + \beta \ln(\rho \times D^2 \times H) + \varepsilon$ (D is trunk diameter, H is tree height); Fallen branch is compensated by new branch growth, calculate by volume (length*diameter)* wood density then converted to dry biomass.
 
 NPP~litterfall~ is the sum of leaf litterfall (outflow) and changes in canopy leaf biomass (inflow). Litterfall is separated into leaves, twigs, and reproductive parts, dried to biomass, and converted to C (using \~50% of dry mass). At some sites, leaf herbivory is quantified by scanning fallen leaves. Seasonal canopy productivity is derived from canopy leaf area index (LAI, from hemispherical photos) combined with specific leaf area (SLA, leaf area per unit mass) to estimate canopy leaf biomass.
 
@@ -136,6 +140,14 @@ R~stems~ (woody respiration) is measured using a closed dynamic chamber (SRC-1) 
 R~canopy~ (leaf respiration) is measured as leaf dark respiration with an IRGA and cuvette on \~20 trees per plot, using both sunlit and shaded branches. Branches are re-cut underwater to restore conductivity and leaves are dark-adapted in black bags before measurement.
 
 R~rhizosphere~ is derived from total soil CO~2~ efflux measured with an IRGA (EGM-4) and SRC-1 on permanent soil collars. Partitioning experiments use shallow collars (10 cm) for total respiration and deep collars (40 cm) excluding roots and mycorrhizae, with controls for disturbance effects.
+
+**The Missing Terms\
+-** production of root exudates and transfer of photosynthate to mycorrhizae\
+- canopy productivity by epiphytes that senesce and decay in situ in the canopy\
+- productivity of the herbaceous understory\
+- release of volatile organic compounds such as isoprene or monoterpenes\
+- methane fluxes from the soil\
+- lateral export of material as particulate or dissolved organic carbon
 
 ### (Warring et al., 1998)
 
@@ -178,7 +190,7 @@ The two main assumption 1) Rg~root~ + Rm~root~ = NPP~root~ and 2) Rm~stem&branch
 
 ## What might control the variations of CUE?
 
-**Section 1 - Controls of C Components**\
+**Section 1 - Control of C Components (Precipitation)**\
 (Luyssaert et al., 2007)\
 NPP, GPP of ecosystems that are already limited by low precipitation (P) sums (\>800 mm) or low mean annual temperatures (T) (\< 5 celsius degrees), 71% explained GPP, 36% explained NPP.\
 - When P \> 800 mm, GPP increases with T\
@@ -201,13 +213,56 @@ NPP, GPP of ecosystems that are already limited by low precipitation (P) sums (\
 GPP-Ra/GPP\
 GPP higher in dry season as radiation increased (10.87 vs. 10.09)\
 Ra increased by 4% from wet season to dry season (6.83 vs. 6.53)\
-CUE increases from wet to dry season by 5.38 +- 0.3%\
+CUE increases from wet to dry season by 5.38 +- 0.3%
 
-**Section 2 - NPP~VOC~**
+**Drier forests and dry seasons exhibit higher CUE**, while **wetter forests and wet seasons exhibit lower CUE (Malhi et al., 2021)**\
+- as increasing dry season intensity limited productivity for part of the year, GPP increases with P (Malhi et al., 2015)\
+- NPP decreases with P is more apparent (drier forests invested more in biomass production and less in autotrophic respiration) (Doughty et al., 2015a)\
+\
+Doughty et al. (2015a) examined impacts of the 2010 drought in 13 GEM sites across Amazonia. They found that, as expected, the drought caused a reduction in GPP but that, remarkably, there was no corresponding reduction in NPP and or woody growth; instead, there was a decline in Ra. The study proposed that this indicated a decreased investment in plant maintenance and defence in favour of continued biomass growth, but that such a strategy may contribute to increased mortality in the years following drought.
+
+Changes in growth and maintenance respiration related to plant age resulted in substantial variation in CUE values ranging from 0.2 to 0.7 (van Iersel, 2003). & (Doughty et al., 2018) also supports that
+
+(Moore et al., 2018)\
+Aboveground biomass decreases from wet to dry\
+Highest NPP occurs at intermediate rainfall sites
+
+**Section 2 - Control of C Components (Temperature)**
+
+Warmer temperatures increase total respiration rates, Ra (more about the maintenance side, Rm)\
+
+**Section 3 - NPP~VOC~**
 
 Malhi et al. (2009) showed that NPP~VOC~ is a small component of the carbon budget in a central Amazonian forest (0.1 ± 0.05 Mg C ha−1 year−1)\
 And that near-closure of the carbon budget for several sites in Brazil suggests that the other neglected NPP terms are relatively minor. -\> the allocation to root exudates and to mycorrhizae is neglected\
 \
+**Section 4 - NSCs\
+**When considering the full GPP, NPP and respiration budget, the data suggested that there is a temporal decoupling between total photosynthesis from eddy covariance and total carbon usage (from GEM studies) that indicates that nonstructural carbohydrates could be serving as seasonal stores of energy reserves that have a strong influence on shaping patterns of seasonality and interannual variability (Doughty et al., 2015a; Doughty et al., 2015b).\
+\
+Doughty, C.E., ....2015a. Drought impact on forest carbon dynamics and fluxes in Amazonia. Nature 519, 78–U140.\
+\
+Doughty, C.E., .... 2015b. Source and sink carbon dynamics and carbon allocation in the Amazon basin. Glob. Biogeochem. Cycles 29, 645–655.\
+
+**Section 5 - Controls of CUE**
+
+-   (Luo et al., 2025) CUE decreased significantly with MAT and insignificantly decreased with MAP & MAPAR; CUE decreased insignificantly with stand age
+
+-   (Luo et al., 2025) PFTs emerged as the pivotal contributor to CUE variability
+
+-   Stand ages (Decline in BPE&CUE with ages):\
+
+    -   younger forests allocating more C to growth and less to respiration than older forests\
+    -   longer transport pathway for water in taller trees can result in more closed stomata, reduced GPP but no Ra changes\
+    -   soil fertility declines due to nutrient immobilization as stands age
+    -   (Goulden et al., 2011) NPP:GPP ratio decreased from ∼0.5 to ∼0.3 with increasing stand age in boreal forests
+
+-   Management (Campioli et al., 2015)
+
+    -   
+
+-   Soil Fertility: higher CUE in forests with high-nutrient availability compared to forests with low- or medium nutrient availability.
+
+    -   Vicca et al. (2012) found that forests with high nutrient availability invest 16 4% more of their photosynthates in biomass production than forests with low-nutrient availability.\
 
 ### (Doughty et al., 2017)
 
@@ -218,4 +273,198 @@ And that near-closure of the carbon budget for several sites in Brazil suggests 
 3.  **Soil Fertility**: Higher CUE in forests with high-nutrient availability compared to forests with low- or medium nutrient availability. Vicca et al. (2012) found that forests with high nutrient availability invest 16+-4% more of their photosynthates in biomass production than forests with low-nutrient availability, also supported by (Chapin, 1980) in this paper.
     -   Significant positive relationship between soil fertility (CEC) and CUE. Low fertility sites showed higher rhizosphere respiration and lower CUE (Plants try to get nutrients from roots, the mycorrhizae). Growth rhizosphere respiration was significantly higher at low fertility sites, but maintenance respiration did not differ.
 
-### (Vicca et al., 2012) focus on fertility of soils
+### 
+
+### (Wurth et al., 2005) Non-structural Carbohydrate pools (NSCs) in a tropical forest
+
+Hypothesis: a progressive draw down of NSC stores during prolonged periods of drought.\
+\
+Method: research on 17 tree species in Panama; Würth et al. (2005) quantified non-structural carbohydrates using repeated seasonal sampling of leaves, branches, stems, and roots, followed by immediate enzyme inactivation, drying, and grinding of tissues. Soluble sugars (glucose, fructose, sucrose) and starch were measured using standard enzymatic assays, with starch enzymatically hydrolyzed and quantified as glucose.
+
+Results (seasonal variations of CUE):\
+- NSC was always higher in the dry compared to the wet season -\> increase in delta NSC over dry season\
+- NSC never passed through a period of significant depletion -\> seasonal NSC drawdown was not observed\
+- Leaf flushing did not draw heavily upon NSC pools\
+\
+Hints:\
+1) in leaves (the smallest pool) most of the NSC was sugar and in stems (the largest pool) most of NSC was starch\
+2) Starch is more closely linked to precipitation
+
+### (Doughty et al., 2018) What controls variation in carbon use efficiency among Amazonian tropical forests?
+
+### (Vicca et al., 2012) Fertile forests produce biomass more efficiently, also, the paper introduce the BPE as BP/GPP
+
+Objective: whether BPE increased with increasing nutrient availability?\
+49 forests to one of three categories: low/medium/high following information available in literature\
+\
+Methods: BP from biometric TNPP1, GPP from EC; BPE = BP/GPP
+
+Results:
+
+-   GPP did not significantly differ between temperate forests of low/high nutrient availability; BP was 78% higher in temperate forests of high nutrient availability than in temperate forests with low nutrient availability
+
+-   Through a stepwise regression analysis including climate zone, forest type, stand age, nutrient availability and forest management -\> nutrient availability affected BPE highly significantly (P \< 0.01)\
+
+    -   Independently of climate or forest type, forests with high-nutrient availability allocated on average 58 ± 3% of their photosynthates to BP\
+    -   forests with lownutrient availability used on average only 42 ± 2% (mean ± SE of 19 forests) of their photosynthates for BP
+
+-   In addition to nutrient availability, which was by far the dominant determinant of variation in BPE, management also affected BPE significantly according to the stepwise regression analysis (P = 0.02).
+
+Discussion:
+
+-   Higher BPE with higher nutrient availability because 1) smaller fraction of GPP is being respired in high-nutrient availability? 2) a smaller fraction of GPP is partitioned to unaccounted NPP components (VOC emissions, root symbionts, root exudation)? 3) Both?\
+    GPP = BP + Ra + unaccounted C\
+    1 = BP/GPP + Ra/GPP + unaccounted C/GPP\
+    If BP/GPP increases, Ra/GPP decreases, unaccounted C/GPP decreases
+
+-   11 forests revealed no effect of nutrient availability on the Ra-to-GPP ratio -\> variation in the ratio of Ra to GPP does not explain the higher BPE in nutrient-rich forests (Box 1)-\> We therefore hypothesis that **the unmeasured NPP components explain the difference in BPE among nutrient availability classes** (Box 2, one long-term field study in a nutrient-rich, temperate oak forest (Heinemeyer et al. 2012) where the mycorrhizal soil carbon flux contribution was estimated at about 20% of NPP)
+
+-   Still unresolved why fertile forests with higher BPE?\
+    Future (large-scale) experiments in which nutrient availability is manipulated and where all measurements needed to unravel carbon partitioning are made (i.e. independent estimates for all NPP components, GPP and Ra) would help resolve these questions.
+
+**(Doughty et al., 2018) A continue work based on Vicca, What controls variation in CUE among Amazonian tropical forests?**\
+\
+Key Qs:\
+(1) If increase in rhizosphere respiration enough to explain the low fertility in forests and 2) Any other factors?\
+\
+Total plot CUE and also check on the estimating CUE by comparing rhizosphere respiration (root plus mycorrhizal respiration) to fine root growth and wood respiration to wood growth rates to see how organ-specific CUE varies with fertility, wood residence time, and temperature\
+\
+Results:
+
+-   The **lower fertility sites** had **higher rhizosphere respiration** and lower CUE. (a significant (P \< 0.05) difference in slopes (0.72 0.24 and 0.00 0.21 unitless), with **increased** **growth rhizosphere respiration** at less fertile sites but not maintenance)\
+
+    -   And found growth respiration is significantly higher at less fertile sites than more fertile sites (P \< 0.05, Fig. 5). More carbon is allocated to mycorrhizae to search for nutrients?
+
+-   root maintenance respiratory costs were significantly (P \< 0.001) greater at stands with sres \>40 years (0.40 0.05 Mg C/ha/mo) than at stands with sres \<40 years (0.27 0.05 Mg C/ha/mo)
+
+-   Wood maintenance respiratory costs were significantly greater (P \< 0.01) at stands with sres \>40 years (0.60 0.04 Mg C/ha/mo) than at stands with sres \<40 years (0.44 0.03 Mg C/ha/mo).
+
+\
+Hint: At low soil fertility, plants invest more photosynthate into mycorrhizal fungi, whose metabolically expensive hyphal exploration and enzyme production respire large amounts of carbon while acquiring nutrients, increasing the carbon cost of root growth.
+
+### (Delucia et al., 2007) Forest carbon use efficiency: is respiration a constant fraction of gross primary production?
+
+Objective: We conducted a literature survey to test the hypothesis that CUE is constant and universal among forest ecosystems (most temperate, 4 tropical).\
+1) Ra is proportional to GPP? -\> constant CUE\
+Since Ra depends on sugars from photosynthesis, Ra should be constrained by a proportional of GPP, then earlier 1-Ra/GPP is constant\
+2) Ra is proportional to biomass? -\>CUE vary with differences in allocation\
+whole organism respiration varies with 3/4 power of body size in animals (see Hedin, 2006).
+
+Results:
+
+1\) Overall, slope of this relationship (NPP = 0.53\*GPP-110.1, r2 = 0.72, p \< 0.01) represents a global estimate of CUE and was similar to the value of 0.47. But individual estimates of CUE varied\
+2) a strong decrease in CUE with stand age\
+- The proportionately stronger decrease in NPP than GPP suggests that Ra increased with stand age and presumably with the accumulation of woody mass in older forests.\
+3) With decrease in the fractional investment in foliage by older forests (leaf mass/total mass= -0.03168 + 0.1305/ log(age), r2=0.787, P\<0.01) -\> increase in Ra with age and allocation to woody tissues supports the traditional theory that Ra scales with biomass.
+
+\
+Hints:
+
+1\) divide Ra into maintenance and growth components; maintenance being proportional to plant size and growth being proportional to GPP (Amthor, 2000).
+
+### (Collalti et al., 2018) Plant respiration: Controlled by photosynthesis or biomass?
+
+### (Piao et al., 2018) Forest annual carbon cost: a global-scale analysis of autotrophic respiration
+
+Aim: Used C-flux database developed by Luyssaert et al. (2007), to study relationship between Ra and its environmental variables (MAP(350\~3700mm), MAT(-5\~27)).
+
+Results:
+
+-   Ra is in positive relationship with MAT
+
+-   Q10 value of forest annual Ra varies from 1.8 to 2.9; a 10C increase in MAT results in an increase in annual Rm by a factor of 2.09–2.52 and 1.86–2.17 when total biomass and maximum LAI is an independent variable, respectively
+
+-   Ra to GPP ratio decreases (CUE increases) with increasing MAT when MAT is below a threshold of 11.8C, but then increases when MAT reaches above this value (CUE decreases).
+
+-   with MAT between **8 and 12C**, Ra/GPP increase with forest age; Ra to GPP is not significantly correlated with age across all forest sites\
+
+Hints:
+
+-   According to the 161 estimations, Ra range from 177 to 3323 g C m-2 yr-1
+
+-   Previous studies suggested that Ra is generally more sensitive to rising temperature than GPP (Ryan 1991), implying that rising temperature may cause an increase in fraction of Ra vs. GPP (Woodwell 1990).
+
+-   The nonlinear response of the Ra to GPP ratio to temperature also implies that forest carbon-use efficiency (CUE, 1 Ra/GPP) is nonlinear, with the highest CUE at 11C.
+
+\
+\
+(Collalti et al., 2020) Forest production efficiency increases with growth temperature
+
+NPP/GPP -\> carbon use efficiency (CUE = NPP/GPP)\
+BP/GPP -\> biomass production efficiency (BPE = BP/GPP)\
+(Collalti et al., 2020) proposed FPE, represents both BPE and CUE\
+\
+Results:
+
+-   FPE decreases with increasing age
+
+-   higher TAP with higher FPE -\> increase in soil water availability, greater stomatal openess, increased photosynthesis, photosynthesis might be expected to increase faster than plant respiration
+
+-   increase of FPE with absolute latitude
+
+-   increase in FPE with mean annual temperature,\
+
+    -   Opposite to that the instantaneous response of maintenance respiration to a temperature change is steeper than that of photosynthesis\
+
+Hints:\
+- nonstressed conditions BVOCs consume a small fraction (\~5%), under stressed conditions and in hot climates, BVOCs can consume 15-30% of annual NPP
+
+### (Campioli et al., 2015) Biomass production efficiency controlled by management in temperate and boreal ecosystems
+
+Objective: The impact of management on BPE is underestimated. -\> The influence of site fertility and management on BPE has not been disentangled in previous studies, and the impact of N deposition on BPE is largely overlooked.
+
+Method:\
+3 statistical analyses, 1) univariate analysis tested the significance of the relationships between single predictors and BPE, 2) Multiple linear regressions allow a comparison of the effects of potential BPE predictors considering them all together, 3) Random Forest is a partitioning method that we used to produce a large ensemble of regression trees considering always our complete BPE data set but random subsets of predictor variables.
+
+Results:
+
+-   Analysed all natural sites, BPE is not driven by natural variation in site fertility
+
+-   By analysing the relationship between fertility and management in natural and managed forests -\> management was a significant explanatory variable for site fertility
+
+-   Evaluated fertility and management relative importance as controllers of BPE and compared them to other possible BPE drivers (vegetation and environmental characteristics, N deposition) -\> management was the key, followed by N deposition, and natural fertility was insignificant, stand age has a significant negative impact on BPE
+
+-   Compared between natural and managed ecosystem types -\> BPE of managed sites was substantially greater than the BPE of natural sites
+
+-   Impacts of potential drivers of BPE on all natural ecosystems -\> Climate showed an influence on BPE, but this effect was weak (0.05 \< p \< 0.10) and not consistent across statistical methods
+
+Hints:
+
+-   Revised Vicca's opinion which "greater BPE in more fertile sites is related to reduced C allocation to symbiotic fungi, as plants in nutrient-rich conditions invest less in processes facilitating nutrient uptake" to "**adaptation processes in natural ecosystems could allow plants in both nutrient-poor and nutrient-rich environments to have similar growth efficiency. However, belowground C transfers to symbionts are not static, and the greater nutrient availability caused by management could make root symbiotic associations less important for plants, thus reducing the flux of C from plants to symbionts**."
+
+### (Collalti & Prentice, 2018) Is NPP proportional to GPP? Waring’s hypothesis 20 years on
+
+Aim: 1) summarize results of these various studies approximately chronologically within each of three broad categories of study, according to their principal focus on **effects of forest type and stand age**, **effects of climate (temperature and drought)** or **effects of site fertility, disturbance and management**. 2) summarize data on NPP:GPP ratios in a new data set compiled from over 200 studies, representing different biomes, species and stand ages, and draw some general conclusions about the state of knowledge and research needs.
+
+Results-Effects of forest type and stand age:\
+Various results from different literatures
+
+Results-Effects of temperature:\
+Tjoelker et al. (1999) NPP:GPP ratio is likely to decrease slightly with increasing temperature.\
+Piao et al. (2010) non-linear relationship with MAT\
+Keith et al. (2010) being non-linearly related to GPP, with MAT and solar radiation accounting for about half of the variation.
+
+Results-Effects of soil fertility, disturbance and management:\
+Vicca et al. (2012) found that site fertility was a major control of this ratio to GPP, which was found to range from ∼0.4 to ∼0.6.\
+Kunert et al. (2019) confirmed that disturbed forests have a higher NPP:GPP ratio in comparison with the undisturbed ones.\
+\
+Results-Variability across measurement methods:\
+Curtis et al. (2005) 0.54 ± 0.04 using biometric methods for NPP against eddy covariance GPP VS. 0.42 ± 0.016 using biometric methods for both NPP and GPP in the transition zone between temperate deciduous and boreal forests in North America. **EC overestimate GPP?\
+\
+OVERALL:** Different studies have come to different conclusions about the role of stand age, climate and soil fertility on this ratio (or on the ratio of BP to GPP). The potential role of management is a complicating factor that has only recently been recognized. Further confounded by different methods.
+
+**However, the range of variation is substantially wider than was indicated by W98, moreover, we now have sufficient indications in the recent literature for effects of forest type, stand age, site fertility and management to motivate further investigations of the controls on partitioning of GPP in forests.**
+
+Results-combined data:
+
+-   Mean value for the NPP:GPP ratio in the dataset is similar as W98 as 0.46 ± 0.12, but specific values varied from 0.22 to 0.79
+
+    -   0.42 (± 0.12, n = 48) for boreal sites, 0.48 (± 0.12, n = 162) for temperate sites and 0.41 (± 0.11, n = 18) for tropical sites
+
+    -   higher values of the NPP:GPP ratio (0.50 ± 0.13, n = 71) were shown by deciduous broad-leaf species than for evergreen needle leaf forests (0.45 ± 0.11, n = 12), evergreen broad-leaf forests (0.44 ± 0.11, n = 127) and mixed forests (0.43 ± 0.09, n = 18).
+
+    -   temperate deciduous forests are slightly more efficient than boreal and tropical forests in converting photosynthates into biomass.
+
+    -   As age getting older, **Stem respiration** may instead continue to increase, because of the continuing accumulation of sapwood biomass as trees become taller, resulting in a decline in the NPP:GPP ratio over the course of stand development.
+
+    -   Based on textbook suggests, threshold temperature for inactivation of respiration is generally higher than that for photosynthesis, thus NPP/GPP decreases

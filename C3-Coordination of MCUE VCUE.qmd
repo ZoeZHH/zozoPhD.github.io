@@ -4,34 +4,105 @@ format:
   html:
     toc: true
     title-block-style: none
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 ## CHAPTER 3 - Longterm of VCUE
 
 ### Overview
-Research gap and aim: considerable uncertainties remain regarding the current status of terrestrial sinks and the fate of the carbon sequestered by the terrestrial biosphere over both short and long timescales. 
 
-assembled a comprehensive global database for forest ecosystems, which includes carbon budget variables (fluxes and stocks), ecosystem traits (e.g. leaf area index, age), as well as ancillary site information such as management regime, climate, and soil characteristics.
+Research gap and aim: considerable uncertainties remain regarding the
+current status of terrestrial sinks and the fate of the carbon
+sequestered by the terrestrial biosphere over both short and long
+timescales.
 
-Key ideas:
-NPP = fNPP + wNPP +rNPP + mNPP
-foliage NPP (fNPP), wood (wNPP, including branches and stems), root (rNPP, including coarse and fine roots) production, mNPP as those are difficult to measure (C invested in understorty plant growth and in reproductive organs, lost in herbivory, emitted as VOC and methane, and exuded from roots or transferred to mycorrhizae) mNPP was estimated to be 11% but can easily amount to 20% of the sum of fNPP, wNPP, and rNPP in tropical forests
+assembled a comprehensive global database for forest ecosystems, which
+includes carbon budget variables (fluxes and stocks), ecosystem traits
+(e.g. leaf area index, age), as well as ancillary site information such
+as management regime, climate, and soil characteristics.
 
-NPP=NEP+Rh
-Rh describes fluxes of decomposition by microbial activity, it includes decomposition of current year biomass but also contain decomposition of organic matter that accumulated in ecosystem during last decades.
+Key ideas: NPP = fNPP + wNPP +rNPP + mNPP foliage NPP (fNPP), wood
+(wNPP, including branches and stems), root (rNPP, including coarse and
+fine roots) production, mNPP as those are difficult to measure (C
+invested in understorty plant growth and in reproductive organs, lost in
+herbivory, emitted as VOC and methane, and exuded from roots or
+transferred to mycorrhizae) mNPP was estimated to be 11% but can easily
+amount to 20% of the sum of fNPP, wNPP, and rNPP in tropical forests
 
-Key Findings:
-NPP increases with increasing temperature but appears to saturate beyond 10
-low NPP values observed with low precipitation
-Given a sufficient amount of precipitation (4800 mm), GPP increases with increasing temperatures
+NPP=NEP+Rh Rh describes fluxes of decomposition by microbial activity,
+it includes decomposition of current year biomass but also contain
+decomposition of organic matter that accumulated in ecosystem during
+last decades.
 
-Interesting points:
-Where the C sink in GPP is only sustained for minutes, the sink or source quantified as the NECB equals the long-term carbon-sequestration by ecosystems. 
+Key Findings: NPP increases with increasing temperature but appears to
+saturate beyond 10 low NPP values observed with low precipitation Given
+a sufficient amount of precipitation (4800 mm), GPP increases with
+increasing temperatures
 
-### Specific Studies
+Interesting points: Where the C sink in GPP is only sustained for
+minutes, the sink or source quantified as the NECB equals the long-term
+carbon-sequestration by ecosystems.
 
-Ecosystem carbon use efficiency at global scale from upscaling eddy-covariance data with machine learning and MODIS products (Campos-Taberner et al., 2025)
+### Global Variation vegetation carbon use efficiency inferred from eddy covariance observations (Luo et al., 2025)
 
-Main findings:
-a global trend of (–1.2 ± 0.3) × 10–3 yr− 1 is reported for mean global CUE from 2001 to 2023
+Methods: used independent estimated of CUE and BPE from inventory or
+biometric measurements (CUE~IN~)
 
+Results:
+
+-   CUE averaged 0.43 ± 0.12 across 2,737 site-years
+
+-   CUE~EC~ of forest biomes was 0.41 ± 0.11, significant lower than
+    CUE~EC~ of non-forest biomes 0.45 ± 0.11, same results from other
+    methods (C stocks?turnover rates of live biomass?)
+
+-   Our estimates of CUE ranged from 0.3 to 0.6, with a clear
+    latitudinal gradient—increasing from the tropics to high latitudes
+
+-   Predicted CUE and MAP in negative relationship (MAP increase, CUE
+    decreases)
+
+Discussion:\
+Non-linear relationship between CUE and stand age?
+
+In fact, forests are likely to experience a decrease in biomass
+residency time (leaf shedding and high tree mortality rate) and then a
+decrease in Ra, ultimately leading to a CUE increase during droughts
+
+### Divergence in global plant carbon use efficiency across data-driven estimates, satellite product, and process-oriented models (He et al., 2025)
+
+Global plant CUE derived from 3 approaches to understand both spatial
+distributions and temporal dynamics (2001-2012):\
+CUE=NPP/GPP=(GPP-Ra)/GPP=\[GPP-(Re-Rh)\]/GPP\
+1) Data-driven method based on existing global GPP, Re and Rh datasets\
+GPP from different products (LUEs, NIRv derived, satellite-based,
+machine learning products, an empirical ecosystem-level light response
+function)\
+6 Re and 4 Rh datasets, derived from machine learning approaches\
+\
+2) MODIS satellite product \[MOD17A3HGF V6.1 product\]\
+\
+3) DGVM simulations\
+Plant CUE was calculated from simulated GPP and NPP outputs of 16 DGVMs
+participating in the TRENDY v12 project—CLM5.0, CLASSIC, CABLE-POP,
+E3SM, EDv3, JSBACH, ISBA-CTRIP, IBIS, JULES, LPX-Bern, LPJwsl,
+LPJ-GUESS, SDGVM, YIBs, ORCHIDEE, and OCN
+
+Results:
+
+-   Biome-level by summarizing the distributions within each biome
+
+### Ecosystem carbon use efficiency at global scale from upscaling eddy-covariance data with machine learning and MODIS products (Campos-Taberner et al., 2025)
+
+Main findings: a global trend of (–1.2 ± 0.3) × 10–3 yr− 1 is reported
+for mean global ecosystem CUE (NEP/GPP, (GPP-Reco)/GPP) from 2001 to
+2023
+
+Spatial variation of CUE with a clear latitudinal path, suggesting a
+dependence on climate variability
+
+For coverage limitation, most EC sites cover in North America and
+Europe. To address this well-known limitation, the GPR model operates in
+the environmental feature space rather than geographic space
