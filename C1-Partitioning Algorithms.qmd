@@ -37,3 +37,11 @@ Lasslop, G., Reichstein, M., Papale, D., Richardson, A. D., Arneth, A., Barr, A.
 -   (Lasslop et al., 2012) identify the proper driving temperature for partitioning
 
 Lasslop, G., Migliavacca, M., Bohrer, G., Reichstein, M., Bahn, M., Ibrom, A., Jacobs, C., Kolari, P., Papale, D., Vesala, T., Wohlfahrt, G., & Cescatti, A. (2012). On the choice of the driving temperature for eddy-covariance carbon dioxide flux partitioning. Biogeosciences, 9(12), 5243–5259. https://doi.org/10.5194/bg-9-5243-2012
+
+### Terrestrial gross carbon dioxide uptake: Global distribution and covariation with climate (Beer et al., 2010)
+
+Methods: Diagnostic Modeling (Parametrization + application to gridded) 1) GPP through partitioning 2) GPP data was then used to calibrate 5 highly diverse diagnostic models, relate GPP to meteorology, vegetation type, or remote sensing indices at daily, monthly, or annual time scales using machine-learning techniques 3) The second step, the mapping of flux tower GPP to the land surface, was performed by applying these diagnostic models to fields of remote sensing (24–26) and climatic data (27–29),
+
+Results:
+
+Tropical forests assimilate 34% of the global terrestrial GPP
